@@ -1,0 +1,13 @@
+[http.routers]
+
+  [http.routers.unhealthy-node]
+    entryPoints = ["external"]
+    service = "router-rest"
+    priority = 9000
+    rule = "PathPrefix(`/`) && !HeadersRegexp(`X-Jfrog-Ignore-Unhealthy`, `.*`)"
+    middlewares = ["hotPath","unhealthy"]
+
+[http.middlewares]
+
+  [http.middlewares.unhealthy.plugin.unhealthy]
+    enabled = true

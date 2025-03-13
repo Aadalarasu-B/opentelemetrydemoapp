@@ -1,0 +1,890 @@
+Preparing to run Artifactory in Docker
+Running as uid=1030(artifactory) gid=1030(artifactory) groups=1030(artifactory)
+Dockerfile for this image can found inside the container.
+To view the Dockerfile: 'cat /docker/artifactory-oss/Dockerfile.artifactory'.
+Copying Artifactory bootstrap files
+2025-03-12T00:16:52.306Z [shell] [38;5;69m[INFO ][0m [] [installerCommon.sh:1659       ] [main] - Checking open files and processes limits
+2025-03-12T00:16:52.319Z [shell] [38;5;69m[INFO ][0m [] [installerCommon.sh:1662       ] [main] - Current max open files is 1048576
+2025-03-12T00:16:52.334Z [shell] [38;5;69m[INFO ][0m [] [installerCommon.sh:1673       ] [main] - Current max open processes is unlimited
+yaml validation succeeded
+2025-03-12T00:16:52.382Z [shell] [38;5;69m[INFO ][0m [] [installerCommon.sh:3041       ] [main] - System.yaml validation succeeded
+
+Database connection check failed Could not determine database type
+2025-03-12T00:16:52.427Z [shell] [38;5;69m[INFO ][0m [] [installerCommon.sh:1742       ] [main] - Testing directory /opt/jfrog/artifactory/var has read/write permissions for user id 1030
+2025-03-12T00:16:52.443Z [shell] [38;5;69m[INFO ][0m [] [installerCommon.sh:1757       ] [main] - Permissions for /opt/jfrog/artifactory/var are good
+2025-03-12T00:16:52.538Z [shell] [38;5;69m[INFO ][0m [] [installerCommon.sh:3543       ] [main] - Setting JF_SHARED_NODE_ID to df51ad00acb0
+2025-03-12T00:16:52.581Z [shell] [38;5;69m[INFO ][0m [] [installerCommon.sh:3543       ] [main] - Setting JF_SHARED_NODE_IP to 172.17.0.2
+2025-03-12T00:16:52.623Z [shell] [38;5;69m[INFO ][0m [] [installerCommon.sh:3543       ] [main] - Setting JF_SHARED_NODE_NAME to df51ad00acb0
+2025-03-12T00:16:52.946Z [shell] [38;5;69m[INFO ][0m [] [artifactoryCommon.sh:590      ] [main] - Removing old custom drivers : /opt/jfrog/artifactory/var/work/artifactory/tomcat/lib/jf_README.md
+2025-03-12T00:16:52.963Z [shell] [38;5;69m[INFO ][0m [] [artifactoryCommon.sh:595      ] [main] - Copying /opt/jfrog/artifactory/var/bootstrap/artifactory/tomcat/lib/README.md to /opt/jfrog/artifactory/var/work/artifactory/tomcat/lib/jf_README.md
+2025-03-12T00:16:53.204Z [shell] [38;5;69m[INFO ][0m [] [artifactoryCommon.sh:266      ] [main] - Saving /opt/jfrog/artifactory/app/artifactory/tomcat/conf/server.xml as /opt/jfrog/artifactory/app/artifactory/tomcat/conf/server.xml.orig
+2025-03-12T00:16:53.224Z [shell] [38;5;69m[INFO ][0m [] [artifactoryCommon.sh:274      ] [main] - Using Tomcat template to generate : /opt/jfrog/artifactory/app/artifactory/tomcat/conf/server.xml
+2025-03-12T00:16:53.277Z [shell] [38;5;69m[INFO ][0m [] [systemYamlHelper.sh:981       ] [main] - Resolved ${artifactory.port||8081} to default value : 8081
+2025-03-12T00:16:53.314Z [shell] [38;5;69m[INFO ][0m [] [systemYamlHelper.sh:981       ] [main] - Resolved ${artifactory.tomcat.connector.sendReasonPhrase||false} to default value : false
+2025-03-12T00:16:53.354Z [shell] [38;5;69m[INFO ][0m [] [systemYamlHelper.sh:981       ] [main] - Resolved ${artifactory.tomcat.connector.relaxedPathChars||_SQUARE_BRACKETS_} to default value : _SQUARE_BRACKETS_
+2025-03-12T00:16:53.393Z [shell] [38;5;69m[INFO ][0m [] [systemYamlHelper.sh:981       ] [main] - Resolved ${artifactory.tomcat.connector.relaxedQueryChars||_SQUARE_BRACKETS_} to default value : _SQUARE_BRACKETS_
+2025-03-12T00:16:53.432Z [shell] [38;5;69m[INFO ][0m [] [systemYamlHelper.sh:981       ] [main] - Resolved ${artifactory.tomcat.connector.maxThreads||200} to default value : 200
+2025-03-12T00:16:53.497Z [shell] [38;5;69m[INFO ][0m [] [systemYamlHelper.sh:981       ] [main] - Resolved ${artifactory.tomcat.maintenanceConnector.port||8091} to default value : 8091
+2025-03-12T00:16:53.536Z [shell] [38;5;69m[INFO ][0m [] [systemYamlHelper.sh:981       ] [main] - Resolved ${artifactory.tomcat.maintenanceConnector.maxThreads||5} to default value : 5
+2025-03-12T00:16:53.575Z [shell] [38;5;69m[INFO ][0m [] [systemYamlHelper.sh:981       ] [main] - Resolved ${artifactory.tomcat.maintenanceConnector.acceptCount||5} to default value : 5
+2025-03-12T00:16:53.653Z [shell] [38;5;69m[INFO ][0m [] [systemYamlHelper.sh:621       ] [main] - Resolved JF_PRODUCT_HOME (/opt/jfrog/artifactory) from environment variable
+2025-03-12T00:16:53.715Z [shell] [38;5;69m[INFO ][0m [] [systemYamlHelper.sh:981       ] [main] - Resolved ${shared.tomcat.workDir||/opt/jfrog/artifactory/var/work/artifactory/tomcat} to default value : /opt/jfrog/artifactory/var/work/artifactory/tomcat
+
+========================
+JF Environment variables
+========================
+
+JF_ARTIFACTORY_USER                 : artifactory
+JF_SHARED_RESTRICTEDMODE_ENABLED    : true
+JF_SHARED_NODE_ID                   : df51ad00acb0
+JF_SHARED_NODE_IP                   : 172.17.0.2
+JF_ARTIFACTORY_PID                  : /opt/jfrog/artifactory/var/work/run/artifactory.pid
+JF_ACCESS_USEEXTERNALTOPOLOGY       : true
+JF_LEGACY_ARTIFACTORY_PID           : /opt/jfrog/artifactory/app/run/artifactory.pid
+JF_PRODUCT_DATA_INTERNAL            : /var/opt/jfrog/artifactory
+JF_SYSTEM_YAML                      : /opt/jfrog/artifactory/var/etc/system.yaml
+JF_PRODUCT_HOME                     : /opt/jfrog/artifactory
+JF_ROUTER_TOPOLOGY_LOCAL_REQUIREDSERVICETYPES : jfrt,jfac,jfmd,jffe,jfob,jfevt,jftpl
+JF_SHARED_NODE_NAME                 : df51ad00acb0
+Using default router's certificate and private key
+Starting router...
+PID exists (3924), but router not running. Proceed to start it up.
+2025-03-12T00:16:54.097Z [shell] [38;5;69m[INFO ][0m [] [systemYamlHelper.sh:621       ] [main] - Resolved JF_SHARED_NODE_ID (df51ad00acb0) from environment variable
+2025-03-12T00:16:54.123Z [shell] [38;5;69m[INFO ][0m [] [systemYamlHelper.sh:621       ] [main] - Resolved JF_SHARED_NODE_IP (172.17.0.2) from environment variable
+router started. PID: 3948
+Starting metadata...
+PID exists (4376), but metadata not running. Proceed to start it up.
+2025-03-12T00:16:54.243Z [36m[jfrou][0m [34m[INFO ][0m [50b4ca0620849e5c] [bootstrap.go:91               ] [main                ] [] - Router (jfrou) service initialization started. Version: 7.149.1-1 Revision: 619561f935520ad047fe4f06257b4bfe068500bf PID: 3948 Home: /opt/jfrog/artifactory
+2025-03-12T00:16:54.243Z [36m[jfrou][0m [34m[INFO ][0m [50b4ca0620849e5c] [bootstrap.go:94               ] [main                ] [] - JFrog Router IP: 172.17.0.2
+2025-03-12T00:16:54.244Z [36m[jfrou][0m [34m[INFO ][0m [50b4ca0620849e5c] [bootstrap.go:95               ] [main                ] [] - Effective configuration:
+access (File): <nil>
+access.http.port (Default Value): 8040
+access.useexternaltopology (Environment Variable: JF_ACCESS_USEEXTERNALTOPOLOGY): true
+artifactory.pid (Environment Variable: JF_ARTIFACTORY_PID): /opt/jfrog/artifactory/var/work/run/artifactory.pid
+artifactory.user (Environment Variable: JF_ARTIFACTORY_USER): artifactory
+configVersion (File): 1
+legacy.artifactory.pid (Environment Variable: JF_LEGACY_ARTIFACTORY_PID): /opt/jfrog/artifactory/app/run/artifactory.pid
+product.data.internal (Environment Variable: JF_PRODUCT_DATA_INTERNAL): /var/opt/jfrog/artifactory
+product.home (Environment Variable: JF_PRODUCT_HOME): /opt/jfrog/artifactory
+router.autoMemLimitRatio (Default Value): 0.9
+router.availabilityZoneOptimization.loggingIntervalSecs (Default Value): 600
+router.encryptSystemConfig (Default Value): true
+router.entrypoints.externalHost (Default Value): 
+router.entrypoints.externalMaxConcurrentStreams (Default Value): 500
+router.entrypoints.externalPort (Default Value): 8082
+router.entrypoints.grpcPort (Default Value): 8047
+router.entrypoints.hotPathLogEnabled (Default Value): true
+router.entrypoints.internalMaxConcurrentStreams (Default Value): 500
+router.entrypoints.internalPort (Default Value): 8046
+router.entrypoints.traefikApiPort (Default Value): 8049
+router.httpclient.requestTimeoutSecs (Default Value): 30
+router.lifecycle.shutdown.entrypointsGraceTimeout (Default Value): 10s
+router.lifecycle.shutdown.internalJobsGraceTimeout (Default Value): 7s
+router.logging.application.caller (Default Value): false
+router.logging.application.console (Default Value): true
+router.logging.application.filePath (Default Value): router-service.log
+router.logging.application.format (Default Value): jftext
+router.logging.application.level (Default Value): info
+router.logging.application.rotation.compress (Default Value): true
+router.logging.application.rotation.keepLastDecompressed (Default Value): 1
+router.logging.application.rotation.maxAgeDays (Default Value): 0
+router.logging.application.rotation.maxFiles (Default Value): 10
+router.logging.application.rotation.maxSizeMb (Default Value): 25
+router.logging.consoleLog.format (Default Value): jftext
+router.logging.request.filePath (Default Value): router-request.log
+router.logging.request.forwardedForLogging.enabled (Default Value): false
+router.logging.request.forwardedForLogging.header (Default Value): X-Forwarded-For
+router.logging.request.rotation.compress (Default Value): true
+router.logging.request.rotation.keepLastDecompressed (Default Value): 1
+router.logging.request.rotation.maxAgeDays (Default Value): 0
+router.logging.request.rotation.maxFiles (Default Value): 10
+router.logging.request.rotation.maxSizeMb (Default Value): 100
+router.logging.request.tokenIdLoggingEnabled (Default Value): false
+router.logging.request.verbose (Default Value): false
+router.logging.traefik.caller (Default Value): false
+router.logging.traefik.console (Default Value): false
+router.logging.traefik.filePath (Default Value): router-traefik.log
+router.logging.traefik.format (Default Value): jftext
+router.logging.traefik.level (Default Value): info
+router.logging.traefik.rotation.compress (Default Value): true
+router.logging.traefik.rotation.keepLastDecompressed (Default Value): 1
+router.logging.traefik.rotation.maxAgeDays (Default Value): 0
+router.logging.traefik.rotation.maxFiles (Default Value): 10
+router.logging.traefik.rotation.maxSizeMb (Default Value): 25
+router.masterKeyRemoval.heartbeatCount (Default Value): 3
+router.masterKeyRemoval.intervalSecs (Default Value): 60
+router.masterKeyRemoval.timeoutSecs (Default Value): 600
+router.metrics.tokenVerification.accessUrl (Default Value): 
+router.metrics.tokenVerification.revocableExpiryThresholdSeconds (Default Value): -1
+router.mtls.configCacheErrorExpirationSecs (Default Value): 15
+router.mtls.configCacheExpirationSecs (Default Value): 600
+router.multiTenant.cacheExpirySecs (Default Value): 86400
+router.multiTenant.cacheGcPeriodSecs (Default Value): 600
+router.multiTenant.transport.idleConnTimeoutSecs (Default Value): 5
+router.multiTenant.transport.insecureSkipVerify (Default Value): true
+router.probes.liveness.failOnLongFailingReadiness.enabled (Default Value): true
+router.probes.liveness.failOnLongFailingReadiness.failureDurationSecs (Default Value): 60
+router.profiling.enabled (Default Value): false
+router.profiling.pprofServerPort (Default Value): 6060
+router.profiling.pprofServerTimeoutSeconds (Default Value): 21600
+router.proxy.httpUrl (Default Value): 
+router.proxy.httpsUrl (Default Value): 
+router.proxy.ignoredHosts (Default Value): []
+router.redirectUnknownPathToArtifactoryEnabled (Default Value): false
+router.retry.enabled (Default Value): false
+router.retry.enabledOnUnavailable (Default Value): true
+router.security.cipherSuites (Default Value): TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_AES_128_GCM_SHA256,TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+router.serviceRegistry.accessUrl (Applicative Resolution): http://localhost:8040/access
+router.serviceRegistry.insecure (Default Value): false
+router.serviceRegistry.requestTimeout (Default Value): 15s
+router.serviceRegistry.skipJoinConnectivityTest (Default Value): false
+router.serviceRegistry.topologyServiceTokenExpirySecs (Default Value): 7200
+router.serviceRegistry.topologyUrl (Applicative Resolution): http://localhost:8020/topology
+router.serviceRegistry.useTopologyService (Default Value): false
+router.supportBundle.aggregationTimeout (Default Value): 1h0m0s
+router.topology.external.allowH2c (Default Value): true
+router.topology.external.healthRequestTimeoutSecs (Default Value): 5
+router.topology.external.protocolFinderCacheSecs (Default Value): 600
+router.topology.external.refresh.interval (Default Value): 3s
+router.topology.external.refresh.maxStaleHeartbeat (Default Value): 30s
+router.topology.external.skipIpCheck (Default Value): false
+router.topology.local.enableNodeStatusBroadcast (Default Value): true
+router.topology.local.healthCheck.healthyThreshold (Default Value): 2
+router.topology.local.healthCheck.interval (Default Value): 5s
+router.topology.local.healthCheck.requestTimeout (Default Value): 5s
+router.topology.local.healthCheck.unhealthyThreshold (Default Value): 2
+router.topology.local.ignorePersistedServices (Default Value): false
+router.topology.local.requiredServiceTypes (Environment Variable: JF_ROUTER_TOPOLOGY_LOCAL_REQUIREDSERVICETYPES): jfrt,jfac,jfmd,jffe,jfob,jfevt,jftpl
+shared.database (File): <nil>
+shared.jfrogUrl (Default Value): 
+shared.logging.consoleLog.format (Default Value): shared.logging.consoleLog.format
+shared.logging.enableJsonConsoleLogAppenders (Default Value): false
+shared.multiTenant.cellId (Default Value): 
+shared.multiTenant.enabled (Default Value): false
+shared.multiTenant.keyPrefix (Default Value): 
+shared.multiTenant.tenantRegistryClient.caCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.cacheExpirationSecs (Default Value): 21600
+shared.multiTenant.tenantRegistryClient.clientCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.clientCertKey (Default Value): *****
+shared.multiTenant.tenantRegistryClient.dialTimeoutSecs (Default Value): 10
+shared.multiTenant.tenantRegistryClient.endpoints (Default Value): []
+shared.multiTenant.tenantRegistryClient.requestTimeoutSecs (Default Value): 30
+shared.newrelic.appName (Default Value): 
+shared.newrelic.distributedTracerEnabled (Default Value): true
+shared.newrelic.enableDebugLog (Default Value): false
+shared.newrelic.enabled (Default Value): false
+shared.newrelic.licenseKey (Default Value): *****
+shared.node (File): <nil>
+shared.node.availabilityZoneId (Default Value): 
+shared.node.id (Environment Variable: JF_SHARED_NODE_ID): df51ad00acb0
+shared.node.ip (Environment Variable: JF_SHARED_NODE_IP): 172.17.0.2
+shared.node.name (Environment Variable: JF_SHARED_NODE_NAME): df51ad00acb0
+shared.node.port (Default Value): 0
+shared.node.tlsEnabled (Default Value): false
+shared.restrictedmode.enabled (Environment Variable: JF_SHARED_RESTRICTEDMODE_ENABLED): true
+shared.security (File): <nil>
+shared.security.bootstrapKeysReadTimeoutSecs (Default Value): 300
+shared.security.joinKeyFile (Default Value): etc/security/join.key
+shared.security.masterKeyExternal (Default Value): false
+shared.security.masterKeyFile (Default Value): etc/security/master.key
+system.yaml (Environment Variable: JF_SYSTEM_YAML): /opt/jfrog/artifactory/var/etc/system.yaml
+topology.grpcPort (Default Value): 8021
+topology.port (Default Value): 8020
+JF_METADATA_ACCESSCLIENT_URL: http://localhost:8081/access
+metadata started. PID: 4387
+2025-03-12T00:16:54.380Z [35;1m[jfmd][0m [DEBUG] [                ] [file_resolver.go:71           ] [main                ] - Resolved system configuration file path: /opt/jfrog/artifactory/var/etc/system.yaml
+2025-03-12T00:16:54.380Z [35;1m[jfmd][0m [TRACE] [                ] [aws_secret_resolver.go:76     ] [main                ] - Config key not set for aws secret (metadata.database.secretsManagerAlias)
+2025-03-12T00:16:54.380Z [35;1m[jfmd][0m [DEBUG] [                ] [load_config.go:192            ] [main                ] - Adding optional resolver failed: <nil>
+Starting event...
+PID exists (4760), but event not running. Proceed to start it up.
+event started. PID: 4770
+2025-03-12T00:16:54.507Z [36;1m[jfevt][0m [34m[INFO ][0m [68c55354b09247c9] [bootstrap.go:40               ] [main                ] - JFrog Event (jfevt) service initialization started. Version: 7.155.0 (revision: 18a98fd272, build date: 2024-12-23T00:29:19Z) PID: 4770 Home: /opt/jfrog/artifactory
+2025-03-12T00:16:54.507Z [36;1m[jfevt][0m [DEBUG] [                ] [file_resolver.go:71           ] [main                ] - Resolved system configuration file path: /opt/jfrog/artifactory/var/etc/system.yaml
+2025-03-12T00:16:54.510Z [36;1m[jfevt][0m [34m[INFO ][0m [68c55354b09247c9] [bootstrap.go:56               ] [main                ] [                ] - Effective configuration:
+access (File): <nil>
+access.useexternaltopology (Environment Variable: JF_ACCESS_USEEXTERNALTOPOLOGY): true
+artifactory.pid (Environment Variable: JF_ARTIFACTORY_PID): /opt/jfrog/artifactory/var/work/run/artifactory.pid
+artifactory.user (Environment Variable: JF_ARTIFACTORY_USER): artifactory
+configVersion (File): 1
+event.accessClient.joinTimeout (Default Value): 5m
+event.accessClient.pingTimeout (Default Value): 5m
+event.artifactoryClient.request.timeout (Default Value): 5s
+event.baseUrlCache.interval (Default Value): 5m
+event.customWebhooks.enabled (Default Value): true
+event.customWebhooks.maxIdleConnections (Default Value): 100
+event.customWebhooks.maxIdleConnectionsPerHost (Default Value): 100
+event.customWebhooks.retryCount (Default Value): 5
+event.customWebhooks.retryWaitMillis (Default Value): 10000
+event.customWebhooks.sizeLimits.headersMaxCount (Default Value): 50
+event.customWebhooks.sizeLimits.headersMaxSizeBytes (Default Value): 5120
+event.customWebhooks.sizeLimits.payloadMaxSizeBytes (Default Value): 51200
+event.customWebhooks.sizeLimits.secretsMaxCount (Default Value): 50
+event.customWebhooks.sizeLimits.secretsMaxSizeBytes (Default Value): 5120
+event.customWebhooks.timeoutMillis (Default Value): 30000
+event.customWebhooks.tlsInsecure (Default Value): false
+event.domainCache.interval (Default Value): 5m
+event.grpcPort (Default Value): 8062
+event.logging.application.caller (Default Value): false
+event.logging.application.console (Default Value): true
+event.logging.application.filePath (Default Value): event-service.log
+event.logging.application.format (Default Value): jftext
+event.logging.application.level (Default Value): info
+event.logging.application.rotation.compress (Default Value): true
+event.logging.application.rotation.keepLastDecompressed (Default Value): 1
+event.logging.application.rotation.maxAgeDays (Default Value): 365
+event.logging.application.rotation.maxFiles (Default Value): 10
+event.logging.application.rotation.maxSizeMb (Default Value): 25
+event.logging.consoleLog.format (Default Value): jftext
+event.logging.metrics.console (Default Value): false
+event.logging.metrics.filePath (Default Value): event-metrics.log
+event.logging.metrics.rotation.compress (Default Value): true
+event.logging.metrics.rotation.keepLastDecompressed (Default Value): 1
+event.logging.metrics.rotation.maxAgeDays (Default Value): 365
+event.logging.metrics.rotation.maxFiles (Default Value): 10
+event.logging.metrics.rotation.maxSizeMb (Default Value): 25
+event.logging.outgoingRequest.console (Default Value): false
+event.logging.outgoingRequest.filePath (Default Value): event-webhook-request-out.log
+event.logging.outgoingRequest.rotation.compress (Default Value): true
+event.logging.outgoingRequest.rotation.keepLastDecompressed (Default Value): 1
+event.logging.outgoingRequest.rotation.maxAgeDays (Default Value): 365
+event.logging.outgoingRequest.rotation.maxFiles (Default Value): 10
+event.logging.outgoingRequest.rotation.maxSizeMb (Default Value): 25
+event.logging.request.console (Default Value): false
+event.logging.request.filePath (Default Value): event-request.log
+event.logging.request.rotation.compress (Default Value): true
+event.logging.request.rotation.keepLastDecompressed (Default Value): 1
+event.logging.request.rotation.maxAgeDays (Default Value): 365
+event.logging.request.rotation.maxFiles (Default Value): 10
+event.logging.request.rotation.maxSizeMb (Default Value): 25
+event.logging.troubleshooting.console (Default Value): false
+event.logging.troubleshooting.filePath (Default Value): event-troubleshooting.log
+event.logging.troubleshooting.rotation.compress (Default Value): true
+event.logging.troubleshooting.rotation.keepLastDecompressed (Default Value): 1
+event.logging.troubleshooting.rotation.maxAgeDays (Default Value): 365
+event.logging.troubleshooting.rotation.maxFiles (Default Value): 10
+event.logging.troubleshooting.rotation.maxSizeMb (Default Value): 25
+event.metrics.enabled (Default Value): false
+event.metrics.exclude (Default Value): []
+event.metrics.interval (Default Value): 10s
+event.metrics.logPeriodically (Default Value): true
+event.metrics.tokenVerification.accessUrl (Default Value): 
+event.metrics.tokenVerification.retryBackoffInitialIntervalMillis (Default Value): 500
+event.metrics.tokenVerification.retryBackoffMaxElapsedTimeMillis (Default Value): 0
+event.metrics.tokenVerification.retryBackoffMaxIntervalMillis (Default Value): 3600000
+event.metrics.tokenVerification.revocableExpiryThresholdSeconds (Default Value): -1
+event.metrics.triggers.enabled (Default Value): true
+event.metrics.triggers.intervalMillis (Default Value): 20000
+event.metrics.triggers.limit (Default Value): 1000000
+event.port (Default Value): 8061
+event.profiling.enabled (Default Value): false
+event.proxyCache.interval (Default Value): 5m
+event.rateLimit.burstSize (Default Value): 10000
+event.rateLimit.frequency (Default Value): 1000
+event.rateLimit.maxConcurrentHandlers (Default Value): 50000
+event.security.blacklist.enabled (Default Value): true
+event.security.blacklist.timeoutMillis (Default Value): 5000
+event.shutdownWaitForRouterTimeoutSecs (Default Value): 10
+event.supportBundle.aggregationTimeout (Default Value): 1h
+event.tokenCache.timeout (Default Value): 1m
+event.troubleshooting.enabled (Default Value): false
+event.troubleshooting.keepAliveIntervalMillis (Default Value): 10000
+event.troubleshooting.redis.addresses (Default Value): []
+event.troubleshooting.redis.blockTimeoutMillis (Default Value): 0
+event.troubleshooting.redis.cleanupIntervalMillis (Default Value): 30000
+event.troubleshooting.redis.dialTimeoutMillis (Default Value): 0
+event.troubleshooting.redis.password (Default Value): *****
+event.troubleshooting.redis.readTimeoutMillis (Default Value): 0
+event.troubleshooting.redis.serverType (Default Value): single
+event.troubleshooting.redis.streamBatchSize (Default Value): 1000
+event.troubleshooting.redis.streamMaxLen (Default Value): 10000
+event.troubleshooting.redis.tlsEnabled (Default Value): false
+event.troubleshooting.redis.tlsInsecure (Default Value): false
+event.troubleshooting.redis.username (Default Value): 
+event.troubleshooting.redis.writeTimeoutMillis (Default Value): 0
+event.troubleshooting.storageType (Default Value): log
+event.troubleshooting.streamIdSuffix (Default Value): troubleshooting
+event.webhooks.maxIdleConnections (Default Value): 100
+event.webhooks.maxIdleConnectionsPerHost (Default Value): 100
+event.webhooks.retryCount (Default Value): 5
+event.webhooks.retryWait (Default Value): 10s
+event.webhooks.sizeLimits.headersMaxCount (Default Value): 50
+event.webhooks.sizeLimits.headersMaxSizeBytes (Default Value): 5120
+event.webhooks.timeout (Default Value): 30s
+event.webhooks.tlsInsecure (Default Value): false
+event.webhooks.urlStrictPolicy (Default Value): true
+legacy.artifactory.pid (Environment Variable: JF_LEGACY_ARTIFACTORY_PID): /opt/jfrog/artifactory/app/run/artifactory.pid
+metadata.accessclient.url (Environment Variable: JF_METADATA_ACCESSCLIENT_URL): http://localhost:8081/access
+product.data.internal (Environment Variable: JF_PRODUCT_DATA_INTERNAL): /var/opt/jfrog/artifactory
+product.home (Environment Variable: JF_PRODUCT_HOME): /opt/jfrog/artifactory
+router.entrypoints.internalPort (Default Value): 8046
+router.topology.local.requiredservicetypes (Environment Variable: JF_ROUTER_TOPOLOGY_LOCAL_REQUIREDSERVICETYPES): jfrt,jfac,jfmd,jffe,jfob,jfevt,jftpl
+shared.database (File): <nil>
+shared.multiTenant.cellId (Default Value): 
+shared.multiTenant.enabled (Default Value): false
+shared.multiTenant.tenantRegistryClient.caCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.cacheExpirationSecs (Default Value): 21600
+shared.multiTenant.tenantRegistryClient.clientCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.clientCertKey (Default Value): *****
+shared.multiTenant.tenantRegistryClient.dialTimeoutSecs (Default Value): 10
+shared.multiTenant.tenantRegistryClient.endpoints (Default Value): 
+shared.multiTenant.tenantRegistryClient.pingCacheExpirationSecs (Default Value): 15
+shared.multiTenant.tenantRegistryClient.pingTimeoutSecs (Default Value): 1
+shared.multiTenant.tenantRegistryClient.requestTimeoutSecs (Default Value): 30
+shared.newrelic.appName (Default Value): 
+shared.newrelic.distributedTracerEnabled (Default Value): true
+shared.newrelic.enableDebugLog (Default Value): false
+shared.newrelic.enabled (Default Value): false
+shared.newrelic.licenseKey (Default Value): *****
+shared.node (File): <nil>
+shared.node.id (Environment Variable: JF_SHARED_NODE_ID): df51ad00acb0
+shared.node.ip (Environment Variable: JF_SHARED_NODE_IP): 172.17.0.2
+shared.node.name (Environment Variable: JF_SHARED_NODE_NAME): df51ad00acb0
+shared.openTelemetry.distributedTracerEnabled (Default Value): true
+shared.openTelemetry.enabled (Default Value): false
+shared.openTelemetry.endpoint (Default Value): 
+shared.openTelemetry.exportPace (Default Value): 0s
+shared.openTelemetry.labels (Default Value): 
+shared.openTelemetry.metricsEnabled (Default Value): false
+shared.openTelemetry.token (Default Value): *****
+shared.openTelemetry.useGrpcExporters (Default Value): true
+shared.restrictedmode.enabled (Environment Variable: JF_SHARED_RESTRICTEDMODE_ENABLED): true
+shared.security (File): <nil>
+shared.security.ExposeApplicationHeaders (Default Value): false
+shared.security.bootstrapKeysReadTimeoutSecs (Default Value): 120
+shared.security.joinKeyFile (Default Value): etc/security/join.key
+shared.security.masterKeyFile (Default Value): etc/security/master.key
+system.yaml (Environment Variable: JF_SYSTEM_YAML): /opt/jfrog/artifactory/var/etc/system.yaml [startup]
+Starting frontend...
+PID exists (5157), but frontend not running. Proceed to start it up.
+2025-03-12T00:16:54.577Z [shell] [38;5;69m[INFO ][0m [] [installerCommon.sh:1659       ] [main] - Checking open files and processes limits
+2025-03-12T00:16:54.590Z [shell] [38;5;69m[INFO ][0m [] [installerCommon.sh:1662       ] [main] - Current max open files is 1048576
+2025-03-12T00:16:54.602Z [shell] [38;5;69m[INFO ][0m [] [installerCommon.sh:1673       ] [main] - Current max open processes is unlimited
+yaml validation succeeded
+2025-03-12T00:16:54.634Z [shell] [38;5;69m[INFO ][0m [] [installerCommon.sh:3041       ] [main] - System.yaml validation succeeded
+frontend started. PID: 5190
+
+Database connection check failed Could not determine database type
+2025-03-12T00:16:54.682Z [shell] [38;5;69m[INFO ][0m [] [installerCommon.sh:1742       ] [main] - Testing directory /opt/jfrog/artifactory/var has read/write permissions for user id 1030
+Starting observability...
+2025-03-12T00:16:54.696Z [shell] [38;5;69m[INFO ][0m [] [installerCommon.sh:1757       ] [main] - Permissions for /opt/jfrog/artifactory/var are good
+observability not running. Proceed to start it up.
+2025-03-12T00:16:54.757Z [shell] [38;5;69m[INFO ][0m [] [installerCommon.sh:3553       ] [main] - Found JF_SHARED_NODE_ID set as environment variable with value : df51ad00acb0
+2025-03-12T00:16:54.787Z [shell] [38;5;69m[INFO ][0m [] [installerCommon.sh:3553       ] [main] - Found JF_SHARED_NODE_IP set as environment variable with value : 172.17.0.2
+observability started. PID: 5542
+2025-03-12T00:16:54.816Z [shell] [38;5;69m[INFO ][0m [] [installerCommon.sh:3553       ] [main] - Found JF_SHARED_NODE_NAME set as environment variable with value : df51ad00acb0
+[INFO ] JFrog Observability (jfob) service initialization started. Version: 1.31.11 (revision: a761e9718c, build date: 2024-12-23T14:07:19Z) PID: 5542 Home: /opt/jfrog/artifactory
+[DEBUG] Resolved system configuration file path: /opt/jfrog/artifactory/var/etc/system.yaml
+2025-03-12T00:16:54.963Z [shell] [38;5;69m[INFO ][0m [] [nativeCommon.sh:29            ] [main] - Removing old custom drivers : /opt/jfrog/artifactory/var/work/access/tomcat/lib/jf_README.md
+2025-03-12T00:16:54.979Z [shell] [38;5;69m[INFO ][0m [] [nativeCommon.sh:34            ] [main] - Copying /opt/jfrog/artifactory/var/bootstrap/artifactory/tomcat/lib/README.md to /opt/jfrog/artifactory/var/work/access/tomcat/lib/jf_README.md
+2025-03-12T00:16:55.073Z [shell] [38;5;69m[INFO ][0m [] [nativeCommon.sh:90            ] [main] - Saving /opt/jfrog/artifactory/app/access/tomcat/conf/server.xml as /opt/jfrog/artifactory/app/access/tomcat/conf/server.xml.orig
+2025-03-12T00:16:55.093Z [shell] [38;5;69m[INFO ][0m [] [nativeCommon.sh:94            ] [main] - Using Tomcat template to generate : /opt/jfrog/artifactory/app/access/tomcat/conf/server.xml
+2025-03-12T00:16:55.146Z [shell] [38;5;69m[INFO ][0m [] [systemYamlHelper.sh:981       ] [main] - Resolved ${access.http.port||8040} to default value : 8040
+2025-03-12T00:16:55.148Z [shell] [38;5;69m[INFO ][0m [] [topology.sh:155               ] [main] - Final command:
+Starting topology...
+2025-03-12T00:16:55.183Z [shell] [38;5;69m[INFO ][0m [] [topology.sh:43                ] [main] - Removing old custom drivers : /opt/jfrog/artifactory/app/topology/tomcat/lib/jf_*
+2025-03-12T00:16:55.193Z [shell] [38;5;69m[INFO ][0m [] [systemYamlHelper.sh:981       ] [main] - Resolved ${access.tomcat.connector.sendReasonPhrase||false} to default value : false
+2025-03-12T00:16:55.202Z [shell] [38;5;69m[INFO ][0m [] [topology.sh:48                ] [main] - Copying /opt/jfrog/artifactory/var/bootstrap/artifactory/tomcat/lib/README.md to /opt/jfrog/artifactory/app/topology/tomcat/lib/jf_README.md
+2025-03-12T00:16:55.240Z [shell] [38;5;69m[INFO ][0m [] [systemYamlHelper.sh:981       ] [main] - Resolved ${access.tomcat.connector.maxThreads||50} to default value : 50
+topology started. PID: 6656
+2025-03-12T00:16:55.337Z [shell] [38;5;69m[INFO ][0m [] [systemYamlHelper.sh:621       ] [main] - Resolved JF_PRODUCT_HOME (/opt/jfrog/artifactory) from environment variable
+2025-03-12T00:16:55.410Z [shell] [38;5;69m[INFO ][0m [] [installerCommon.sh:1292       ] [main] - Redirection is set to false. Skipping catalina log redirection
+2025-03-12T00:16:55.420Z [shell] [38;5;69m[INFO ][0m [] [systemYamlHelper.sh:981       ] [main] - Resolved ${access.tomcat.workDir||/opt/jfrog/artifactory/var/work/access/tomcat} to default value : /opt/jfrog/artifactory/var/work/access/tomcat
+2025-03-12T00:16:55.450Z [33m[jffe ][39m [34m[INFO ][39m [] [frontend-service.log] [main                ] - frontend (jffe) service initialization started. Version: 1.113.3 Revision: 10000003 PID: 5190 Home: /opt/jfrog/artifactory
+2025-03-12T00:16:55.452Z [33m[jffe ][39m [34m[INFO ][39m [] [frontend-service.log] [main                ] - Starting FE server in ST mode
+2025-03-12T00:16:55.453Z [33m[jffe ][39m [34m[INFO ][39m [] [frontend-service.log] [main                ] - attempting pinging artifactory for 300 retires and 1.0s interval for total of 5 minutes
+
+========================
+JF Environment variables
+========================
+
+JF_ACCESS_PID                       : /opt/jfrog/artifactory/var/work/run/access.pid
+JF_ARTIFACTORY_USER                 : artifactory
+JF_SHARED_RESTRICTEDMODE_ENABLED    : true
+JF_SHARED_NODE_ID                   : df51ad00acb0
+JF_SHARED_NODE_IP                   : 172.17.0.2
+JF_ARTIFACTORY_PID                  : /opt/jfrog/artifactory/var/work/run/artifactory.pid
+JF_ACCESS_USEEXTERNALTOPOLOGY       : true
+JF_PRODUCT_DATA_INTERNAL            : /var/opt/jfrog/artifactory
+JF_LEGACY_ARTIFACTORY_PID           : /opt/jfrog/artifactory/app/run/artifactory.pid
+JF_SYSTEM_YAML                      : /opt/jfrog/artifactory/var/etc/system.yaml
+JF_LEGACY_ACCESS_PID                : /opt/jfrog/artifactory/app/run/access.pid
+JF_PRODUCT_HOME                     : /opt/jfrog/artifactory
+JF_ROUTER_TOPOLOGY_LOCAL_REQUIREDSERVICETYPES : jfrt,jfac,jfmd,jffe,jfob,jfevt,jftpl
+JF_SHARED_NODE_NAME                 : df51ad00acb0
+2025-03-12T00:16:55.845Z [shell] [38;5;69m[INFO ][0m [] [installerCommon.sh:1292       ] [main] - Redirection is set to false. Skipping catalina log redirection
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2025-03-12T00:16:58.648Z [1;37m[jftpl][0;39m [34m[INFO ][0;39m [                ] [plicationContextInitializer:78] [main                ] - topology (jftpl) service initialization started. Version: 1.76.2 Revision: 17602900 PID: 6656 Home: /opt/jfrog/artifactory
+2025-03-12T00:16:58.653Z [1;37m[jftpl][0;39m [34m[INFO ][0;39m [                ] [plicationContextInitializer:37] [main                ] - Topology service deployment type: OnPrem
+2025-03-12T00:16:58.668Z [1;37m[jftpl][0;39m [34m[INFO ][0;39m [                ] [plicationContextInitializer:48] [main                ] - shared.logging.enableJsonConsoleLogAppenders (Default Value): false
+shared.multiTenant.enabled (Default Value): false
+shared.node.id (Environment Variable: JF_SHARED_NODE_ID): df51ad00acb0
+shared.runtime.isSaas (Default Value): false
+shared.security.bootstrapKeysReadTimeoutSecs (Default Value): 120
+topology.accessClient.connectionTimeoutSecs (Default Value): 5
+topology.accessClient.insecure (Default Value): false
+topology.accessClient.maxJoinRetries (Default Value): 90
+topology.accessClient.providerCacheTimeoutSecs (Default Value): 10800
+topology.accessClient.serverBypassMaxJoinRetries (Default Value): 5
+topology.accessClient.serverBypassUrl (Default Value): 
+topology.accessClient.socketTimeoutSecs (Default Value): 45
+topology.accessClient.versionCacheExpirationSecs (Default Value): 120
+topology.accessClient.waitJoinMillis (Default Value): 1000
+topology.cleanup.staleNodeInitialDelaySecs (Default Value): 3600
+topology.cleanup.staleNodeIntervalSecs (Default Value): 3600
+topology.cleanup.staleNodeThresholdSecs (Default Value): 604800
+topology.database.driver (Default Value): org.apache.derby.jdbc.EmbeddedDriver
+topology.database.maxOpenConnections (Default Value): 100
+topology.database.maxWait (Default Value): 30000
+topology.database.metrics.enabled (Default Value): false
+topology.database.migrationRetry.backoff (Default Value): 1.5
+topology.database.migrationRetry.initialDelayMillis (Default Value): 2000
+topology.database.migrationRetry.maxIntervalSecs (Default Value): 900
+topology.database.password (Default Value): *****
+topology.database.timeoutSecs (Default Value): 600
+topology.database.type (Default Value): derby
+topology.database.url (Default Value): jdbc:derby:{db.home};create=true
+topology.database.username (Default Value): 
+topology.grpc.maxInboundMetadataSize (Default Value): 8192
+topology.grpc.port (Default Value): 8021
+topology.healthCheck.initialDelaySecs (Default Value): 15
+topology.healthCheck.intervalSecs (Default Value): 10
+topology.healthCheck.tenantCacheExpirationSecs (Default Value): 30
+topology.kubernetesFetcher.cacheTimeoutSecs (Default Value): 120
+topology.kubernetesFetcher.clientTimeoutSecs (Default Value): 10
+topology.kubernetesFetcher.enabled (Default Value): false
+topology.logging.requestFilter.enabled (Default Value): false
+topology.logging.requestFilter.grpc.ignoreDurationThresholdMillis (Default Value): 100
+topology.logging.requestFilter.grpc.ignorePaths (Default Value): 
+topology.logging.requestFilter.grpc.ignoreStatusCodes (Default Value): 
+topology.logging.requestFilter.http.ignoreDurationThresholdMillis (Default Value): 100
+topology.logging.requestFilter.http.ignorePaths (Default Value): 
+topology.logging.requestFilter.http.ignoreStatusCodes (Default Value): 
+topology.metrics.enabled (Default Value): false
+topology.metrics.exclude (Default Value): 
+topology.metrics.intervalSecs (Default Value): 60
+topology.metrics.logPeriodically (Default Value): true
+topology.metrics.numberServicesCacheTimeoutSecs (Default Value): 600
+topology.multiTenant.parallelMigrationsCount (Default Value): 0
+topology.newrelic.enabled (Default Value): false
+topology.newrelic.environment (Default Value): devel
+topology.newrelic.licenseKey (Default Value): *****
+topology.newrelic.logLevel (Default Value): off
+topology.newrelic.namespace (Default Value): devel
+topology.port (Default Value): 8020
+topology.routerHost (Default Value): localhost
+topology.security.exposeApplicationHeaders (Default Value): false
+topology.tomcat.config (Default Value): 
+2025-03-12T00:16:58.667Z [1;32m[jfrt ][0;39m [34m[INFO ][0;39m [c649b7f0071bbf75] [o.a.c.h.ArtifactoryHome:252   ] [Catalina-utility-1  ] - Creating Artifactory home at 'null'
+2025-03-12T00:16:58.816Z [1;32m[jfrt ][0;39m [34m[INFO ][0;39m [c649b7f0071bbf75] [o.a.c.h.HaNodeProperties:65   ] [Catalina-utility-1  ] - Artifactory is running in non-clustered mode.
+2025-03-12T00:16:58.846Z [1;32m[jfrt ][0;39m [34m[INFO ][0;39m [c649b7f0071bbf75] [tifactoryHomeConfigListener:85] [Catalina-utility-1  ] - Resolved Home: '/opt/jfrog/artifactory
+2025-03-12T00:16:59.055Z [1;32m[jfrt ][0;39m [34m[INFO ][0;39m [c649b7f0071bbf75] [o.a.c.h.ArtifactoryHome:1022  ] [Catalina-utility-1  ] - Setting 'npmNew,condaNew,alpineNew,cocoapodsNew,swiftNew,vagrantNew,vcsNew,permissions-cache-legacy' to system property 'spring.profiles.active'
+2025-03-12T00:16:59.238Z [1;32m[jfrt ][0;39m [34m[INFO ][0;39m [c649b7f0071bbf75] [o.a.c.h.ArtifactoryHome:1022  ] [Catalina-utility-1  ] - Setting 'npmNew,condaNew,alpineNew,cocoapodsNew,swiftNew,vagrantNew,vcsNew,permissions-cache-legacy' to system property 'spring.profiles.active'
+2025-03-12T00:16:59.247Z [36m[jfrou][0m [34m[INFO ][0m [50b4ca0620849e5c] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 5 seconds with 5m0s timeout
+2025-03-12T00:16:59.252Z [1;32m[jfrt ][0;39m [34m[INFO ][0;39m [                ] [o.j.c.w.FileWatcher:146       ] [file-watcher-poller ] - Starting watch of folder configurations
+2025-03-12T00:16:59.299Z [1;32m[jfrt ][0;39m [31m[WARN ][0;39m [c649b7f0071bbf75] [c.z.h.u.DriverDataSource:68   ] [Catalina-utility-1  ] - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2025-03-12T00:16:59.389Z [34;1m[jfmd ][0m [34m[INFO ][0m [                ] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 5 seconds with 2m0s timeout [init]
+2025-03-12T00:16:59.514Z [36;1m[jfevt][0m [34m[INFO ][0m [68c55354b09247c9] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 5 seconds with 2m0s timeout [startup]
+2025-03-12T00:16:59.836Z [1;32m[jfrt ][0;39m [34m[INFO ][0;39m [c649b7f0071bbf75] [.BasicConfigurationManager:197] [Catalina-utility-1  ] - Artifactory (jfrt) service initialization started. Version: 7.104.18 Revision: 80418900 PID: 6931 Home: /opt/jfrog/artifactory
+2025-03-12T00:16:59.842Z [[35[jfob ][0m [34m[INFO ][0m [127402291d24b759] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 5 seconds with 2m0s timeout [startup]
+2025-03-12T00:16:59.850Z [1;32m[jfrt ][0;39m [34m[INFO ][0;39m [c649b7f0071bbf75] [d.c.m.ConverterManagerImpl:214] [Catalina-utility-1  ] - Triggering PRE_INIT conversion, from 7.104.18 to 7.104.18
+2025-03-12T00:16:59.851Z [1;32m[jfrt ][0;39m [34m[INFO ][0;39m [c649b7f0071bbf75] [d.c.m.ConverterManagerImpl:217] [Catalina-utility-1  ] - Finished PRE_INIT conversion, current version is: 7.104.18
+2025-03-12T00:16:59.851Z [1;32m[jfrt ][0;39m [34m[INFO ][0;39m [c649b7f0071bbf75] [d.i.DbInitializationManager:48] [Catalina-utility-1  ] - Initializing DB Schema initialization manager
+2025-03-12T00:16:59.852Z [1;32m[jfrt ][0;39m [34m[INFO ][0;39m [c649b7f0071bbf75] [.i.DbInitializationManager:177] [Catalina-utility-1  ] - Database: Apache Derby 10.17.1.0 - (1913217). Driver: Apache Derby Embedded JDBC Driver 10.17.1.0 - (1913217) Pool: derby
+2025-03-12T00:16:59.881Z [1;32m[jfrt ][0;39m [1;31m[ERROR][0;39m [c649b7f0071bbf75] [d.i.DbInitializationManager:55] [Catalina-utility-1  ] - DB Schema initialization manager failed to init.
+java.lang.IllegalStateException: Cannot start the application with a database other than PostgreSQL. For more information, see JFrog documentation
+	at org.artifactory.storage.db.init.DbConnectionUtils.checkDefaultDbProperties(DbConnectionUtils.java:83)
+	at org.artifactory.storage.db.init.DbInitializationManager.initDatabaseSchema(DbInitializationManager.java:69)
+	at org.artifactory.storage.db.init.DbInitializationManager.init(DbInitializationManager.java:50)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initArtifactoryInstallation(BasicConfigurationManager.java:160)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initialize(BasicConfigurationManager.java:135)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.initBasicConfigManager(ArtifactoryHomeConfigListener.java:61)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.contextInitialized(ArtifactoryHomeConfigListener.java:53)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4008)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4436)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:635)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1889)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-03-12T00:16:59.892Z [1;32m[jfrt ][0;39m [1;31m[ERROR][0;39m [c649b7f0071bbf75] [tifactoryHomeConfigListener:55] [Catalina-utility-1  ] - Failed initializing Home. Caught exception: 
+java.lang.IllegalStateException: DB Schema initialization manager failed to init.
+	at org.artifactory.storage.db.init.DbInitializationManager.init(DbInitializationManager.java:56)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initArtifactoryInstallation(BasicConfigurationManager.java:160)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initialize(BasicConfigurationManager.java:135)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.initBasicConfigManager(ArtifactoryHomeConfigListener.java:61)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.contextInitialized(ArtifactoryHomeConfigListener.java:53)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4008)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4436)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:635)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1889)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalStateException: Cannot start the application with a database other than PostgreSQL. For more information, see JFrog documentation
+	at org.artifactory.storage.db.init.DbConnectionUtils.checkDefaultDbProperties(DbConnectionUtils.java:83)
+	at org.artifactory.storage.db.init.DbInitializationManager.initDatabaseSchema(DbInitializationManager.java:69)
+	at org.artifactory.storage.db.init.DbInitializationManager.init(DbInitializationManager.java:50)
+	... 19 common frames omitted
+2025-03-12T00:16:59.895Z [1;32m[jfrt ][0;39m [34m[INFO ][0;39m [c649b7f0071bbf75] [actoryContextConfigListener:88] [Catalina-utility-1  ] - Artifactory context initialization started for context: null
+2025-03-12T00:16:59.896Z [1;32m[jfrt ][0;39m [1;31m[ERROR][0;39m [c649b7f0071bbf75] [actoryContextConfigListener:93] [Catalina-utility-1  ] - Failed initializing Artifactory context: Artifactory home not initialized.
+2025-03-12T00:17:01.060Z [1;33m[jfac ][0;39m [34m[INFO ][0;39m [be664619fbebc7eb] [licationContextInitializer:166] [main                ] - Access (jfac) service initialization started. Version: 7.134.4 Revision: 83404900 PID: 7261 Home: /opt/jfrog/artifactory FIPS Mode: none
+2025-03-12T00:17:01.254Z [1;33m[jfac ][0;39m [34m[INFO ][0;39m [be664619fbebc7eb] [o.j.a.AccessApplication:53    ] [main                ] - Starting AccessApplication v7.134.4 using Java 21.0.5 with PID 7261 (/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-application-7.134.4.jar started by artifactory in /opt/jfrog/artifactory)
+2025-03-12T00:17:01.256Z [1;33m[jfac ][0;39m [34m[INFO ][0;39m [be664619fbebc7eb] [o.j.a.AccessApplication:658   ] [main                ] - The following 1 profile is active: "production"
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2025-03-12T00:17:01.667Z [1;37m[jftpl][0;39m [34m[INFO ][0;39m [                ] [c.j.t.s.l.RequestLogHelper:24 ] [main                ] - HttpRequestConfig: Config[filterPaths=[], filterStatusCodes=[], filterDurationThreshold=100]
+2025-03-12T00:17:01.681Z [1;37m[jftpl][0;39m [34m[INFO ][0;39m [                ] [c.j.t.s.l.RequestLogHelper:25 ] [main                ] - GrpcRequestConfig: Config[filterPaths=[], filterStatusCodes=[], filterDurationThreshold=100]
+2025-03-12T00:17:03.090Z [1;37m[jftpl][0;39m [34m[INFO ][0;39m [                ] [c.j.t.s.g.GrpcServer:44       ] [main                ] - Starting gRPC Server on port 8021
+2025-03-12T00:17:03.289Z [1;37m[jftpl][0;39m [34m[INFO ][0;39m [                ] [c.j.t.s.l.RequestLogHelper:24 ] [main                ] - HttpRequestConfig: Config[filterPaths=[], filterStatusCodes=[], filterDurationThreshold=100]
+2025-03-12T00:17:03.289Z [1;37m[jftpl][0;39m [34m[INFO ][0;39m [                ] [c.j.t.s.l.RequestLogHelper:25 ] [main                ] - GrpcRequestConfig: Config[filterPaths=[], filterStatusCodes=[], filterDurationThreshold=100]
+2025-03-12T00:17:03.486Z [1;37m[jftpl][0;39m [34m[INFO ][0;39m [                ] [c.j.t.s.g.GrpcServer:66       ] [main                ] - gRPC Server started, listening on 8021
+2025-03-12T00:17:03.491Z [1;37m[jftpl][0;39m [34m[INFO ][0;39m [                ] [c.j.t.s.m.MetricsService:47   ] [main                ] - Metrics Framework Service is disabled
+2025-03-12T00:17:04.250Z [36m[jfrou][0m [34m[INFO ][0m [50b4ca0620849e5c] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 10 seconds with 5m0s timeout
+2025-03-12T00:17:04.396Z [34;1m[jfmd ][0m [34m[INFO ][0m [                ] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 10 seconds with 2m0s timeout [init]
+2025-03-12T00:17:04.517Z [36;1m[jfevt][0m [34m[INFO ][0m [68c55354b09247c9] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 10 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:04.821Z [33m[jffe ][39m [34m[INFO ][39m [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 10
+2025-03-12T00:17:04.825Z [33m[jffe ][39m [34m[INFO ][39m [] [frontend-service.log] [main                ] - pinging artifactory attempt number 10 failed with code : ECONNREFUSED
+2025-03-12T00:17:04.846Z [[35[jfob ][0m [34m[INFO ][0m [127402291d24b759] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 10 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:07.699Z [1;33m[jfac ][0;39m [31m[WARN ][0;39m [be664619fbebc7eb] [ebServerApplicationContext:635] [main                ] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-03-12T00:17:07.709Z [1;33m[jfac ][0;39m [1;31m[ERROR][0;39m [be664619fbebc7eb] [PropertiesMigrationListener:99] [main                ] - 
+The use of configuration keys that are no longer supported was found in the environment:
+
+Property source 'Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/'':
+	Key: management.endpoint.health.enabled
+		Line: 30
+		Reason: Replacement key 'management.endpoint.health.access' uses an incompatible target type
+	Key: management.endpoint.info.enabled
+		Line: 33
+		Reason: Replacement key 'management.endpoint.info.access' uses an incompatible target type
+	Key: management.endpoint.metrics.enabled
+		Line: 32
+		Reason: Replacement key 'management.endpoint.metrics.access' uses an incompatible target type
+	Key: management.endpoints.enabled-by-default
+		Line: 20
+		Reason: Replacement key 'management.endpoints.access.default' uses an incompatible target type
+
+
+Please refer to the release notes or reference guide for potential alternatives.
+
+2025-03-12T00:17:07.762Z [1;33m[jfac ][0;39m [1;31m[ERROR][0;39m [be664619fbebc7eb] [o.s.b.SpringApplication:857   ] [main                ] - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.web.servlet.support.SpringBootServletInitializer.run(SpringBootServletInitializer.java:194)
+	at org.springframework.boot.web.servlet.support.SpringBootServletInitializer.createRootApplicationContext(SpringBootServletInitializer.java:174)
+	at org.springframework.boot.web.servlet.support.SpringBootServletInitializer.onStartup(SpringBootServletInitializer.java:102)
+	at org.springframework.web.SpringServletContainerInitializer.onStartup(SpringServletContainerInitializer.java:171)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4426)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:635)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1889)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:530)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:421)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1629)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:303)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:389)
+	at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:336)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:776)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:761)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'jerseyConfig' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-application-7.134.4.jar!/org/jfrog/access/rest/config/JerseyConfig.class]: Failed to instantiate [org.jfrog.access.rest.config.JerseyConfig]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:202)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:97)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:197)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jerseyConfig' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-application-7.134.4.jar!/org/jfrog/access/rest/config/JerseyConfig.class]: Failed to instantiate [org.jfrog.access.rest.config.JerseyConfig]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1631)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 73 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.jfrog.access.rest.config.JerseyConfig]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:145)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	... 87 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationFilter' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-server-rest-7.134.4.jar!/org/jfrog/access/server/rest/filter/AuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'authenticationServiceImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.134.4.jar!/org/jfrog/access/server/service/auth/AuthenticationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userStorageServiceImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.134.4.jar!/org/jfrog/access/server/service/db/UserStorageServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'accessUsersDao' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.134.4.jar!/org/jfrog/access/server/db/dao/AccessUsersDao.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'sqlDaoHelperFactory' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.134.4.jar!/org/jfrog/access/server/db/dao/SqlDaoHelperFactory.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'accessJdbcHelperImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.134.4.jar!/org/jfrog/access/server/db/util/AccessJdbcHelperImpl.class]: Failed to instantiate [org.jfrog.access.server.db.util.AccessJdbcHelperImpl]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:695)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:683)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1418)
+	at org.jfrog.access.rest.config.JerseyConfig.registerAdditionalFilters(JerseyConfig.java:80)
+	at org.jfrog.access.rest.config.JerseyConfig.<init>(JerseyConfig.java:41)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:209)
+	... 89 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationServiceImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.134.4.jar!/org/jfrog/access/server/service/auth/AuthenticationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userStorageServiceImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.134.4.jar!/org/jfrog/access/server/service/db/UserStorageServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'accessUsersDao' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.134.4.jar!/org/jfrog/access/server/db/dao/AccessUsersDao.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'sqlDaoHelperFactory' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.134.4.jar!/org/jfrog/access/server/db/dao/SqlDaoHelperFactory.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'accessJdbcHelperImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.134.4.jar!/org/jfrog/access/server/db/util/AccessJdbcHelperImpl.class]: Failed to instantiate [org.jfrog.access.server.db.util.AccessJdbcHelperImpl]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1631)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 107 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userStorageServiceImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.134.4.jar!/org/jfrog/access/server/service/db/UserStorageServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'accessUsersDao' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.134.4.jar!/org/jfrog/access/server/db/dao/AccessUsersDao.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'sqlDaoHelperFactory' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.134.4.jar!/org/jfrog/access/server/db/dao/SqlDaoHelperFactory.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'accessJdbcHelperImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.134.4.jar!/org/jfrog/access/server/db/util/AccessJdbcHelperImpl.class]: Failed to instantiate [org.jfrog.access.server.db.util.AccessJdbcHelperImpl]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1631)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 121 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accessUsersDao' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.134.4.jar!/org/jfrog/access/server/db/dao/AccessUsersDao.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'sqlDaoHelperFactory' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.134.4.jar!/org/jfrog/access/server/db/dao/SqlDaoHelperFactory.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'accessJdbcHelperImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.134.4.jar!/org/jfrog/access/server/db/util/AccessJdbcHelperImpl.class]: Failed to instantiate [org.jfrog.access.server.db.util.AccessJdbcHelperImpl]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1631)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 135 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlDaoHelperFactory' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.134.4.jar!/org/jfrog/access/server/db/dao/SqlDaoHelperFactory.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'accessJdbcHelperImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.134.4.jar!/org/jfrog/access/server/db/util/AccessJdbcHelperImpl.class]: Failed to instantiate [org.jfrog.access.server.db.util.AccessJdbcHelperImpl]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 149 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessJdbcHelperImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/access/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.134.4.jar!/org/jfrog/access/server/db/util/AccessJdbcHelperImpl.class]: Failed to instantiate [org.jfrog.access.server.db.util.AccessJdbcHelperImpl]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1631)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 162 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.jfrog.access.server.db.util.AccessJdbcHelperImpl]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:145)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	... 176 common frames omitted
+Caused by: org.jfrog.storage.dbtype.DbTypeNotAllowedException: DB Type derby is not allowed: Cannot start the application with a database other than PostgreSQL. For more information, see JFrog documentation.
+	at org.jfrog.storage.util.DbUtils.assertAllowedDbType(DbUtils.java:884)
+	at org.jfrog.storage.util.migration.MigrationUtil.initSchemas(MigrationUtil.java:100)
+	at org.jfrog.access.server.db.util.AccessJdbcHelperImpl.init(AccessJdbcHelperImpl.java:85)
+	at org.jfrog.access.server.db.util.AccessJdbcHelperImpl.<init>(AccessJdbcHelperImpl.java:70)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:209)
+	... 178 common frames omitted
+2025-03-12T00:17:09.249Z [36m[jfrou][0m [34m[INFO ][0m [50b4ca0620849e5c] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 15 seconds with 5m0s timeout
+2025-03-12T00:17:09.395Z [34;1m[jfmd ][0m [34m[INFO ][0m [                ] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 15 seconds with 2m0s timeout [init]
+2025-03-12T00:17:09.516Z [36;1m[jfevt][0m [34m[INFO ][0m [68c55354b09247c9] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 15 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:09.846Z [[35[jfob ][0m [34m[INFO ][0m [127402291d24b759] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 15 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:14.254Z [36m[jfrou][0m [34m[INFO ][0m [50b4ca0620849e5c] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 20 seconds with 5m0s timeout
+2025-03-12T00:17:14.397Z [34;1m[jfmd ][0m [34m[INFO ][0m [                ] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 20 seconds with 2m0s timeout [init]
+2025-03-12T00:17:14.520Z [36;1m[jfevt][0m [34m[INFO ][0m [68c55354b09247c9] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 20 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:14.850Z [[35[jfob ][0m [34m[INFO ][0m [127402291d24b759] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 20 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:14.858Z [33m[jffe ][39m [34m[INFO ][39m [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 20
+2025-03-12T00:17:14.861Z [33m[jffe ][39m [34m[INFO ][39m [] [frontend-service.log] [main                ] - pinging artifactory attempt number 20 failed with code : ECONNREFUSED
+2025-03-12T00:17:18.534Z [1;37m[jftpl][0;39m [31m[WARN ][0;39m [fc30854efb442d76] [c.z.h.u.DriverDataSource:68   ] [topology-scheduler-1] - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2025-03-12T00:17:18.801Z [1;37m[jftpl][0;39m [34m[INFO ][0;39m [fc30854efb442d76] [c.j.t.s.s.HealthCheckRunner:37] [topology-scheduler-1] - Service node has become healthy
+2025-03-12T00:17:19.257Z [36m[jfrou][0m [34m[INFO ][0m [50b4ca0620849e5c] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 25 seconds with 5m0s timeout
+2025-03-12T00:17:19.401Z [34;1m[jfmd ][0m [34m[INFO ][0m [                ] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 25 seconds with 2m0s timeout [init]
+2025-03-12T00:17:19.522Z [36;1m[jfevt][0m [34m[INFO ][0m [68c55354b09247c9] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 25 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:19.853Z [[35[jfob ][0m [34m[INFO ][0m [127402291d24b759] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 25 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:24.259Z [36m[jfrou][0m [34m[INFO ][0m [50b4ca0620849e5c] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 30 seconds with 5m0s timeout
+2025-03-12T00:17:24.405Z [34;1m[jfmd ][0m [34m[INFO ][0m [                ] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 30 seconds with 2m0s timeout [init]
+2025-03-12T00:17:24.526Z [36;1m[jfevt][0m [34m[INFO ][0m [68c55354b09247c9] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 30 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:24.855Z [[35[jfob ][0m [34m[INFO ][0m [127402291d24b759] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 30 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:24.895Z [33m[jffe ][39m [34m[INFO ][39m [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 30
+2025-03-12T00:17:24.897Z [33m[jffe ][39m [34m[INFO ][39m [] [frontend-service.log] [main                ] - pinging artifactory attempt number 30 failed with code : ECONNREFUSED
+2025-03-12T00:17:29.262Z [36m[jfrou][0m [34m[INFO ][0m [50b4ca0620849e5c] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 35 seconds with 5m0s timeout
+2025-03-12T00:17:29.408Z [34;1m[jfmd ][0m [34m[INFO ][0m [                ] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 35 seconds with 2m0s timeout [init]
+2025-03-12T00:17:29.529Z [36;1m[jfevt][0m [34m[INFO ][0m [68c55354b09247c9] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 35 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:29.858Z [[35[jfob ][0m [34m[INFO ][0m [127402291d24b759] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 35 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:34.265Z [36m[jfrou][0m [34m[INFO ][0m [50b4ca0620849e5c] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 40 seconds with 5m0s timeout
+2025-03-12T00:17:34.411Z [34;1m[jfmd ][0m [34m[INFO ][0m [                ] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 40 seconds with 2m0s timeout [init]
+2025-03-12T00:17:34.532Z [36;1m[jfevt][0m [34m[INFO ][0m [68c55354b09247c9] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 40 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:34.862Z [[35[jfob ][0m [34m[INFO ][0m [127402291d24b759] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 40 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:34.929Z [33m[jffe ][39m [34m[INFO ][39m [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 40
+2025-03-12T00:17:34.931Z [33m[jffe ][39m [34m[INFO ][39m [] [frontend-service.log] [main                ] - pinging artifactory attempt number 40 failed with code : ECONNREFUSED
+2025-03-12T00:17:39.267Z [36m[jfrou][0m [34m[INFO ][0m [50b4ca0620849e5c] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 45 seconds with 5m0s timeout
+2025-03-12T00:17:39.412Z [34;1m[jfmd ][0m [34m[INFO ][0m [                ] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 45 seconds with 2m0s timeout [init]
+2025-03-12T00:17:39.534Z [36;1m[jfevt][0m [34m[INFO ][0m [68c55354b09247c9] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 45 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:39.862Z [[35[jfob ][0m [34m[INFO ][0m [127402291d24b759] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 45 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:44.270Z [36m[jfrou][0m [34m[INFO ][0m [50b4ca0620849e5c] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 50 seconds with 5m0s timeout
+2025-03-12T00:17:44.416Z [34;1m[jfmd ][0m [34m[INFO ][0m [                ] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 50 seconds with 2m0s timeout [init]
+2025-03-12T00:17:44.536Z [36;1m[jfevt][0m [34m[INFO ][0m [68c55354b09247c9] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 50 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:44.865Z [[35[jfob ][0m [34m[INFO ][0m [127402291d24b759] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 50 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:44.961Z [33m[jffe ][39m [34m[INFO ][39m [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 50
+2025-03-12T00:17:44.964Z [33m[jffe ][39m [34m[INFO ][39m [] [frontend-service.log] [main                ] - pinging artifactory attempt number 50 failed with code : ECONNREFUSED
+2025-03-12T00:17:49.272Z [36m[jfrou][0m [34m[INFO ][0m [50b4ca0620849e5c] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 55 seconds with 5m0s timeout
+2025-03-12T00:17:49.419Z [34;1m[jfmd ][0m [34m[INFO ][0m [                ] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 55 seconds with 2m0s timeout [init]
+2025-03-12T00:17:49.538Z [36;1m[jfevt][0m [34m[INFO ][0m [68c55354b09247c9] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 55 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:49.868Z [[35[jfob ][0m [34m[INFO ][0m [127402291d24b759] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 55 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:54.275Z [36m[jfrou][0m [34m[INFO ][0m [50b4ca0620849e5c] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 60 seconds with 5m0s timeout
+2025-03-12T00:17:54.423Z [34;1m[jfmd ][0m [34m[INFO ][0m [                ] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 60 seconds with 2m0s timeout [init]
+2025-03-12T00:17:54.541Z [36;1m[jfevt][0m [34m[INFO ][0m [68c55354b09247c9] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 60 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:54.870Z [[35[jfob ][0m [34m[INFO ][0m [127402291d24b759] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 60 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:54.995Z [33m[jffe ][39m [34m[INFO ][39m [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 60
+2025-03-12T00:17:54.997Z [33m[jffe ][39m [34m[INFO ][39m [] [frontend-service.log] [main                ] - pinging artifactory attempt number 60 failed with code : ECONNREFUSED
+2025-03-12T00:17:59.278Z [36m[jfrou][0m [34m[INFO ][0m [50b4ca0620849e5c] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 65 seconds with 5m0s timeout
+2025-03-12T00:17:59.425Z [34;1m[jfmd ][0m [34m[INFO ][0m [                ] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 65 seconds with 2m0s timeout [init]
+2025-03-12T00:17:59.544Z [36;1m[jfevt][0m [34m[INFO ][0m [68c55354b09247c9] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 65 seconds with 2m0s timeout [startup]
+2025-03-12T00:17:59.873Z [[35[jfob ][0m [34m[INFO ][0m [127402291d24b759] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 65 seconds with 2m0s timeout [startup]
+2025-03-12T00:18:04.281Z [36m[jfrou][0m [34m[INFO ][0m [50b4ca0620849e5c] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 70 seconds with 5m0s timeout
+2025-03-12T00:18:04.427Z [34;1m[jfmd ][0m [34m[INFO ][0m [                ] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 70 seconds with 2m0s timeout [init]
+2025-03-12T00:18:04.547Z [36;1m[jfevt][0m [34m[INFO ][0m [68c55354b09247c9] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 70 seconds with 2m0s timeout [startup]
+2025-03-12T00:18:04.876Z [[35[jfob ][0m [34m[INFO ][0m [127402291d24b759] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 70 seconds with 2m0s timeout [startup]
+2025-03-12T00:18:05.028Z [33m[jffe ][39m [34m[INFO ][39m [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 70
+2025-03-12T00:18:05.031Z [33m[jffe ][39m [34m[INFO ][39m [] [frontend-service.log] [main                ] - pinging artifactory attempt number 70 failed with code : ECONNREFUSED
+2025-03-12T00:18:09.282Z [36m[jfrou][0m [34m[INFO ][0m [50b4ca0620849e5c] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 75 seconds with 5m0s timeout
+2025-03-12T00:18:09.427Z [34;1m[jfmd ][0m [34m[INFO ][0m [                ] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 75 seconds with 2m0s timeout [init]
+2025-03-12T00:18:09.547Z [36;1m[jfevt][0m [34m[INFO ][0m [68c55354b09247c9] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 75 seconds with 2m0s timeout [startup]
+2025-03-12T00:18:09.877Z [[35[jfob ][0m [34m[INFO ][0m [127402291d24b759] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 75 seconds with 2m0s timeout [startup]
+2025-03-12T00:18:14.286Z [36m[jfrou][0m [34m[INFO ][0m [50b4ca0620849e5c] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 80 seconds with 5m0s timeout
+2025-03-12T00:18:14.430Z [34;1m[jfmd ][0m [34m[INFO ][0m [                ] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 80 seconds with 2m0s timeout [init]
+2025-03-12T00:18:14.550Z [36;1m[jfevt][0m [34m[INFO ][0m [68c55354b09247c9] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 80 seconds with 2m0s timeout [startup]
+2025-03-12T00:18:14.880Z [[35[jfob ][0m [34m[INFO ][0m [127402291d24b759] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 80 seconds with 2m0s timeout [startup]
+2025-03-12T00:18:15.059Z [33m[jffe ][39m [34m[INFO ][39m [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 80
+2025-03-12T00:18:15.061Z [33m[jffe ][39m [34m[INFO ][39m [] [frontend-service.log] [main                ] - pinging artifactory attempt number 80 failed with code : ECONNREFUSED
+2025-03-12T00:18:19.288Z [36m[jfrou][0m [34m[INFO ][0m [50b4ca0620849e5c] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 85 seconds with 5m0s timeout
+2025-03-12T00:18:19.433Z [34;1m[jfmd ][0m [34m[INFO ][0m [                ] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 85 seconds with 2m0s timeout [init]
+2025-03-12T00:18:19.553Z [36;1m[jfevt][0m [34m[INFO ][0m [68c55354b09247c9] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 85 seconds with 2m0s timeout [startup]
+2025-03-12T00:18:19.883Z [[35[jfob ][0m [34m[INFO ][0m [127402291d24b759] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 85 seconds with 2m0s timeout [startup]
+2025-03-12T00:18:24.292Z [36m[jfrou][0m [34m[INFO ][0m [50b4ca0620849e5c] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 90 seconds with 5m0s timeout
+2025-03-12T00:18:24.437Z [34;1m[jfmd ][0m [34m[INFO ][0m [                ] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 90 seconds with 2m0s timeout [init]
+2025-03-12T00:18:24.556Z [36;1m[jfevt][0m [34m[INFO ][0m [68c55354b09247c9] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 90 seconds with 2m0s timeout [startup]
+2025-03-12T00:18:24.885Z [[35[jfob ][0m [34m[INFO ][0m [127402291d24b759] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 90 seconds with 2m0s timeout [startup]
+2025-03-12T00:18:25.090Z [33m[jffe ][39m [34m[INFO ][39m [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 90
+2025-03-12T00:18:25.092Z [33m[jffe ][39m [34m[INFO ][39m [] [frontend-service.log] [main                ] - pinging artifactory attempt number 90 failed with code : ECONNREFUSED
+2025-03-12T00:18:29.294Z [36m[jfrou][0m [34m[INFO ][0m [50b4ca0620849e5c] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 95 seconds with 5m0s timeout
+2025-03-12T00:18:29.440Z [34;1m[jfmd ][0m [34m[INFO ][0m [                ] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 95 seconds with 2m0s timeout [init]
+2025-03-12T00:18:29.559Z [36;1m[jfevt][0m [34m[INFO ][0m [68c55354b09247c9] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 95 seconds with 2m0s timeout [startup]
+2025-03-12T00:18:29.888Z [[35[jfob ][0m [34m[INFO ][0m [127402291d24b759] [security_keys.go:172          ] [main                ] - Master key is missing. Pending for 95 seconds with 2m0s timeout [startup]

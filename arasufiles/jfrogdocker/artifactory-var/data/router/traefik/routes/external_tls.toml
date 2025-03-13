@@ -1,0 +1,8 @@
+# Reference: https://doc.traefik.io/traefik/reference/dynamic-configuration/file/
+# This template file includes tls configuration values which are dynamically loaded
+
+
+[tls]
+  [tls.options]
+    [tls.options.default]
+      sniStrict = true

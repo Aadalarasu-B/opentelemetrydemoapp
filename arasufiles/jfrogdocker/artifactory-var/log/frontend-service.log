@@ -1,0 +1,128 @@
+2025-03-12T02:09:08.761Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - frontend (jffe) service initialization started. Version: 1.113.3 Revision: 10000003 PID: 6437 Home: /opt/jfrog/artifactory
+2025-03-12T02:09:08.763Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - Starting FE server in ST mode
+2025-03-12T02:09:08.764Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - attempting pinging artifactory for 300 retires and 1.0s interval for total of 5 minutes
+2025-03-12T02:09:18.317Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 10
+2025-03-12T02:09:18.324Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 10 failed with code : ECONNREFUSED
+2025-03-12T02:09:28.385Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 20
+2025-03-12T02:09:28.397Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 20 failed with code : ECONNREFUSED
+2025-03-12T02:09:38.452Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 30
+2025-03-12T02:09:38.458Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 30 failed with code : ECONNREFUSED
+2025-03-12T02:09:48.512Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 40
+2025-03-12T02:09:48.517Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 40 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:09:58.566Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 50
+2025-03-12T02:09:58.569Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 50 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:10:08.609Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 60
+2025-03-12T02:10:08.612Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 60 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:10:18.648Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 70
+2025-03-12T02:10:18.652Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 70 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:10:28.700Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 80
+2025-03-12T02:10:28.706Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 80 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:10:38.798Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 90
+2025-03-12T02:10:38.801Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 90 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:10:48.845Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 100
+2025-03-12T02:10:48.849Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 100 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:10:58.934Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 110
+2025-03-12T02:10:58.937Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 110 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:11:08.983Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 120
+2025-03-12T02:11:08.987Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 120 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:11:19.050Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 130
+2025-03-12T02:11:19.053Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 130 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:11:29.096Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 140
+2025-03-12T02:11:29.103Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 140 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:11:39.143Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 150
+2025-03-12T02:11:39.146Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 150 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:11:49.183Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 160
+2025-03-12T02:11:49.188Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 160 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:11:59.221Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 170
+2025-03-12T02:11:59.225Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 170 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:12:09.260Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 180
+2025-03-12T02:12:09.263Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 180 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:12:19.303Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 190
+2025-03-12T02:12:19.308Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 190 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:12:29.350Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 200
+2025-03-12T02:12:29.355Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 200 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:12:39.391Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 210
+2025-03-12T02:12:39.394Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 210 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:12:49.435Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 220
+2025-03-12T02:12:49.439Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 220 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:12:59.478Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 230
+2025-03-12T02:12:59.483Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 230 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:13:09.523Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 240
+2025-03-12T02:13:09.526Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 240 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:13:19.568Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 250
+2025-03-12T02:13:19.571Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 250 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:13:29.616Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 260
+2025-03-12T02:13:29.620Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 260 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:13:39.655Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 270
+2025-03-12T02:13:39.659Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 270 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:13:49.700Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 280
+2025-03-12T02:13:49.704Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 280 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:13:59.746Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 290
+2025-03-12T02:13:59.749Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 290 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:14:09.786Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 300
+2025-03-12T02:14:09.790Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 300 failed with code : ERR_BAD_REQUEST
+2025-03-12T02:14:10.790Z [jffe ] [[31M[1M[ERROR][22M[39M] [] [frontend-service.log] [main                ] - Error starting application - AxiosError: Failed pinging artifactory for 300Request failed with status code 404
+2025-03-12T02:29:52.006Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - frontend (jffe) service initialization started. Version: 1.113.3 Revision: 10000003 PID: 4873 Home: /opt/jfrog/artifactory
+2025-03-12T02:29:52.008Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - Starting FE server in ST mode
+2025-03-12T02:29:52.009Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - attempting pinging artifactory for 300 retires and 1.0s interval for total of 5 minutes
+2025-03-12T02:30:01.383Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 10
+2025-03-12T02:30:01.388Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 10 failed with code : ECONNREFUSED
+2025-03-12T02:30:11.430Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 20
+2025-03-12T02:30:11.433Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 20 failed with code : ECONNREFUSED
+2025-03-12T02:30:21.475Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 30
+2025-03-12T02:30:21.477Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 30 failed with code : ECONNREFUSED
+2025-03-12T02:30:31.511Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 40
+2025-03-12T02:30:31.514Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 40 failed with code : ECONNREFUSED
+2025-03-12T02:30:41.543Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 50
+2025-03-12T02:30:41.546Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 50 failed with code : ECONNREFUSED
+2025-03-12T02:30:51.591Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 60
+2025-03-12T02:30:51.595Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 60 failed with code : ECONNREFUSED
+2025-03-12T02:31:01.643Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 70
+2025-03-12T02:31:01.655Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 70 failed with code : ECONNREFUSED
+2025-03-12T08:14:04.116Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 80
+2025-03-12T08:14:04.120Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 80 failed with code : ECONNREFUSED
+2025-03-12T14:23:24.130Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 90
+2025-03-12T14:23:24.180Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 90 failed with code : ECONNREFUSED
+2025-03-12T14:23:34.307Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 100
+2025-03-12T14:23:34.312Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 100 failed with code : ECONNREFUSED
+2025-03-12T14:23:44.386Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 110
+2025-03-12T14:23:44.390Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 110 failed with code : ECONNREFUSED
+2025-03-12T14:23:55.017Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 120
+2025-03-12T14:23:55.021Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 120 failed with code : ECONNREFUSED
+2025-03-12T14:24:05.108Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 130
+2025-03-12T14:24:05.113Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 130 failed with code : ECONNREFUSED
+2025-03-12T14:24:15.197Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 140
+2025-03-12T14:24:15.202Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 140 failed with code : ECONNREFUSED
+2025-03-12T14:24:25.289Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 150
+2025-03-12T14:24:25.294Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 150 failed with code : ECONNREFUSED
+2025-03-12T14:24:35.341Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 160
+2025-03-12T14:24:35.346Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 160 failed with code : ECONNREFUSED
+2025-03-12T14:24:45.381Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 170
+2025-03-12T14:24:45.383Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 170 failed with code : ECONNREFUSED
+2025-03-12T14:24:55.419Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 180
+2025-03-12T14:24:55.423Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 180 failed with code : ECONNREFUSED
+2025-03-12T14:25:05.474Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 190
+2025-03-12T14:25:05.478Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 190 failed with code : ECONNREFUSED
+2025-03-12T14:25:15.515Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 200
+2025-03-12T14:25:15.518Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 200 failed with code : ECONNREFUSED
+2025-03-12T14:25:25.557Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 210
+2025-03-12T14:25:25.560Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 210 failed with code : ECONNREFUSED
+2025-03-12T14:25:35.598Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 220
+2025-03-12T14:25:35.602Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 220 failed with code : ECONNREFUSED
+2025-03-12T14:25:45.637Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 230
+2025-03-12T14:25:45.641Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 230 failed with code : ECONNREFUSED
+2025-03-12T14:25:55.674Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 240
+2025-03-12T14:25:55.679Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 240 failed with code : ECONNREFUSED
+2025-03-12T14:26:05.735Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 250
+2025-03-12T14:26:05.738Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 250 failed with code : ECONNREFUSED
+2025-03-12T14:26:15.774Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 260
+2025-03-12T14:26:15.778Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 260 failed with code : ECONNREFUSED
+2025-03-12T14:26:25.814Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 270
+2025-03-12T14:26:25.817Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 270 failed with code : ECONNREFUSED
+2025-03-12T14:26:35.851Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 280
+2025-03-12T14:26:35.854Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 280 failed with code : ECONNREFUSED
+2025-03-12T14:26:45.894Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 290
+2025-03-12T14:26:45.898Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 290 failed with code : ECONNREFUSED
+2025-03-12T14:26:55.929Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 300
+2025-03-12T14:26:55.933Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 300 failed with code : ECONNREFUSED
+2025-03-12T14:26:56.935Z [jffe ] [[31M[1M[ERROR][22M[39M] [] [frontend-service.log] [main                ] - Error starting application - Error: Failed pinging artifactory for 300connect ECONNREFUSED 127.0.0.1:8046

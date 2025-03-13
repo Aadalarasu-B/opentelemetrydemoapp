@@ -1,0 +1,314 @@
+2025-03-12T02:09:14.649Z [jfrt ] [INFO ] [18ae9f6b58bdfb11] [o.a.c.h.ArtifactoryHome:252   ] [Catalina-utility-1  ] - Creating Artifactory home at 'null'
+2025-03-12T02:09:14.897Z [jfrt ] [INFO ] [18ae9f6b58bdfb11] [o.a.c.h.HaNodeProperties:65   ] [Catalina-utility-1  ] - Artifactory is running in non-clustered mode.
+2025-03-12T02:09:15.059Z [jfrt ] [INFO ] [18ae9f6b58bdfb11] [tifactoryHomeConfigListener:85] [Catalina-utility-1  ] - Resolved Home: '/opt/jfrog/artifactory
+2025-03-12T02:09:15.284Z [jfrt ] [INFO ] [18ae9f6b58bdfb11] [o.a.c.h.ArtifactoryHome:1022  ] [Catalina-utility-1  ] - Setting 'swiftNew,cocoapodsNew,alpineNew,condaNew,npmNew,vcsNew,vagrantNew,permissions-cache-legacy' to system property 'spring.profiles.active'
+2025-03-12T02:09:16.095Z [jfrt ] [INFO ] [18ae9f6b58bdfb11] [o.a.c.h.ArtifactoryHome:1022  ] [Catalina-utility-1  ] - Setting 'swiftNew,cocoapodsNew,alpineNew,condaNew,npmNew,vcsNew,vagrantNew,permissions-cache-legacy' to system property 'spring.profiles.active'
+2025-03-12T02:09:16.124Z [jfrt ] [INFO ] [                ] [o.j.c.w.FileWatcher:146       ] [file-watcher-poller ] - Starting watch of folder configurations
+2025-03-12T02:09:16.302Z [jfrt ] [INFO ] [18ae9f6b58bdfb11] [.BasicConfigurationManager:197] [Catalina-utility-1  ] - Artifactory (jfrt) service initialization started. Version: 7.104.18 Revision: 80418900 PID: 8156 Home: /opt/jfrog/artifactory
+2025-03-12T02:09:16.315Z [jfrt ] [INFO ] [18ae9f6b58bdfb11] [d.c.m.ConverterManagerImpl:214] [Catalina-utility-1  ] - Triggering PRE_INIT conversion, from 7.104.18 to 7.104.18
+2025-03-12T02:09:16.316Z [jfrt ] [INFO ] [18ae9f6b58bdfb11] [d.c.m.ConverterManagerImpl:217] [Catalina-utility-1  ] - Finished PRE_INIT conversion, current version is: 7.104.18
+2025-03-12T02:09:16.318Z [jfrt ] [INFO ] [18ae9f6b58bdfb11] [d.i.DbInitializationManager:48] [Catalina-utility-1  ] - Initializing DB Schema initialization manager
+2025-03-12T02:09:16.321Z [jfrt ] [INFO ] [18ae9f6b58bdfb11] [.i.DbInitializationManager:177] [Catalina-utility-1  ] - Database: PostgreSQL 13.20 (Debian 13.20-1.pgdg120+1). Driver: PostgreSQL JDBC Driver 42.7.4 Pool: postgresql
+2025-03-12T02:09:16.361Z [jfrt ] [INFO ] [18ae9f6b58bdfb11] [d.i.DbInitializationManager:70] [Catalina-utility-1  ] - ***Creating database schema***
+2025-03-12T02:09:17.718Z [jfrt ] [INFO ] [18ae9f6b58bdfb11] [d.i.DbInitializationManager:73] [Catalina-utility-1  ] - ***Database schema created***
+2025-03-12T02:09:17.719Z [jfrt ] [INFO ] [18ae9f6b58bdfb11] [d.i.DbInitializationManager:52] [Catalina-utility-1  ] - DB Schema initialization manager initialized
+2025-03-12T02:09:22.741Z [jfrt ] [INFO ] [18ae9f6b58bdfb11] [o.j.s.c.KeyUtils:108          ] [Catalina-utility-1  ] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2025-03-12T02:09:27.786Z [jfrt ] [INFO ] [18ae9f6b58bdfb11] [o.j.s.c.KeyUtils:108          ] [Catalina-utility-1  ] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2025-03-12T02:09:31.111Z [jfrt ] [INFO ] [18ae9f6b58bdfb11] [o.j.c.AbstractDbConverter:36  ] [Catalina-utility-1  ] - Starting converter org.artifactory.storage.db.init.MasterKeyBootstrapUtil$1@4ea8b87d with description: "v570a"
+2025-03-12T02:09:31.138Z [jfrt ] [INFO ] [18ae9f6b58bdfb11] [o.j.c.AbstractDbConverter:51  ] [Catalina-utility-1  ] - Converter `MASTER_KEY_TABLE_VERSION` is done with status `COMPLETED`.
+2025-03-12T02:09:31.220Z [jfrt ] [INFO ] [18ae9f6b58bdfb11] [SchemaInitializationManager:48] [Catalina-utility-1  ] - Initializing Post-DB initialization manager
+2025-03-12T02:09:31.340Z [jfrt ] [WARN ] [18ae9f6b58bdfb11] [o.a.c.VersionProviderImpl:239 ] [Catalina-utility-1  ] - Inserting initial version into db_properties table
+2025-03-12T02:09:31.395Z [jfrt ] [INFO ] [18ae9f6b58bdfb11] [.c.ConfigurationManagerImpl:97] [Catalina-utility-1  ] - Starting file sync
+2025-03-12T02:09:32.664Z [jfrt ] [INFO ] [18ae9f6b58bdfb11] [SchemaInitializationManager:51] [Catalina-utility-1  ] - Post-DB initialization manager initialized
+2025-03-12T02:09:32.724Z [jfrt ] [INFO ] [18ae9f6b58bdfb11] [o.a.m.MimeTypesReader:73      ] [Catalina-utility-1  ] - Converting mimetypes.xml version from 'v15' to 'v16'
+2025-03-12T02:09:33.169Z [jfrt ] [INFO ] [18ae9f6b58bdfb11] [actoryContextConfigListener:88] [Catalina-utility-1  ] - Artifactory context initialization started for context: null
+2025-03-12T02:09:33.175Z [jfrt ] [INFO ] [                ] [ctoryContextConfigListener:114] [art-init            ] - Artifactory initialization thread started for home null
+2025-03-12T02:09:33.213Z [jfrt ] [INFO ] [eda8a05c304d3553] [ctoryContextConfigListener:331] [art-init            ] - 
+                _   _  __           _                      ____   _____ _____
+     /\        | | (_)/ _|         | |                    / __ \ / ____/ ____|
+    /  \   _ __| |_ _| |_ __ _  ___| |_ ___  _ __ _   _  | |  | | (___| (___
+   / /\ \ | '__| __| |  _/ _` |/ __| __/ _ \| '__| | | | | |  | |\___ \\___ \
+  / ____ \| |  | |_| | || (_| | (__| || (_) | |  | |_| | | |__| |____) |___) |
+ /_/    \_\_|   \__|_|_| \__,_|\___|\__\___/|_|   \__, |  \____/|_____/_____/
+ Version:  7.104.18                                __/ |
+ Revision: 80418900                               |___/
+ Product Version:  7.104.10
+ Product Revision: 80410900
+ Artifactory Home: '/opt/jfrog/artifactory'
+ Node ID: '5edea333cc2e'
+
+2025-03-12T02:09:33.331Z [jfrt ] [INFO ] [eda8a05c304d3553] [ifactoryApplicationContext:635] [art-init            ] - Artifactory application context set to NOT READY by refresh
+2025-03-12T02:09:38.427Z [jfrt ] [INFO ] [eda8a05c304d3553] [.a.s.d.m.DbQueryMonitorImpl:91] [art-init            ] - Database cluster name=host.docker.internal, hash=735cb285, db_name=artifactorydb
+2025-03-12T02:09:39.153Z [jfrt ] [INFO ] [eda8a05c304d3553] [.b.BinariesStoreBeansConfig:47] [art-init            ] - injecting spring beans for binary-store-code module
+2025-03-12T02:09:41.238Z [jfrt ] [INFO ] [eda8a05c304d3553] [estRateLimiterServiceV2Impl:64] [art-init            ] - OutboundRequest rate limiter is disabled
+2025-03-12T02:09:41.263Z [jfrt ] [WARN ] [eda8a05c304d3553] [c.z.h.HikariConfig:1095       ] [art-init            ] - JFrog HikariCP Main - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-03-12T02:09:41.285Z [jfrt ] [WARN ] [eda8a05c304d3553] [c.z.h.HikariConfig:1095       ] [art-init            ] - JFrog HikariCP Main - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-03-12T02:09:41.306Z [jfrt ] [WARN ] [eda8a05c304d3553] [c.z.h.HikariConfig:1095       ] [art-init            ] - JFrog HikariCP Main - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-03-12T02:09:41.330Z [jfrt ] [INFO ] [                ] [veDbLocksConnRecoveryDaemon:35] [ Connection Recovery] - Native Locks Recovery daemon is started.
+2025-03-12T02:09:41.334Z [jfrt ] [INFO ] [eda8a05c304d3553] [.d.l.s.DbLocksServiceFacade:70] [art-init            ] - Automatic DB lock mechanism selected.
+2025-03-12T02:09:41.629Z [jfrt ] [INFO ] [eda8a05c304d3553] [ritiesStorageServiceFactory:25] [art-init            ] - Initializing DB-based Priorities Storage Service
+2025-03-12T02:09:41.764Z [jfrt ] [INFO ] [eda8a05c304d3553] [acyAuthorizationServiceImpl:88] [art-init            ] - Active permissions cache type: LEGACY
+2025-03-12T02:09:42.038Z [jfrt ] [INFO ] [eda8a05c304d3553] [ueryRateLimiterServiceImpl:119] [art-init            ] - Query rate limiter is disabled
+2025-03-12T02:09:42.385Z [jfrt ] [INFO ] [eda8a05c304d3553] [ctoryStorageHandlerGCConfig:33] [art-init            ] - injecting spring beans for storage-handler-gc module
+2025-03-12T02:09:42.559Z [jfrt ] [INFO ] [eda8a05c304d3553] [sabledLoadHealerServiceImpl:60] [art-init            ] - Artifactory Load Healer running on DISABLED mode.
+2025-03-12T02:09:42.764Z [jfrt ] [WARN ] [eda8a05c304d3553] [lerDynamicActivitiesConfig:134] [art-init            ] - Failed to resolve dynamic value for key 'artifactory.lh.xrayBlockUnscanned.threshold.max'. Using default '${artifactory.tomcat.connector.maxThreads} * 0.8'
+2025-03-12T02:09:42.765Z [jfrt ] [WARN ] [eda8a05c304d3553] [lerDynamicActivitiesConfig:177] [art-init            ] - Invalid number format for threshold.max: ${artifactory.tomcat.connector.maxThreads} * 0.8
+2025-03-12T02:09:42.766Z [jfrt ] [WARN ] [eda8a05c304d3553] [lerDynamicActivitiesConfig:134] [art-init            ] - Failed to resolve dynamic value for key 'artifactory.lh.xrayBlockUnscanned.threshold.min'. Using default '${artifactory.tomcat.connector.maxThreads} * 0.5'
+2025-03-12T02:09:42.766Z [jfrt ] [WARN ] [eda8a05c304d3553] [lerDynamicActivitiesConfig:177] [art-init            ] - Invalid number format for threshold.min: ${artifactory.tomcat.connector.maxThreads} * 0.5
+2025-03-12T02:09:42.769Z [jfrt ] [INFO ] [eda8a05c304d3553] [lerDynamicActivitiesConfig:117] [art-init            ] - Loaded 2 activities:
+2025-03-12T02:09:42.772Z [jfrt ] [INFO ] [eda8a05c304d3553] [lerDynamicActivitiesConfig:118] [art-init            ] - ActivityConfig[name=xrayBlockUnscanned, minThreshold=0, maxThreshold=0, healthyTimeout=60000]
+2025-03-12T02:09:42.778Z [jfrt ] [INFO ] [eda8a05c304d3553] [lerDynamicActivitiesConfig:118] [art-init            ] - ActivityConfig[name=example, minThreshold=1, maxThreshold=2, healthyTimeout=300]
+2025-03-12T02:09:44.206Z [jfrt ] [INFO ] [eda8a05c304d3553] [oryBinariesStoreBeansConfig:21] [art-init            ] - injecting spring beans for storage-handler-b2a-bridge module
+2025-03-12T02:09:44.301Z [jfrt ] [INFO ] [eda8a05c304d3553] [.p.t.TomcatReadinessMonitor:53] [art-init            ] - TomcatReadinessMonitor properties mode: monitor, maxFailedMetricsCount: 3, minProcessedRequestsCount: 15
+2025-03-12T02:09:44.302Z [jfrt ] [INFO ] [eda8a05c304d3553] [.p.t.TomcatReadinessMonitor:77] [art-init            ] - Server readiness monitor mode MONITOR
+2025-03-12T02:09:45.930Z [jfrt ] [INFO ] [eda8a05c304d3553] [actorySchedulerFactoryBean:729] [art-init            ] - Starting Quartz Scheduler now
+2025-03-12T02:09:45.932Z [jfrt ] [INFO ] [eda8a05c304d3553] [actorySchedulerFactoryBean:729] [art-init            ] - Starting Quartz Scheduler now
+2025-03-12T02:09:45.985Z [jfrt ] [INFO ] [eda8a05c304d3553] [ifactoryApplicationContext:302] [art-init            ] - Artifactory context starting up 63 Spring Beans...
+2025-03-12T02:09:46.056Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.a.s.a.AccessServiceImpl:664 ] [art-init            ] - Initialized new service id: jfrt@01jp41twhvvx6012h6w1jw1mab
+2025-03-12T02:09:46.092Z [jfrt ] [INFO ] [eda8a05c304d3553] [oryAccessClientConfigStore:531] [art-init            ] - Using Access Server URL: http://localhost:8046/access source: System Config
+2025-03-12T02:09:46.624Z [jfrt ] [INFO ] [8c08a019906a162c] [eyFixMemoryConsumptionHooks:49] [9906a162c|art-exec-1] - Install the ByteBuddy Java agent
+2025-03-12T02:09:46.932Z [jfrt ] [INFO ] [8c08a019906a162c] [eyFixMemoryConsumptionHooks:52] [9906a162c|art-exec-1] - Hook the Jersey server initialization, improving memory consumption
+2025-03-12T02:09:47.519Z [jfrt ] [INFO ] [8c08a019906a162c] [eyFixMemoryConsumptionHooks:78] [9906a162c|art-exec-1] - Registered the fillMediaTypes hook
+2025-03-12T02:09:47.558Z [jfrt ] [INFO ] [8c08a019906a162c] [o.a.r.s.JerseyApplication:84  ] [9906a162c|art-exec-1] - Apply additional JAX-RS filters (metrics, etc.)
+2025-03-12T02:09:48.008Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 5: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:09:53.061Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 10: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:09:58.081Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 15: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:10:03.097Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 20: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:10:08.112Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 25: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:10:13.127Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 30: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:10:18.146Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 35: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:10:23.162Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 40: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:10:28.180Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 45: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:10:33.196Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 50: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:10:38.208Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 55: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:10:43.220Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 60: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:10:48.234Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 65: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:10:53.249Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 70: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:10:58.263Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 75: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:11:03.288Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 80: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:11:08.323Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 85: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:11:13.364Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 90: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:11:18.386Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 95: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:11:23.401Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 100: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:11:28.416Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 105: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:11:33.430Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 110: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:11:38.443Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 115: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:11:43.458Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 120: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:11:48.474Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 125: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:11:53.491Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 130: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:11:58.505Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 135: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:12:03.520Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 140: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:12:08.534Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 145: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:12:13.549Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 150: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:12:18.565Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 155: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:12:23.579Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 160: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:12:28.594Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 165: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:12:33.607Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 170: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:12:38.619Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 175: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:12:43.634Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 180: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:12:48.648Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 185: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:12:53.663Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 190: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:12:58.678Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 195: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:13:03.694Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 200: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:13:08.708Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 205: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:13:13.722Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 210: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:13:18.739Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 215: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:13:23.757Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 220: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:13:28.772Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 225: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:13:33.787Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 230: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:13:38.799Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 235: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:13:43.814Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 240: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:13:48.830Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 245: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:13:53.845Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 250: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:13:58.859Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 255: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:14:03.875Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 260: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:14:08.888Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 265: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:14:13.901Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 270: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:14:18.915Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 275: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:14:23.930Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 280: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:14:28.952Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 285: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:14:33.965Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-1    ] - Cluster join: Retry 290: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:14:38.982Z [jfrt ] [INFO ] [eda8a05c304d3553] [o.j.c.ExecutionUtils:289      ] [jf-common-pool-0    ] - Cluster join: Retry 295: Service registry ping failed, will retry. Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:14:44.004Z [jfrt ] [ERROR] [eda8a05c304d3553] [o.j.c.ExecutionUtils:305      ] [jf-common-pool-1    ] - Cluster join: Service registry ping failed; Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+2025-03-12T02:14:44.053Z [jfrt ] [ERROR] [eda8a05c304d3553] [ctoryContextConfigListener:131] [art-init            ] - Application could not be initialized: HTTP response status 404:Failed on executing request. Response: Not Found
+java.lang.reflect.InvocationTargetException: null
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:74)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryContextConfigListener.configure(ArtifactoryContextConfigListener.java:272)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryContextConfigListener$1.run(ArtifactoryContextConfigListener.java:127)
+Caused by: org.springframework.beans.factory.BeanInitializationException: Failed to initialize bean 'AccessServiceImpl'.
+	at org.artifactory.spring.ArtifactoryApplicationContext.initReloadableBeans(ArtifactoryApplicationContext.java:359)
+	at org.artifactory.spring.ArtifactoryApplicationContext.refresh(ArtifactoryApplicationContext.java:309)
+	at org.artifactory.spring.ArtifactoryApplicationContext.<init>(ArtifactoryApplicationContext.java:183)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	... 4 common frames omitted
+Caused by: java.util.concurrent.ExecutionException: org.jfrog.common.ExecutionFailed: Cluster join: Service registry ping failed; Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073)
+	at org.jfrog.access.client.AccessServerStartupValidator.waitForServer(AccessServerStartupValidator.java:40)
+	at org.jfrog.access.client.AccessClientBootstrap.waitForServer(AccessClientBootstrap.java:174)
+	at org.jfrog.access.client.AccessClientBootstrap.<init>(AccessClientBootstrap.java:95)
+	at org.jfrog.access.client.AccessClientBootstrap.<init>(AccessClientBootstrap.java:134)
+	at org.artifactory.security.access.AccessServiceImpl.bootstrapAccessClient(AccessServiceImpl.java:1554)
+	at org.artifactory.security.access.AccessServiceImpl.lambda$bootstrapAccessClient$26(AccessServiceImpl.java:1513)
+	at io.vavr.control.Try.mapTry(Try.java:634)
+	at io.vavr.control.Try.map(Try.java:585)
+	at org.artifactory.security.access.AccessServiceImpl.bootstrapAccessClient(AccessServiceImpl.java:1513)
+	at org.artifactory.security.access.AccessServiceImpl.initAccessService(AccessServiceImpl.java:582)
+	at org.artifactory.security.access.AccessServiceImpl.initAccessClientIfNeeded(AccessServiceImpl.java:567)
+	at org.artifactory.security.access.AccessServiceImpl.init(AccessServiceImpl.java:548)
+	at org.artifactory.spring.ArtifactoryApplicationContext.initReloadableBeans(ArtifactoryApplicationContext.java:357)
+	... 7 common frames omitted
+Caused by: org.jfrog.common.ExecutionFailed: Cluster join: Service registry ping failed; Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+	at org.jfrog.common.ExecutionUtils.handleStopError(ExecutionUtils.java:307)
+	at org.jfrog.common.ExecutionUtils.handleFunctionExecution(ExecutionUtils.java:197)
+	at org.jfrog.common.ExecutionUtils.lambda$generateExecutionRunnable$1(ExecutionUtils.java:135)
+	at org.jfrog.common.ExecutionUtils$MDCRunnableDecorator.run(ExecutionUtils.java:323)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at com.google.common.util.concurrent.TrustedListenableFutureTask$TrustedFutureInterruptibleTask.runInterruptibly(TrustedListenableFutureTask.java:131)
+	at com.google.common.util.concurrent.InterruptibleTask.run(InterruptibleTask.java:76)
+	at com.google.common.util.concurrent.TrustedListenableFutureTask.run(TrustedListenableFutureTask.java:82)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.jfrog.common.RetryException: Error while trying to connect to service registry (status = 404). Please review router request log for additional information
+	at org.jfrog.access.client.AccessServerStartupValidator.convertToRetryException(AccessServerStartupValidator.java:55)
+	at io.vavr.API$Match$Case0.apply(API.java:5135)
+	at io.vavr.API$Match.option(API.java:5105)
+	at io.vavr.control.Try.mapFailure(Try.java:602)
+	at org.jfrog.access.client.AccessServerStartupValidator.pingAccess(AccessServerStartupValidator.java:47)
+	at org.jfrog.common.ExecutionUtils.handleFunctionExecution(ExecutionUtils.java:190)
+	... 9 common frames omitted
+Caused by: org.jfrog.access.client.AccessClientHttpException: HTTP response status 404:Failed on executing request. Response: Not Found
+	at org.jfrog.access.client.http.AccessHttpClient.createRestResponse(AccessHttpClient.java:211)
+	at org.jfrog.access.client.http.AccessHttpClient.restCall(AccessHttpClient.java:154)
+	at org.jfrog.access.client.http.AccessHttpClient.ping(AccessHttpClient.java:127)
+	at org.jfrog.access.client.AccessClientImpl.ping(AccessClientImpl.java:324)
+	at io.vavr.control.Try.run(Try.java:118)
+	at org.jfrog.access.client.AccessServerStartupValidator.pingAccess(AccessServerStartupValidator.java:46)
+	... 10 common frames omitted
+2025-03-12T02:21:35.194Z [jfrt ] [WARN ] [                ] [c.z.h.p.PoolBase:180          ] [ Connection Recovery] - JFrog HikariCP Main - Failed to validate connection org.postgresql.jdbc.PgConnection@af0cdf6 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-03-12T02:21:55.949Z [jfrt ] [WARN ] [                ] [c.z.h.p.PoolBase:180          ] [repo-conf-cache-Jabv] - JFrog HikariCP Main - Failed to validate connection org.postgresql.jdbc.PgConnection@778172c (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-03-12T02:22:35.145Z [jfrt ] [ERROR] [                ] [veDbLocksConnRecoveryDaemon:58] [ Connection Recovery] - Unexpected failure occurred: Failed to run SQL query to count session variables: key 'jfrog.lock_service_id', value '20256af9-8c27-4487-a7e3-60d49deb6ce2', error: JFrog HikariCP Main - Connection is not available, request timed out after 60001ms (total=0, active=0, idle=0, waiting=0). Resuming work loop. LockService: '20256af9-8c27-4487-a7e3-60d49deb6ce2'
+2025-03-12T02:22:35.147Z [jfrt ] [WARN ] [                ] [c.z.h.p.PoolBase:180          ] [ Connection Recovery] - JFrog HikariCP Main - Failed to validate connection org.postgresql.jdbc.PgConnection@45fc2bff (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-03-12T02:23:35.145Z [jfrt ] [ERROR] [                ] [veDbLocksConnRecoveryDaemon:58] [ Connection Recovery] - Unexpected failure occurred: Failed to run SQL query to count session variables: key 'jfrog.lock_service_id', value '226cc92b-11be-48e2-86de-8ecf5d884647', error: JFrog HikariCP Main - Connection is not available, request timed out after 60001ms (total=0, active=0, idle=0, waiting=0). Resuming work loop. LockService: '226cc92b-11be-48e2-86de-8ecf5d884647'
+2025-03-12T02:23:35.147Z [jfrt ] [WARN ] [                ] [c.z.h.p.PoolBase:180          ] [ Connection Recovery] - JFrog HikariCP Main - Failed to validate connection org.postgresql.jdbc.PgConnection@1a55bce8 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-03-12T02:24:35.144Z [jfrt ] [ERROR] [                ] [veDbLocksConnRecoveryDaemon:58] [ Connection Recovery] - Unexpected failure occurred: Failed to run SQL query to count session variables: key 'jfrog.lock_service_id', value '2e24a2d4-ec12-4891-a59b-8115e126b7c5', error: JFrog HikariCP Main - Connection is not available, request timed out after 60001ms (total=0, active=0, idle=0, waiting=0). Resuming work loop. LockService: '2e24a2d4-ec12-4891-a59b-8115e126b7c5'
+2025-03-12T02:25:36.143Z [jfrt ] [ERROR] [                ] [veDbLocksConnRecoveryDaemon:58] [ Connection Recovery] - Unexpected failure occurred: Failed to run SQL query to count session variables: key 'jfrog.lock_service_id', value '20256af9-8c27-4487-a7e3-60d49deb6ce2', error: JFrog HikariCP Main - Connection is not available, request timed out after 60000ms (total=0, active=0, idle=0, waiting=0). Resuming work loop. LockService: '20256af9-8c27-4487-a7e3-60d49deb6ce2'
+2025-03-12T02:26:25.415Z [jfrt ] [INFO ] [                ] [veDbLocksConnRecoveryDaemon:53] [ Connection Recovery] - Detected native locks DB connection dropped! Attempting to re-acquire all previous locks with new connection. LockService id: '226cc92b-11be-48e2-86de-8ecf5d884647'
+2025-03-12T02:26:25.417Z [jfrt ] [INFO ] [                ] [.s.c.PostgresDbLocksService:63] [ Connection Recovery] - Service id: '226cc92b-11be-48e2-86de-8ecf5d884647' initiating replace dao and renew locks.
+2025-03-12T02:26:25.418Z [jfrt ] [WARN ] [                ] [c.z.h.HikariConfig:1095       ] [ Connection Recovery] - JFrog HikariCP Main - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-03-12T02:26:25.444Z [jfrt ] [INFO ] [                ] [s.c.PostgresDbLocksService:238] [ Connection Recovery] - Service id: '226cc92b-11be-48e2-86de-8ecf5d884647' old datasource closed successfully.
+2025-03-12T02:26:25.445Z [jfrt ] [INFO ] [                ] [.s.c.PostgresDbLocksService:70] [ Connection Recovery] - Service id: '226cc92b-11be-48e2-86de-8ecf5d884647' replace dao and renew locks completed.
+2025-03-12T02:26:25.448Z [jfrt ] [INFO ] [                ] [veDbLocksConnRecoveryDaemon:53] [ Connection Recovery] - Detected native locks DB connection dropped! Attempting to re-acquire all previous locks with new connection. LockService id: '2e24a2d4-ec12-4891-a59b-8115e126b7c5'
+2025-03-12T02:26:25.449Z [jfrt ] [INFO ] [                ] [.s.c.PostgresDbLocksService:63] [ Connection Recovery] - Service id: '2e24a2d4-ec12-4891-a59b-8115e126b7c5' initiating replace dao and renew locks.
+2025-03-12T02:26:25.449Z [jfrt ] [WARN ] [                ] [c.z.h.HikariConfig:1095       ] [ Connection Recovery] - JFrog HikariCP Main - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-03-12T02:26:25.465Z [jfrt ] [INFO ] [                ] [s.c.PostgresDbLocksService:238] [ Connection Recovery] - Service id: '2e24a2d4-ec12-4891-a59b-8115e126b7c5' old datasource closed successfully.
+2025-03-12T02:26:25.465Z [jfrt ] [INFO ] [                ] [.s.c.PostgresDbLocksService:70] [ Connection Recovery] - Service id: '2e24a2d4-ec12-4891-a59b-8115e126b7c5' replace dao and renew locks completed.
+2025-03-12T02:26:26.470Z [jfrt ] [INFO ] [                ] [veDbLocksConnRecoveryDaemon:53] [ Connection Recovery] - Detected native locks DB connection dropped! Attempting to re-acquire all previous locks with new connection. LockService id: '20256af9-8c27-4487-a7e3-60d49deb6ce2'
+2025-03-12T02:26:26.471Z [jfrt ] [INFO ] [                ] [.s.c.PostgresDbLocksService:63] [ Connection Recovery] - Service id: '20256af9-8c27-4487-a7e3-60d49deb6ce2' initiating replace dao and renew locks.
+2025-03-12T02:26:26.472Z [jfrt ] [WARN ] [                ] [c.z.h.HikariConfig:1095       ] [ Connection Recovery] - JFrog HikariCP Main - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-03-12T02:26:26.486Z [jfrt ] [INFO ] [                ] [s.c.PostgresDbLocksService:238] [ Connection Recovery] - Service id: '20256af9-8c27-4487-a7e3-60d49deb6ce2' old datasource closed successfully.
+2025-03-12T02:26:26.487Z [jfrt ] [INFO ] [                ] [.s.c.PostgresDbLocksService:70] [ Connection Recovery] - Service id: '20256af9-8c27-4487-a7e3-60d49deb6ce2' replace dao and renew locks completed.
+2025-03-12T02:29:26.286Z [jfrt ] [WARN ] [                ] [c.z.h.p.PoolBase:180          ] [ Connection Recovery] - JFrog HikariCP Main - Failed to validate connection org.postgresql.jdbc.PgConnection@7d5bfb69 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-03-12T02:29:35.828Z [jfrt ] [ERROR] [86f1ab6eefcccd32] [o.a.w.s.ArtifactoryFilter:160 ] [http-nio-8081-exec-2] - Caught exception in GET, /artifactory/api/v1/system/preStop
+jakarta.servlet.ServletException: Session filter is not initialized! Thread: 2025-03-12T02:29:35.817Z|86f1ab6eefcccd32|/artifactory/api/v1/system/preStop|http-nio-8081-exec-2
+	at org.artifactory.webapp.servlet.SessionFilter.doFilter(SessionFilter.java:78)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.artifactory.webapp.servlet.ArtifactoryFilter.doFilter(ArtifactoryFilter.java:132)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.artifactory.webapp.servlet.ArtifactoryTracingFilter.doFilter(ArtifactoryTracingFilter.java:48)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.valves.rewrite.RewriteValve.invoke(RewriteValve.java:281)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-03-12T02:29:36.775Z [jfrt ] [INFO ] [                ] [o.a.w.s.SessionFilter:59      ] [Catalina-utility-2  ] - Into destroy method of session filter
+2025-03-12T02:29:36.781Z [jfrt ] [WARN ] [                ] [.AsyncWorkQueueServiceImpl:233] [Catalina-utility-2  ] - Work queue job await termination ended unsuccessfully
+2025-03-12T02:29:36.783Z [jfrt ] [INFO ] [                ] [ageEventsTriggerServiceImpl:70] [Catalina-utility-2  ] - Shutdown terminated: true
+2025-03-12T02:29:36.784Z [jfrt ] [INFO ] [                ] [actorySchedulerFactoryBean:844] [Catalina-utility-2  ] - Shutting down Quartz Scheduler
+2025-03-12T02:29:36.785Z [jfrt ] [INFO ] [                ] [actorySchedulerFactoryBean:844] [Catalina-utility-2  ] - Shutting down Quartz Scheduler
+2025-03-12T02:29:36.787Z [jfrt ] [WARN ] [                ] [nnotationBeanPostProcessor:247] [Catalina-utility-2  ] - Destroy method on bean with name 'lockServiceImpl' threw an exception: java.lang.IllegalStateException: Artifactory home is not bound to the current thread.
+2025-03-12T02:29:36.788Z [jfrt ] [INFO ] [                ] [a.e.ShiftEventsServiceImpl:177] [Catalina-utility-2  ] - Shutdown terminated: true
+2025-03-12T02:29:57.662Z [jfrt ] [INFO ] [2e59951608345e33] [o.a.c.h.ArtifactoryHome:252   ] [Catalina-utility-1  ] - Creating Artifactory home at 'null'
+2025-03-12T02:29:57.957Z [jfrt ] [INFO ] [2e59951608345e33] [o.a.c.h.HaNodeProperties:65   ] [Catalina-utility-1  ] - Artifactory is running in non-clustered mode.
+2025-03-12T02:29:58.122Z [jfrt ] [INFO ] [2e59951608345e33] [tifactoryHomeConfigListener:85] [Catalina-utility-1  ] - Resolved Home: '/opt/jfrog/artifactory
+2025-03-12T02:29:58.365Z [jfrt ] [INFO ] [2e59951608345e33] [o.a.c.h.ArtifactoryHome:1022  ] [Catalina-utility-1  ] - Setting 'cocoapodsNew,alpineNew,condaNew,npmNew,vcsNew,vagrantNew,swiftNew,permissions-cache-legacy' to system property 'spring.profiles.active'
+2025-03-12T02:29:59.602Z [jfrt ] [INFO ] [2e59951608345e33] [o.a.c.h.ArtifactoryHome:1022  ] [Catalina-utility-1  ] - Setting 'cocoapodsNew,alpineNew,condaNew,npmNew,vcsNew,vagrantNew,swiftNew,permissions-cache-legacy' to system property 'spring.profiles.active'
+2025-03-12T02:29:59.644Z [jfrt ] [INFO ] [                ] [o.j.c.w.FileWatcher:146       ] [file-watcher-poller ] - Starting watch of folder configurations
+2025-03-12T02:29:59.756Z [jfrt ] [WARN ] [2e59951608345e33] [c.z.h.u.DriverDataSource:68   ] [Catalina-utility-1  ] - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2025-03-12T02:30:04.284Z [jfrt ] [INFO ] [2e59951608345e33] [.BasicConfigurationManager:197] [Catalina-utility-1  ] - Artifactory (jfrt) service initialization started. Version: 7.104.18 Revision: 80418900 PID: 6507 Home: /opt/jfrog/artifactory
+2025-03-12T02:30:04.298Z [jfrt ] [INFO ] [2e59951608345e33] [d.c.m.ConverterManagerImpl:214] [Catalina-utility-1  ] - Triggering PRE_INIT conversion, from 7.104.18 to 7.104.18
+2025-03-12T02:30:04.300Z [jfrt ] [INFO ] [2e59951608345e33] [d.c.m.ConverterManagerImpl:217] [Catalina-utility-1  ] - Finished PRE_INIT conversion, current version is: 7.104.18
+2025-03-12T02:30:04.302Z [jfrt ] [INFO ] [2e59951608345e33] [d.i.DbInitializationManager:48] [Catalina-utility-1  ] - Initializing DB Schema initialization manager
+2025-03-12T02:30:04.306Z [jfrt ] [INFO ] [2e59951608345e33] [.i.DbInitializationManager:177] [Catalina-utility-1  ] - Database: Apache Derby 10.17.1.0 - (1913217). Driver: Apache Derby Embedded JDBC Driver 10.17.1.0 - (1913217) Pool: derby
+2025-03-12T02:30:04.356Z [jfrt ] [ERROR] [2e59951608345e33] [d.i.DbInitializationManager:55] [Catalina-utility-1  ] - DB Schema initialization manager failed to init.
+java.lang.IllegalStateException: Cannot start the application with a database other than PostgreSQL. For more information, see JFrog documentation
+	at org.artifactory.storage.db.init.DbConnectionUtils.checkDefaultDbProperties(DbConnectionUtils.java:83)
+	at org.artifactory.storage.db.init.DbInitializationManager.initDatabaseSchema(DbInitializationManager.java:69)
+	at org.artifactory.storage.db.init.DbInitializationManager.init(DbInitializationManager.java:50)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initArtifactoryInstallation(BasicConfigurationManager.java:160)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initialize(BasicConfigurationManager.java:135)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.initBasicConfigManager(ArtifactoryHomeConfigListener.java:61)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.contextInitialized(ArtifactoryHomeConfigListener.java:53)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4008)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4436)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:635)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1889)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-03-12T02:30:04.370Z [jfrt ] [ERROR] [2e59951608345e33] [tifactoryHomeConfigListener:55] [Catalina-utility-1  ] - Failed initializing Home. Caught exception: 
+java.lang.IllegalStateException: DB Schema initialization manager failed to init.
+	at org.artifactory.storage.db.init.DbInitializationManager.init(DbInitializationManager.java:56)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initArtifactoryInstallation(BasicConfigurationManager.java:160)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initialize(BasicConfigurationManager.java:135)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.initBasicConfigManager(ArtifactoryHomeConfigListener.java:61)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.contextInitialized(ArtifactoryHomeConfigListener.java:53)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4008)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4436)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:635)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1889)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalStateException: Cannot start the application with a database other than PostgreSQL. For more information, see JFrog documentation
+	at org.artifactory.storage.db.init.DbConnectionUtils.checkDefaultDbProperties(DbConnectionUtils.java:83)
+	at org.artifactory.storage.db.init.DbInitializationManager.initDatabaseSchema(DbInitializationManager.java:69)
+	at org.artifactory.storage.db.init.DbInitializationManager.init(DbInitializationManager.java:50)
+	... 19 common frames omitted
+2025-03-12T02:30:04.379Z [jfrt ] [INFO ] [2e59951608345e33] [actoryContextConfigListener:88] [Catalina-utility-1  ] - Artifactory context initialization started for context: null
+2025-03-12T02:30:04.381Z [jfrt ] [ERROR] [2e59951608345e33] [actoryContextConfigListener:93] [Catalina-utility-1  ] - Failed initializing Artifactory context: Artifactory home not initialized.

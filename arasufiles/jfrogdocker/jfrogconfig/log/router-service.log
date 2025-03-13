@@ -1,0 +1,674 @@
+2025-03-12T14:54:06.792Z [jfrou] [INFO ] [10997b3b972f6b1f] [bootstrap.go:86               ] [main                ] [] - Router (jfrou) service initialization started. Version: 7.71.0-1 Revision: 510b659db435ba23377b140caa37d06c67af0dbd PID: 4149 Home: /opt/jfrog/artifactory
+2025-03-12T14:54:06.797Z [jfrou] [INFO ] [10997b3b972f6b1f] [bootstrap.go:89               ] [main                ] [] - JFrog Router IP: 172.19.0.3
+2025-03-12T14:54:06.798Z [jfrou] [INFO ] [10997b3b972f6b1f] [bootstrap.go:90               ] [main                ] [] - Effective configuration:
+access.http.port (Default Value): 8040
+artifactory.pid (Environment Variable: JF_ARTIFACTORY_PID): /opt/jfrog/artifactory/app/run/artifactory.pid
+artifactory.user (Environment Variable: JF_ARTIFACTORY_USER): artifactory
+configVersion (File): 1
+product.data.internal (Environment Variable: JF_PRODUCT_DATA_INTERNAL): /var/opt/jfrog/artifactory
+product.home (Environment Variable: JF_PRODUCT_HOME): /opt/jfrog/artifactory
+router.autoMemLimitRatio (Default Value): 0.9
+router.encryptSystemConfig (Default Value): true
+router.entrypoints.externalHost (Default Value): 
+router.entrypoints.externalMaxConcurrentStreams (Default Value): 500
+router.entrypoints.externalPort (Default Value): 8082
+router.entrypoints.grpcPort (Default Value): 8047
+router.entrypoints.internalMaxConcurrentStreams (Default Value): 500
+router.entrypoints.internalPort (Default Value): 8046
+router.entrypoints.traefikApiPort (Default Value): 8049
+router.httpclient.requestTimeoutSecs (Default Value): 30
+router.lifecycle.shutdown.entrypointsGraceTimeout (Default Value): 10s
+router.lifecycle.shutdown.internalJobsGraceTimeout (Default Value): 7s
+router.logging.application.caller (Default Value): false
+router.logging.application.console (Default Value): true
+router.logging.application.filePath (Default Value): router-service.log
+router.logging.application.format (Default Value): jftext
+router.logging.application.level (Default Value): info
+router.logging.application.rotation.compress (Default Value): true
+router.logging.application.rotation.keepLastDecompressed (Default Value): 1
+router.logging.application.rotation.maxAgeDays (Default Value): 0
+router.logging.application.rotation.maxFiles (Default Value): 10
+router.logging.application.rotation.maxSizeMb (Default Value): 25
+router.logging.consoleLog.format (Default Value): jftext
+router.logging.request.filePath (Default Value): router-request.log
+router.logging.request.forwardedForLogging.enabled (Default Value): false
+router.logging.request.forwardedForLogging.header (Default Value): X-Forwarded-For
+router.logging.request.rotation.compress (Default Value): true
+router.logging.request.rotation.keepLastDecompressed (Default Value): 1
+router.logging.request.rotation.maxAgeDays (Default Value): 0
+router.logging.request.rotation.maxFiles (Default Value): 10
+router.logging.request.rotation.maxSizeMb (Default Value): 100
+router.logging.request.tokenIdLoggingEnabled (Default Value): false
+router.logging.request.verbose (Default Value): false
+router.logging.traefik.caller (Default Value): false
+router.logging.traefik.console (Default Value): true
+router.logging.traefik.filePath (Default Value): router-traefik.log
+router.logging.traefik.format (Default Value): jftext
+router.logging.traefik.level (Default Value): info
+router.logging.traefik.rotation.compress (Default Value): true
+router.logging.traefik.rotation.keepLastDecompressed (Default Value): 1
+router.logging.traefik.rotation.maxAgeDays (Default Value): 0
+router.logging.traefik.rotation.maxFiles (Default Value): 10
+router.logging.traefik.rotation.maxSizeMb (Default Value): 25
+router.masterKeyRemoval.heartbeatCount (Default Value): 3
+router.masterKeyRemoval.intervalSecs (Default Value): 60
+router.masterKeyRemoval.timeoutSecs (Default Value): 600
+router.mtls.configCacheExpirationSecs (Default Value): 600
+router.multiTenant.cacheExpirySecs (Default Value): 86400
+router.multiTenant.cacheGcPeriodSecs (Default Value): 600
+router.probes.liveness.failOnLongFailingReadiness.enabled (Default Value): true
+router.probes.liveness.failOnLongFailingReadiness.failureDurationSecs (Default Value): 60
+router.profiling.enabled (Default Value): false
+router.proxy.httpUrl (Default Value): 
+router.proxy.httpsUrl (Default Value): 
+router.proxy.ignoredHosts (Default Value): []
+router.retry.enabled (Default Value): true
+router.security.cipherSuites (Default Value): TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_AES_128_GCM_SHA256,TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+router.serviceRegistry.accessUrl (Applicative Resolution): http://localhost:8040/access
+router.serviceRegistry.insecure (Default Value): false
+router.serviceRegistry.requestTimeout (Default Value): 15s
+router.serviceRegistry.skipJoinConnectivityTest (Default Value): false
+router.serviceRegistry.topologyUrl (Applicative Resolution): http://localhost:8040/access
+router.serviceRegistry.useTopologyService (Default Value): false
+router.supportBundle.aggregationTimeout (Default Value): 1h0m0s
+router.topology.external.healthRequestTimeoutSecs (Default Value): 5
+router.topology.external.refresh.interval (Default Value): 3s
+router.topology.external.refresh.maxStaleHeartbeat (Default Value): 30s
+router.topology.local.enableNodeStatusBroadcast (Default Value): true
+router.topology.local.healthCheck.healthyThreshold (Default Value): 2
+router.topology.local.healthCheck.interval (Default Value): 5s
+router.topology.local.healthCheck.requestTimeout (Default Value): 5s
+router.topology.local.healthCheck.unhealthyThreshold (Default Value): 2
+router.topology.local.ignorePersistedServices (Default Value): false
+router.topology.local.requiredServiceTypes (Environment Variable: JF_ROUTER_TOPOLOGY_LOCAL_REQUIREDSERVICETYPES): jfrt,jfac,jfmd,jffe,jfob,jfint,jfevt
+shared.database (File): <nil>
+shared.database.password (Environment Variable: JF_SHARED_DATABASE_PASSWORD): *****
+shared.database.type (Environment Variable: JF_SHARED_DATABASE_TYPE): postgresql
+shared.database.url (Environment Variable: JF_SHARED_DATABASE_URL): jdbc:postgresql://postgres:5432/artifactorydb
+shared.database.user (Environment Variable: JF_SHARED_DATABASE_USER): artifactory
+shared.extrajavaopts (Environment Variable: JF_SHARED_EXTRAJAVAOPTS): -Xms512m -Xmx2g
+shared.jfrogUrl (Default Value): 
+shared.logging.consoleLog.format (Default Value): shared.logging.consoleLog.format
+shared.logging.enableJsonConsoleLogAppenders (Default Value): false
+shared.multiTenant.cellId (Default Value): 
+shared.multiTenant.enabled (Default Value): false
+shared.multiTenant.tenantRegistryClient.caCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.cacheExpirationSecs (Default Value): 21600
+shared.multiTenant.tenantRegistryClient.clientCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.clientCertKey (Default Value): *****
+shared.multiTenant.tenantRegistryClient.dialTimeoutSecs (Default Value): 10
+shared.multiTenant.tenantRegistryClient.endpoints (Default Value): []
+shared.multiTenant.tenantRegistryClient.requestTimeoutSecs (Default Value): 30
+shared.newrelic.appName (Default Value): 
+shared.newrelic.distributedTracerEnabled (Default Value): true
+shared.newrelic.enableDebugLog (Default Value): false
+shared.newrelic.enabled (Default Value): false
+shared.newrelic.licenseKey (Default Value): *****
+shared.node (File): <nil>
+shared.node.id (Environment Variable: JF_SHARED_NODE_ID): eaa950cc8403
+shared.node.ip (Environment Variable: JF_SHARED_NODE_IP): 172.19.0.3
+shared.node.name (Environment Variable: JF_SHARED_NODE_NAME): eaa950cc8403
+shared.node.port (Default Value): 0
+shared.node.tlsEnabled (Default Value): false
+shared.security (File): <nil>
+shared.security.bootstrapKeysReadTimeoutSecs (Default Value): 120
+shared.security.joinKeyFile (Default Value): etc/security/join.key
+shared.security.masterKeyExternal (Default Value): false
+shared.security.masterKeyFile (Default Value): etc/security/master.key
+system.yaml (Environment Variable: JF_SYSTEM_YAML): /opt/jfrog/artifactory/var/etc/system.yaml
+topology.grpcPort (Default Value): 8021
+topology.port (Default Value): 8020
+2025-03-12T14:54:11.821Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 5 seconds with 2m0s timeout
+2025-03-12T14:54:17.018Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 10 seconds with 2m0s timeout
+2025-03-12T14:54:22.200Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 15 seconds with 2m0s timeout
+2025-03-12T14:54:27.227Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 20 seconds with 2m0s timeout
+2025-03-12T14:54:32.380Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 25 seconds with 2m0s timeout
+2025-03-12T14:54:37.468Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 30 seconds with 2m0s timeout
+2025-03-12T14:54:42.644Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 35 seconds with 2m0s timeout
+2025-03-12T14:54:47.722Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 40 seconds with 2m0s timeout
+2025-03-12T14:54:52.802Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 45 seconds with 2m0s timeout
+2025-03-12T14:54:56.896Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 50 seconds with 2m0s timeout
+2025-03-12T14:55:01.906Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 55 seconds with 2m0s timeout
+2025-03-12T14:55:07.143Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 60 seconds with 2m0s timeout
+2025-03-12T14:55:12.157Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 65 seconds with 2m0s timeout
+2025-03-12T14:55:17.307Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 70 seconds with 2m0s timeout
+2025-03-12T14:55:22.322Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 75 seconds with 2m0s timeout
+2025-03-12T14:55:27.542Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 80 seconds with 2m0s timeout
+2025-03-12T14:55:32.666Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 85 seconds with 2m0s timeout
+2025-03-12T14:55:37.677Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 90 seconds with 2m0s timeout
+2025-03-12T14:55:41.835Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 95 seconds with 2m0s timeout
+2025-03-12T14:55:46.845Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 100 seconds with 2m0s timeout
+2025-03-12T14:55:51.884Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 105 seconds with 2m0s timeout
+2025-03-12T14:55:56.959Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 110 seconds with 2m0s timeout
+2025-03-12T14:56:02.039Z [jfrou] [INFO ] [10997b3b972f6b1f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 115 seconds with 2m0s timeout
+2025-03-12T14:56:06.794Z [jfrou] [FATAL] [10997b3b972f6b1f] [bootstrap.go:108              ] [main                ] [] - Cluster join: Failed resolving join key: failed resolving 'shared.security.joinKey' key; file does not exist: /opt/jfrog/artifactory/var/etc/security/join.key
+2025-03-12T15:05:06.385Z [jfrou] [INFO ] [18a9248206afb957] [bootstrap.go:86               ] [main                ] [] - Router (jfrou) service initialization started. Version: 7.71.0-1 Revision: 510b659db435ba23377b140caa37d06c67af0dbd PID: 3815 Home: /opt/jfrog/artifactory
+2025-03-12T15:05:06.388Z [jfrou] [INFO ] [18a9248206afb957] [bootstrap.go:89               ] [main                ] [] - JFrog Router IP: 172.19.0.3
+2025-03-12T15:05:06.390Z [jfrou] [INFO ] [18a9248206afb957] [bootstrap.go:90               ] [main                ] [] - Effective configuration:
+access.http.port (Default Value): 8040
+artifactory.pid (Environment Variable: JF_ARTIFACTORY_PID): /opt/jfrog/artifactory/app/run/artifactory.pid
+artifactory.user (Environment Variable: JF_ARTIFACTORY_USER): artifactory
+configVersion (File): 1
+product.data.internal (Environment Variable: JF_PRODUCT_DATA_INTERNAL): /var/opt/jfrog/artifactory
+product.home (Environment Variable: JF_PRODUCT_HOME): /opt/jfrog/artifactory
+router.autoMemLimitRatio (Default Value): 0.9
+router.encryptSystemConfig (Default Value): true
+router.entrypoints.externalHost (Default Value): 
+router.entrypoints.externalMaxConcurrentStreams (Default Value): 500
+router.entrypoints.externalPort (Default Value): 8082
+router.entrypoints.grpcPort (Default Value): 8047
+router.entrypoints.internalMaxConcurrentStreams (Default Value): 500
+router.entrypoints.internalPort (Default Value): 8046
+router.entrypoints.traefikApiPort (Default Value): 8049
+router.httpclient.requestTimeoutSecs (Default Value): 30
+router.lifecycle.shutdown.entrypointsGraceTimeout (Default Value): 10s
+router.lifecycle.shutdown.internalJobsGraceTimeout (Default Value): 7s
+router.logging.application.caller (Default Value): false
+router.logging.application.console (Default Value): true
+router.logging.application.filePath (Default Value): router-service.log
+router.logging.application.format (Default Value): jftext
+router.logging.application.level (Default Value): info
+router.logging.application.rotation.compress (Default Value): true
+router.logging.application.rotation.keepLastDecompressed (Default Value): 1
+router.logging.application.rotation.maxAgeDays (Default Value): 0
+router.logging.application.rotation.maxFiles (Default Value): 10
+router.logging.application.rotation.maxSizeMb (Default Value): 25
+router.logging.consoleLog.format (Default Value): jftext
+router.logging.request.filePath (Default Value): router-request.log
+router.logging.request.forwardedForLogging.enabled (Default Value): false
+router.logging.request.forwardedForLogging.header (Default Value): X-Forwarded-For
+router.logging.request.rotation.compress (Default Value): true
+router.logging.request.rotation.keepLastDecompressed (Default Value): 1
+router.logging.request.rotation.maxAgeDays (Default Value): 0
+router.logging.request.rotation.maxFiles (Default Value): 10
+router.logging.request.rotation.maxSizeMb (Default Value): 100
+router.logging.request.tokenIdLoggingEnabled (Default Value): false
+router.logging.request.verbose (Default Value): false
+router.logging.traefik.caller (Default Value): false
+router.logging.traefik.console (Default Value): true
+router.logging.traefik.filePath (Default Value): router-traefik.log
+router.logging.traefik.format (Default Value): jftext
+router.logging.traefik.level (Default Value): info
+router.logging.traefik.rotation.compress (Default Value): true
+router.logging.traefik.rotation.keepLastDecompressed (Default Value): 1
+router.logging.traefik.rotation.maxAgeDays (Default Value): 0
+router.logging.traefik.rotation.maxFiles (Default Value): 10
+router.logging.traefik.rotation.maxSizeMb (Default Value): 25
+router.masterKeyRemoval.heartbeatCount (Default Value): 3
+router.masterKeyRemoval.intervalSecs (Default Value): 60
+router.masterKeyRemoval.timeoutSecs (Default Value): 600
+router.mtls.configCacheExpirationSecs (Default Value): 600
+router.multiTenant.cacheExpirySecs (Default Value): 86400
+router.multiTenant.cacheGcPeriodSecs (Default Value): 600
+router.probes.liveness.failOnLongFailingReadiness.enabled (Default Value): true
+router.probes.liveness.failOnLongFailingReadiness.failureDurationSecs (Default Value): 60
+router.profiling.enabled (Default Value): false
+router.proxy.httpUrl (Default Value): 
+router.proxy.httpsUrl (Default Value): 
+router.proxy.ignoredHosts (Default Value): []
+router.retry.enabled (Default Value): true
+router.security.cipherSuites (Default Value): TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_AES_128_GCM_SHA256,TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+router.serviceRegistry.accessUrl (Applicative Resolution): http://localhost:8040/access
+router.serviceRegistry.insecure (Default Value): false
+router.serviceRegistry.requestTimeout (Default Value): 15s
+router.serviceRegistry.skipJoinConnectivityTest (Default Value): false
+router.serviceRegistry.topologyUrl (Applicative Resolution): http://localhost:8040/access
+router.serviceRegistry.useTopologyService (Default Value): false
+router.supportBundle.aggregationTimeout (Default Value): 1h0m0s
+router.topology.external.healthRequestTimeoutSecs (Default Value): 5
+router.topology.external.refresh.interval (Default Value): 3s
+router.topology.external.refresh.maxStaleHeartbeat (Default Value): 30s
+router.topology.local.enableNodeStatusBroadcast (Default Value): true
+router.topology.local.healthCheck.healthyThreshold (Default Value): 2
+router.topology.local.healthCheck.interval (Default Value): 5s
+router.topology.local.healthCheck.requestTimeout (Default Value): 5s
+router.topology.local.healthCheck.unhealthyThreshold (Default Value): 2
+router.topology.local.ignorePersistedServices (Default Value): false
+router.topology.local.requiredServiceTypes (Environment Variable: JF_ROUTER_TOPOLOGY_LOCAL_REQUIREDSERVICETYPES): jfrt,jfac,jfmd,jffe,jfob,jfint,jfevt
+shared.database (File): <nil>
+shared.database.password (Environment Variable: JF_SHARED_DATABASE_PASSWORD): *****
+shared.database.type (Environment Variable: JF_SHARED_DATABASE_TYPE): postgresql
+shared.database.url (Environment Variable: JF_SHARED_DATABASE_URL): jdbc:postgresql://postgres:5432/artifactorydb
+shared.database.user (Environment Variable: JF_SHARED_DATABASE_USER): artifactory
+shared.extrajavaopts (Environment Variable: JF_SHARED_EXTRAJAVAOPTS): -Xms512m -Xmx2g
+shared.jfrogUrl (Default Value): 
+shared.logging.consoleLog.format (Default Value): shared.logging.consoleLog.format
+shared.logging.enableJsonConsoleLogAppenders (Default Value): false
+shared.multiTenant.cellId (Default Value): 
+shared.multiTenant.enabled (Default Value): false
+shared.multiTenant.tenantRegistryClient.caCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.cacheExpirationSecs (Default Value): 21600
+shared.multiTenant.tenantRegistryClient.clientCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.clientCertKey (Default Value): *****
+shared.multiTenant.tenantRegistryClient.dialTimeoutSecs (Default Value): 10
+shared.multiTenant.tenantRegistryClient.endpoints (Default Value): []
+shared.multiTenant.tenantRegistryClient.requestTimeoutSecs (Default Value): 30
+shared.newrelic.appName (Default Value): 
+shared.newrelic.distributedTracerEnabled (Default Value): true
+shared.newrelic.enableDebugLog (Default Value): false
+shared.newrelic.enabled (Default Value): false
+shared.newrelic.licenseKey (Default Value): *****
+shared.node (File): <nil>
+shared.node.id (Environment Variable: JF_SHARED_NODE_ID): eaa950cc8403
+shared.node.ip (Environment Variable: JF_SHARED_NODE_IP): 172.19.0.3
+shared.node.name (Environment Variable: JF_SHARED_NODE_NAME): eaa950cc8403
+shared.node.port (Default Value): 0
+shared.node.tlsEnabled (Default Value): false
+shared.security (File): <nil>
+shared.security.bootstrapKeysReadTimeoutSecs (Default Value): 120
+shared.security.joinKeyFile (Default Value): etc/security/join.key
+shared.security.masterKeyExternal (Default Value): false
+shared.security.masterKeyFile (Default Value): etc/security/master.key
+system.yaml (Environment Variable: JF_SYSTEM_YAML): /opt/jfrog/artifactory/var/etc/system.yaml
+topology.grpcPort (Default Value): 8021
+topology.port (Default Value): 8020
+2025-03-12T15:05:11.415Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 5 seconds with 2m0s timeout
+2025-03-12T15:05:16.533Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 10 seconds with 2m0s timeout
+2025-03-12T15:05:22.033Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 15 seconds with 2m0s timeout
+2025-03-12T15:05:27.048Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 20 seconds with 2m0s timeout
+2025-03-12T15:05:32.159Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 25 seconds with 2m0s timeout
+2025-03-12T15:05:37.308Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 30 seconds with 2m0s timeout
+2025-03-12T15:05:42.320Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 35 seconds with 2m0s timeout
+2025-03-12T15:05:46.745Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 40 seconds with 2m0s timeout
+2025-03-12T15:05:51.757Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 45 seconds with 2m0s timeout
+2025-03-12T15:05:56.922Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 50 seconds with 2m0s timeout
+2025-03-12T15:06:01.953Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 55 seconds with 2m0s timeout
+2025-03-12T15:06:07.075Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 60 seconds with 2m0s timeout
+2025-03-12T15:06:12.084Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 65 seconds with 2m0s timeout
+2025-03-12T15:06:17.182Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 70 seconds with 2m0s timeout
+2025-03-12T15:06:22.310Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 75 seconds with 2m0s timeout
+2025-03-12T15:06:27.324Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 80 seconds with 2m0s timeout
+2025-03-12T15:06:31.539Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 85 seconds with 2m0s timeout
+2025-03-12T15:06:36.581Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 90 seconds with 2m0s timeout
+2025-03-12T15:06:41.707Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 95 seconds with 2m0s timeout
+2025-03-12T15:06:46.831Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 100 seconds with 2m0s timeout
+2025-03-12T15:06:51.908Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 105 seconds with 2m0s timeout
+2025-03-12T15:06:57.136Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 110 seconds with 2m0s timeout
+2025-03-12T15:07:02.150Z [jfrou] [INFO ] [18a9248206afb957] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 115 seconds with 2m0s timeout
+2025-03-12T15:07:06.382Z [jfrou] [FATAL] [18a9248206afb957] [bootstrap.go:108              ] [main                ] [] - Cluster join: Failed resolving join key: failed resolving 'shared.security.joinKey' key; file does not exist: /opt/jfrog/artifactory/var/etc/security/join.key
+2025-03-12T15:14:36.282Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [bootstrap.go:86               ] [main                ] [] - Router (jfrou) service initialization started. Version: 7.71.0-1 Revision: 510b659db435ba23377b140caa37d06c67af0dbd PID: 3843 Home: /opt/jfrog/artifactory
+2025-03-12T15:14:36.285Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [bootstrap.go:89               ] [main                ] [] - JFrog Router IP: 172.19.0.3
+2025-03-12T15:14:36.286Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [bootstrap.go:90               ] [main                ] [] - Effective configuration:
+access.http.port (Default Value): 8040
+artifactory.pid (Environment Variable: JF_ARTIFACTORY_PID): /opt/jfrog/artifactory/app/run/artifactory.pid
+artifactory.user (Environment Variable: JF_ARTIFACTORY_USER): artifactory
+configVersion (File): 1
+product.data.internal (Environment Variable: JF_PRODUCT_DATA_INTERNAL): /var/opt/jfrog/artifactory
+product.home (Environment Variable: JF_PRODUCT_HOME): /opt/jfrog/artifactory
+router.autoMemLimitRatio (Default Value): 0.9
+router.encryptSystemConfig (Default Value): true
+router.entrypoints.externalHost (Default Value): 
+router.entrypoints.externalMaxConcurrentStreams (Default Value): 500
+router.entrypoints.externalPort (Default Value): 8082
+router.entrypoints.grpcPort (Default Value): 8047
+router.entrypoints.internalMaxConcurrentStreams (Default Value): 500
+router.entrypoints.internalPort (Default Value): 8046
+router.entrypoints.traefikApiPort (Default Value): 8049
+router.httpclient.requestTimeoutSecs (Default Value): 30
+router.lifecycle.shutdown.entrypointsGraceTimeout (Default Value): 10s
+router.lifecycle.shutdown.internalJobsGraceTimeout (Default Value): 7s
+router.logging.application.caller (Default Value): false
+router.logging.application.console (Default Value): true
+router.logging.application.filePath (Default Value): router-service.log
+router.logging.application.format (Default Value): jftext
+router.logging.application.level (Default Value): info
+router.logging.application.rotation.compress (Default Value): true
+router.logging.application.rotation.keepLastDecompressed (Default Value): 1
+router.logging.application.rotation.maxAgeDays (Default Value): 0
+router.logging.application.rotation.maxFiles (Default Value): 10
+router.logging.application.rotation.maxSizeMb (Default Value): 25
+router.logging.consoleLog.format (Default Value): jftext
+router.logging.request.filePath (Default Value): router-request.log
+router.logging.request.forwardedForLogging.enabled (Default Value): false
+router.logging.request.forwardedForLogging.header (Default Value): X-Forwarded-For
+router.logging.request.rotation.compress (Default Value): true
+router.logging.request.rotation.keepLastDecompressed (Default Value): 1
+router.logging.request.rotation.maxAgeDays (Default Value): 0
+router.logging.request.rotation.maxFiles (Default Value): 10
+router.logging.request.rotation.maxSizeMb (Default Value): 100
+router.logging.request.tokenIdLoggingEnabled (Default Value): false
+router.logging.request.verbose (Default Value): false
+router.logging.traefik.caller (Default Value): false
+router.logging.traefik.console (Default Value): true
+router.logging.traefik.filePath (Default Value): router-traefik.log
+router.logging.traefik.format (Default Value): jftext
+router.logging.traefik.level (Default Value): info
+router.logging.traefik.rotation.compress (Default Value): true
+router.logging.traefik.rotation.keepLastDecompressed (Default Value): 1
+router.logging.traefik.rotation.maxAgeDays (Default Value): 0
+router.logging.traefik.rotation.maxFiles (Default Value): 10
+router.logging.traefik.rotation.maxSizeMb (Default Value): 25
+router.masterKeyRemoval.heartbeatCount (Default Value): 3
+router.masterKeyRemoval.intervalSecs (Default Value): 60
+router.masterKeyRemoval.timeoutSecs (Default Value): 600
+router.mtls.configCacheExpirationSecs (Default Value): 600
+router.multiTenant.cacheExpirySecs (Default Value): 86400
+router.multiTenant.cacheGcPeriodSecs (Default Value): 600
+router.probes.liveness.failOnLongFailingReadiness.enabled (Default Value): true
+router.probes.liveness.failOnLongFailingReadiness.failureDurationSecs (Default Value): 60
+router.profiling.enabled (Default Value): false
+router.proxy.httpUrl (Default Value): 
+router.proxy.httpsUrl (Default Value): 
+router.proxy.ignoredHosts (Default Value): []
+router.retry.enabled (Default Value): true
+router.security.cipherSuites (Default Value): TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_AES_128_GCM_SHA256,TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+router.serviceRegistry.accessUrl (Applicative Resolution): http://localhost:8040/access
+router.serviceRegistry.insecure (Default Value): false
+router.serviceRegistry.requestTimeout (Default Value): 15s
+router.serviceRegistry.skipJoinConnectivityTest (Default Value): false
+router.serviceRegistry.topologyUrl (Applicative Resolution): http://localhost:8040/access
+router.serviceRegistry.useTopologyService (Default Value): false
+router.supportBundle.aggregationTimeout (Default Value): 1h0m0s
+router.topology.external.healthRequestTimeoutSecs (Default Value): 5
+router.topology.external.refresh.interval (Default Value): 3s
+router.topology.external.refresh.maxStaleHeartbeat (Default Value): 30s
+router.topology.local.enableNodeStatusBroadcast (Default Value): true
+router.topology.local.healthCheck.healthyThreshold (Default Value): 2
+router.topology.local.healthCheck.interval (Default Value): 5s
+router.topology.local.healthCheck.requestTimeout (Default Value): 5s
+router.topology.local.healthCheck.unhealthyThreshold (Default Value): 2
+router.topology.local.ignorePersistedServices (Default Value): false
+router.topology.local.requiredServiceTypes (Environment Variable: JF_ROUTER_TOPOLOGY_LOCAL_REQUIREDSERVICETYPES): jfrt,jfac,jfmd,jffe,jfob,jfint,jfevt
+shared.database (File): <nil>
+shared.database.password (Environment Variable: JF_SHARED_DATABASE_PASSWORD): *****
+shared.database.type (Environment Variable: JF_SHARED_DATABASE_TYPE): postgresql
+shared.database.url (Environment Variable: JF_SHARED_DATABASE_URL): jdbc:postgresql://postgres:5432/artifactorydb
+shared.database.user (Environment Variable: JF_SHARED_DATABASE_USER): artifactory
+shared.extrajavaopts (Environment Variable: JF_SHARED_EXTRAJAVAOPTS): -Xms512m -Xmx2g
+shared.jfrogUrl (Default Value): 
+shared.logging.consoleLog.format (Default Value): shared.logging.consoleLog.format
+shared.logging.enableJsonConsoleLogAppenders (Default Value): false
+shared.multiTenant.cellId (Default Value): 
+shared.multiTenant.enabled (Default Value): false
+shared.multiTenant.tenantRegistryClient.caCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.cacheExpirationSecs (Default Value): 21600
+shared.multiTenant.tenantRegistryClient.clientCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.clientCertKey (Default Value): *****
+shared.multiTenant.tenantRegistryClient.dialTimeoutSecs (Default Value): 10
+shared.multiTenant.tenantRegistryClient.endpoints (Default Value): []
+shared.multiTenant.tenantRegistryClient.requestTimeoutSecs (Default Value): 30
+shared.newrelic.appName (Default Value): 
+shared.newrelic.distributedTracerEnabled (Default Value): true
+shared.newrelic.enableDebugLog (Default Value): false
+shared.newrelic.enabled (Default Value): false
+shared.newrelic.licenseKey (Default Value): *****
+shared.node (File): <nil>
+shared.node.id (Environment Variable: JF_SHARED_NODE_ID): c9d950aef59c
+shared.node.ip (Environment Variable: JF_SHARED_NODE_IP): 172.19.0.3
+shared.node.name (Environment Variable: JF_SHARED_NODE_NAME): c9d950aef59c
+shared.node.port (Default Value): 0
+shared.node.tlsEnabled (Default Value): false
+shared.security (File): <nil>
+shared.security.bootstrapKeysReadTimeoutSecs (Default Value): 120
+shared.security.joinKeyFile (Default Value): etc/security/join.key
+shared.security.masterKeyExternal (Default Value): false
+shared.security.masterKeyFile (Default Value): etc/security/master.key
+system.yaml (Environment Variable: JF_SYSTEM_YAML): /opt/jfrog/artifactory/var/etc/system.yaml
+topology.grpcPort (Default Value): 8021
+topology.port (Default Value): 8020
+2025-03-12T15:14:41.299Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 5 seconds with 2m0s timeout
+2025-03-12T15:14:46.340Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 10 seconds with 2m0s timeout
+2025-03-12T15:14:51.358Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 15 seconds with 2m0s timeout
+2025-03-12T15:14:56.378Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 20 seconds with 2m0s timeout
+2025-03-12T15:15:01.391Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 25 seconds with 2m0s timeout
+2025-03-12T15:15:06.405Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 30 seconds with 2m0s timeout
+2025-03-12T15:15:11.419Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 35 seconds with 2m0s timeout
+2025-03-12T15:15:16.435Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 40 seconds with 2m0s timeout
+2025-03-12T15:15:21.451Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 45 seconds with 2m0s timeout
+2025-03-12T15:15:26.466Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 50 seconds with 2m0s timeout
+2025-03-12T15:15:31.480Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 55 seconds with 2m0s timeout
+2025-03-12T15:15:36.497Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 60 seconds with 2m0s timeout
+2025-03-12T15:15:41.513Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 65 seconds with 2m0s timeout
+2025-03-12T15:15:46.536Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 70 seconds with 2m0s timeout
+2025-03-12T15:15:51.549Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 75 seconds with 2m0s timeout
+2025-03-12T15:15:56.568Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 80 seconds with 2m0s timeout
+2025-03-12T15:16:01.585Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 85 seconds with 2m0s timeout
+2025-03-12T15:16:06.607Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 90 seconds with 2m0s timeout
+2025-03-12T15:16:11.624Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 95 seconds with 2m0s timeout
+2025-03-12T15:16:16.647Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 100 seconds with 2m0s timeout
+2025-03-12T15:16:21.662Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 105 seconds with 2m0s timeout
+2025-03-12T15:16:26.683Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 110 seconds with 2m0s timeout
+2025-03-12T15:16:31.696Z [jfrou] [INFO ] [45d3eb8fcf43dc8d] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 115 seconds with 2m0s timeout
+2025-03-12T15:16:36.278Z [jfrou] [FATAL] [45d3eb8fcf43dc8d] [bootstrap.go:108              ] [main                ] [] - Cluster join: Failed resolving join key: failed resolving 'shared.security.joinKey' key; file does not exist: /opt/jfrog/artifactory/var/etc/security/join.key
+2025-03-12T15:23:38.756Z [jfrou] [INFO ] [588ce3d811881864] [bootstrap.go:86               ] [main                ] [] - Router (jfrou) service initialization started. Version: 7.71.0-1 Revision: 510b659db435ba23377b140caa37d06c67af0dbd PID: 3833 Home: /opt/jfrog/artifactory
+2025-03-12T15:23:38.761Z [jfrou] [INFO ] [588ce3d811881864] [bootstrap.go:89               ] [main                ] [] - JFrog Router IP: 172.19.0.3
+2025-03-12T15:23:38.763Z [jfrou] [INFO ] [588ce3d811881864] [bootstrap.go:90               ] [main                ] [] - Effective configuration:
+access.http.port (Default Value): 8040
+artifactory.pid (Environment Variable: JF_ARTIFACTORY_PID): /opt/jfrog/artifactory/app/run/artifactory.pid
+artifactory.user (Environment Variable: JF_ARTIFACTORY_USER): artifactory
+configVersion (File): 1
+product.data.internal (Environment Variable: JF_PRODUCT_DATA_INTERNAL): /var/opt/jfrog/artifactory
+product.home (Environment Variable: JF_PRODUCT_HOME): /opt/jfrog/artifactory
+router.autoMemLimitRatio (Default Value): 0.9
+router.encryptSystemConfig (Default Value): true
+router.entrypoints.externalHost (Default Value): 
+router.entrypoints.externalMaxConcurrentStreams (Default Value): 500
+router.entrypoints.externalPort (Default Value): 8082
+router.entrypoints.grpcPort (Default Value): 8047
+router.entrypoints.internalMaxConcurrentStreams (Default Value): 500
+router.entrypoints.internalPort (Default Value): 8046
+router.entrypoints.traefikApiPort (Default Value): 8049
+router.httpclient.requestTimeoutSecs (Default Value): 30
+router.lifecycle.shutdown.entrypointsGraceTimeout (Default Value): 10s
+router.lifecycle.shutdown.internalJobsGraceTimeout (Default Value): 7s
+router.logging.application.caller (Default Value): false
+router.logging.application.console (Default Value): true
+router.logging.application.filePath (Default Value): router-service.log
+router.logging.application.format (Default Value): jftext
+router.logging.application.level (Default Value): info
+router.logging.application.rotation.compress (Default Value): true
+router.logging.application.rotation.keepLastDecompressed (Default Value): 1
+router.logging.application.rotation.maxAgeDays (Default Value): 0
+router.logging.application.rotation.maxFiles (Default Value): 10
+router.logging.application.rotation.maxSizeMb (Default Value): 25
+router.logging.consoleLog.format (Default Value): jftext
+router.logging.request.filePath (Default Value): router-request.log
+router.logging.request.forwardedForLogging.enabled (Default Value): false
+router.logging.request.forwardedForLogging.header (Default Value): X-Forwarded-For
+router.logging.request.rotation.compress (Default Value): true
+router.logging.request.rotation.keepLastDecompressed (Default Value): 1
+router.logging.request.rotation.maxAgeDays (Default Value): 0
+router.logging.request.rotation.maxFiles (Default Value): 10
+router.logging.request.rotation.maxSizeMb (Default Value): 100
+router.logging.request.tokenIdLoggingEnabled (Default Value): false
+router.logging.request.verbose (Default Value): false
+router.logging.traefik.caller (Default Value): false
+router.logging.traefik.console (Default Value): true
+router.logging.traefik.filePath (Default Value): router-traefik.log
+router.logging.traefik.format (Default Value): jftext
+router.logging.traefik.level (Default Value): info
+router.logging.traefik.rotation.compress (Default Value): true
+router.logging.traefik.rotation.keepLastDecompressed (Default Value): 1
+router.logging.traefik.rotation.maxAgeDays (Default Value): 0
+router.logging.traefik.rotation.maxFiles (Default Value): 10
+router.logging.traefik.rotation.maxSizeMb (Default Value): 25
+router.masterKeyRemoval.heartbeatCount (Default Value): 3
+router.masterKeyRemoval.intervalSecs (Default Value): 60
+router.masterKeyRemoval.timeoutSecs (Default Value): 600
+router.mtls.configCacheExpirationSecs (Default Value): 600
+router.multiTenant.cacheExpirySecs (Default Value): 86400
+router.multiTenant.cacheGcPeriodSecs (Default Value): 600
+router.probes.liveness.failOnLongFailingReadiness.enabled (Default Value): true
+router.probes.liveness.failOnLongFailingReadiness.failureDurationSecs (Default Value): 60
+router.profiling.enabled (Default Value): false
+router.proxy.httpUrl (Default Value): 
+router.proxy.httpsUrl (Default Value): 
+router.proxy.ignoredHosts (Default Value): []
+router.retry.enabled (Default Value): true
+router.security.cipherSuites (Default Value): TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_AES_128_GCM_SHA256,TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+router.serviceRegistry.accessUrl (Applicative Resolution): http://localhost:8040/access
+router.serviceRegistry.insecure (Default Value): false
+router.serviceRegistry.requestTimeout (Default Value): 15s
+router.serviceRegistry.skipJoinConnectivityTest (Default Value): false
+router.serviceRegistry.topologyUrl (Applicative Resolution): http://localhost:8040/access
+router.serviceRegistry.useTopologyService (Default Value): false
+router.supportBundle.aggregationTimeout (Default Value): 1h0m0s
+router.topology.external.healthRequestTimeoutSecs (Default Value): 5
+router.topology.external.refresh.interval (Default Value): 3s
+router.topology.external.refresh.maxStaleHeartbeat (Default Value): 30s
+router.topology.local.enableNodeStatusBroadcast (Default Value): true
+router.topology.local.healthCheck.healthyThreshold (Default Value): 2
+router.topology.local.healthCheck.interval (Default Value): 5s
+router.topology.local.healthCheck.requestTimeout (Default Value): 5s
+router.topology.local.healthCheck.unhealthyThreshold (Default Value): 2
+router.topology.local.ignorePersistedServices (Default Value): false
+router.topology.local.requiredServiceTypes (Environment Variable: JF_ROUTER_TOPOLOGY_LOCAL_REQUIREDSERVICETYPES): jfrt,jfac,jfmd,jffe,jfob,jfint,jfevt
+shared.database (File): <nil>
+shared.database.password (Environment Variable: JF_SHARED_DATABASE_PASSWORD): *****
+shared.database.type (Environment Variable: JF_SHARED_DATABASE_TYPE): postgresql
+shared.database.url (Environment Variable: JF_SHARED_DATABASE_URL): jdbc:postgresql://postgres:5432/artifactorydb
+shared.database.user (Environment Variable: JF_SHARED_DATABASE_USER): artifactory
+shared.extrajavaopts (Environment Variable: JF_SHARED_EXTRAJAVAOPTS): -Xms512m -Xmx2g
+shared.jfrogUrl (Default Value): 
+shared.logging.consoleLog.format (Default Value): shared.logging.consoleLog.format
+shared.logging.enableJsonConsoleLogAppenders (Default Value): false
+shared.multiTenant.cellId (Default Value): 
+shared.multiTenant.enabled (Default Value): false
+shared.multiTenant.tenantRegistryClient.caCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.cacheExpirationSecs (Default Value): 21600
+shared.multiTenant.tenantRegistryClient.clientCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.clientCertKey (Default Value): *****
+shared.multiTenant.tenantRegistryClient.dialTimeoutSecs (Default Value): 10
+shared.multiTenant.tenantRegistryClient.endpoints (Default Value): []
+shared.multiTenant.tenantRegistryClient.requestTimeoutSecs (Default Value): 30
+shared.newrelic.appName (Default Value): 
+shared.newrelic.distributedTracerEnabled (Default Value): true
+shared.newrelic.enableDebugLog (Default Value): false
+shared.newrelic.enabled (Default Value): false
+shared.newrelic.licenseKey (Default Value): *****
+shared.node (File): <nil>
+shared.node.id (Environment Variable: JF_SHARED_NODE_ID): c9d950aef59c
+shared.node.ip (Environment Variable: JF_SHARED_NODE_IP): 172.19.0.3
+shared.node.name (Environment Variable: JF_SHARED_NODE_NAME): c9d950aef59c
+shared.node.port (Default Value): 0
+shared.node.tlsEnabled (Default Value): false
+shared.security (File): <nil>
+shared.security.bootstrapKeysReadTimeoutSecs (Default Value): 120
+shared.security.joinKeyFile (Default Value): etc/security/join.key
+shared.security.masterKeyExternal (Default Value): false
+shared.security.masterKeyFile (Default Value): etc/security/master.key
+system.yaml (Environment Variable: JF_SYSTEM_YAML): /opt/jfrog/artifactory/var/etc/system.yaml
+topology.grpcPort (Default Value): 8021
+topology.port (Default Value): 8020
+2025-03-12T15:23:38.775Z [jfrou] [FATAL] [588ce3d811881864] [bootstrap.go:108              ] [main                ] [] - Cluster join: Failed resolving join key: Corrupted join key: encoding/hex: invalid byte: U+0069 'i'
+2025-03-12T15:38:16.842Z [jfrou] [INFO ] [4286816321df18bf] [bootstrap.go:86               ] [main                ] [] - Router (jfrou) service initialization started. Version: 7.71.0-1 Revision: 510b659db435ba23377b140caa37d06c67af0dbd PID: 3814 Home: /opt/jfrog/artifactory
+2025-03-12T15:38:16.851Z [jfrou] [INFO ] [4286816321df18bf] [bootstrap.go:89               ] [main                ] [] - JFrog Router IP: 172.19.0.3
+2025-03-12T15:38:16.853Z [jfrou] [INFO ] [4286816321df18bf] [bootstrap.go:90               ] [main                ] [] - Effective configuration:
+access.http.port (Default Value): 8040
+artifactory.pid (Environment Variable: JF_ARTIFACTORY_PID): /opt/jfrog/artifactory/app/run/artifactory.pid
+artifactory.user (Environment Variable: JF_ARTIFACTORY_USER): artifactory
+configVersion (File): 1
+product.data.internal (Environment Variable: JF_PRODUCT_DATA_INTERNAL): /var/opt/jfrog/artifactory
+product.home (Environment Variable: JF_PRODUCT_HOME): /opt/jfrog/artifactory
+router.autoMemLimitRatio (Default Value): 0.9
+router.encryptSystemConfig (Default Value): true
+router.entrypoints.externalHost (Default Value): 
+router.entrypoints.externalMaxConcurrentStreams (Default Value): 500
+router.entrypoints.externalPort (Default Value): 8082
+router.entrypoints.grpcPort (Default Value): 8047
+router.entrypoints.internalMaxConcurrentStreams (Default Value): 500
+router.entrypoints.internalPort (Default Value): 8046
+router.entrypoints.traefikApiPort (Default Value): 8049
+router.httpclient.requestTimeoutSecs (Default Value): 30
+router.lifecycle.shutdown.entrypointsGraceTimeout (Default Value): 10s
+router.lifecycle.shutdown.internalJobsGraceTimeout (Default Value): 7s
+router.logging.application.caller (Default Value): false
+router.logging.application.console (Default Value): true
+router.logging.application.filePath (Default Value): router-service.log
+router.logging.application.format (Default Value): jftext
+router.logging.application.level (Default Value): info
+router.logging.application.rotation.compress (Default Value): true
+router.logging.application.rotation.keepLastDecompressed (Default Value): 1
+router.logging.application.rotation.maxAgeDays (Default Value): 0
+router.logging.application.rotation.maxFiles (Default Value): 10
+router.logging.application.rotation.maxSizeMb (Default Value): 25
+router.logging.consoleLog.format (Default Value): jftext
+router.logging.request.filePath (Default Value): router-request.log
+router.logging.request.forwardedForLogging.enabled (Default Value): false
+router.logging.request.forwardedForLogging.header (Default Value): X-Forwarded-For
+router.logging.request.rotation.compress (Default Value): true
+router.logging.request.rotation.keepLastDecompressed (Default Value): 1
+router.logging.request.rotation.maxAgeDays (Default Value): 0
+router.logging.request.rotation.maxFiles (Default Value): 10
+router.logging.request.rotation.maxSizeMb (Default Value): 100
+router.logging.request.tokenIdLoggingEnabled (Default Value): false
+router.logging.request.verbose (Default Value): false
+router.logging.traefik.caller (Default Value): false
+router.logging.traefik.console (Default Value): true
+router.logging.traefik.filePath (Default Value): router-traefik.log
+router.logging.traefik.format (Default Value): jftext
+router.logging.traefik.level (Default Value): info
+router.logging.traefik.rotation.compress (Default Value): true
+router.logging.traefik.rotation.keepLastDecompressed (Default Value): 1
+router.logging.traefik.rotation.maxAgeDays (Default Value): 0
+router.logging.traefik.rotation.maxFiles (Default Value): 10
+router.logging.traefik.rotation.maxSizeMb (Default Value): 25
+router.masterKeyRemoval.heartbeatCount (Default Value): 3
+router.masterKeyRemoval.intervalSecs (Default Value): 60
+router.masterKeyRemoval.timeoutSecs (Default Value): 600
+router.mtls.configCacheExpirationSecs (Default Value): 600
+router.multiTenant.cacheExpirySecs (Default Value): 86400
+router.multiTenant.cacheGcPeriodSecs (Default Value): 600
+router.probes.liveness.failOnLongFailingReadiness.enabled (Default Value): true
+router.probes.liveness.failOnLongFailingReadiness.failureDurationSecs (Default Value): 60
+router.profiling.enabled (Default Value): false
+router.proxy.httpUrl (Default Value): 
+router.proxy.httpsUrl (Default Value): 
+router.proxy.ignoredHosts (Default Value): []
+router.retry.enabled (Default Value): true
+router.security.cipherSuites (Default Value): TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_AES_128_GCM_SHA256,TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+router.serviceRegistry.accessUrl (Applicative Resolution): http://localhost:8040/access
+router.serviceRegistry.insecure (Default Value): false
+router.serviceRegistry.requestTimeout (Default Value): 15s
+router.serviceRegistry.skipJoinConnectivityTest (Default Value): false
+router.serviceRegistry.topologyUrl (Applicative Resolution): http://localhost:8040/access
+router.serviceRegistry.useTopologyService (Default Value): false
+router.supportBundle.aggregationTimeout (Default Value): 1h0m0s
+router.topology.external.healthRequestTimeoutSecs (Default Value): 5
+router.topology.external.refresh.interval (Default Value): 3s
+router.topology.external.refresh.maxStaleHeartbeat (Default Value): 30s
+router.topology.local.enableNodeStatusBroadcast (Default Value): true
+router.topology.local.healthCheck.healthyThreshold (Default Value): 2
+router.topology.local.healthCheck.interval (Default Value): 5s
+router.topology.local.healthCheck.requestTimeout (Default Value): 5s
+router.topology.local.healthCheck.unhealthyThreshold (Default Value): 2
+router.topology.local.ignorePersistedServices (Default Value): false
+router.topology.local.requiredServiceTypes (Environment Variable: JF_ROUTER_TOPOLOGY_LOCAL_REQUIREDSERVICETYPES): jfrt,jfac,jfmd,jffe,jfob,jfint,jfevt
+shared.database (File): <nil>
+shared.database.password (Environment Variable: JF_SHARED_DATABASE_PASSWORD): *****
+shared.database.type (Environment Variable: JF_SHARED_DATABASE_TYPE): postgresql
+shared.database.url (Environment Variable: JF_SHARED_DATABASE_URL): jdbc:postgresql://postgres:5432/artifactorydb
+shared.database.user (Environment Variable: JF_SHARED_DATABASE_USER): artifactory
+shared.extrajavaopts (Environment Variable: JF_SHARED_EXTRAJAVAOPTS): -Xms512m -Xmx2g
+shared.jfrogUrl (Default Value): 
+shared.logging.consoleLog.format (Default Value): shared.logging.consoleLog.format
+shared.logging.enableJsonConsoleLogAppenders (Default Value): false
+shared.multiTenant.cellId (Default Value): 
+shared.multiTenant.enabled (Default Value): false
+shared.multiTenant.tenantRegistryClient.caCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.cacheExpirationSecs (Default Value): 21600
+shared.multiTenant.tenantRegistryClient.clientCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.clientCertKey (Default Value): *****
+shared.multiTenant.tenantRegistryClient.dialTimeoutSecs (Default Value): 10
+shared.multiTenant.tenantRegistryClient.endpoints (Default Value): []
+shared.multiTenant.tenantRegistryClient.requestTimeoutSecs (Default Value): 30
+shared.newrelic.appName (Default Value): 
+shared.newrelic.distributedTracerEnabled (Default Value): true
+shared.newrelic.enableDebugLog (Default Value): false
+shared.newrelic.enabled (Default Value): false
+shared.newrelic.licenseKey (Default Value): *****
+shared.node (File): <nil>
+shared.node.id (Environment Variable: JF_SHARED_NODE_ID): c9d950aef59c
+shared.node.ip (Environment Variable: JF_SHARED_NODE_IP): 172.19.0.3
+shared.node.name (Environment Variable: JF_SHARED_NODE_NAME): c9d950aef59c
+shared.node.port (Default Value): 0
+shared.node.tlsEnabled (Default Value): false
+shared.security (File): <nil>
+shared.security.bootstrapKeysReadTimeoutSecs (Default Value): 120
+shared.security.joinKeyFile (Default Value): etc/security/join.key
+shared.security.masterKeyExternal (Default Value): false
+shared.security.masterKeyFile (Default Value): etc/security/master.key
+system.yaml (Environment Variable: JF_SYSTEM_YAML): /opt/jfrog/artifactory/var/etc/system.yaml
+topology.grpcPort (Default Value): 8021
+topology.port (Default Value): 8020
+2025-03-12T15:38:16.883Z [jfrou] [FATAL] [4286816321df18bf] [bootstrap.go:108              ] [main                ] [] - Cluster join: Failed resolving join key: Corrupted join key: encoding/hex: invalid byte: U+0069 'i'

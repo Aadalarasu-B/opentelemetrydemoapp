@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  artifactory:
+    image: docker.jfrog.io/jfrog/artifactory-oss:latest
+    container_name: artifactory
+    restart: unless-stopped
+    ports:
+      - "8081:8081"  # JFrog Web UI
+      - "8082:8082"  # JFrog API & Docker Registry
+    volumes:
+      - artifactory_data:/var/opt/jfrog/artifactory
+    environment:
+      - JF_SHARED_NODE_IP=127.0.0.1
+    networks:
+      - jfrog_network
+
+volumes:
+  artifactory_data:
+
+networks:
+  jfrog_network:

@@ -1,0 +1,2 @@
+2025-03-12T02:09:45.516Z [AUDIT] Token created by 'anonymous': tokenId='ba8f751f-ddc1-470e-b584-c41e7022005c', issuer='jfrou@01jp41tm476vn75da9kcaqn3gd', subject='jfrou@01jp41tm476vn75da9kcaqn3gd', expiry=none, refreshable=false
+2025-03-12T02:09:46.519Z [AUDIT] Token created by 'jfrou@01jp41tm476vn75da9kcaqn3gd': tokenId='37d19ffa-cb98-4508-9708-00e27fc8b695', issuer='jfrou@01jp41tm476vn75da9kcaqn3gd', subject='jfrou@01jp41tm476vn75da9kcaqn3gd', expiry=1741752586518, refreshable=false

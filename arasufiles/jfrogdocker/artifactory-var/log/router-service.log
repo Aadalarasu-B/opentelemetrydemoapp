@@ -1,0 +1,1003 @@
+2025-03-12T02:09:07.277Z [jfrou] [INFO ] [21da8d0461c02352] [bootstrap.go:91               ] [main                ] [] - Router (jfrou) service initialization started. Version: 7.149.1-1 Revision: 619561f935520ad047fe4f06257b4bfe068500bf PID: 5179 Home: /opt/jfrog/artifactory
+2025-03-12T02:09:07.280Z [jfrou] [INFO ] [21da8d0461c02352] [bootstrap.go:94               ] [main                ] [] - JFrog Router IP: 172.19.0.3
+2025-03-12T02:09:07.288Z [jfrou] [INFO ] [21da8d0461c02352] [bootstrap.go:95               ] [main                ] [] - Effective configuration:
+access.http.port (Default Value): 8040
+access.useexternaltopology (Environment Variable: JF_ACCESS_USEEXTERNALTOPOLOGY): true
+artifactory.pid (Environment Variable: JF_ARTIFACTORY_PID): /opt/jfrog/artifactory/var/work/run/artifactory.pid
+artifactory.user (Environment Variable: JF_ARTIFACTORY_USER): artifactory
+legacy.artifactory.pid (Environment Variable: JF_LEGACY_ARTIFACTORY_PID): /opt/jfrog/artifactory/app/run/artifactory.pid
+product.data.internal (Environment Variable: JF_PRODUCT_DATA_INTERNAL): /var/opt/jfrog/artifactory
+product.home (Environment Variable: JF_PRODUCT_HOME): /opt/jfrog/artifactory
+router.autoMemLimitRatio (Default Value): 0.9
+router.availabilityZoneOptimization.loggingIntervalSecs (Default Value): 600
+router.encryptSystemConfig (Default Value): true
+router.entrypoints.externalHost (Default Value): 
+router.entrypoints.externalMaxConcurrentStreams (Default Value): 500
+router.entrypoints.externalPort (Default Value): 8082
+router.entrypoints.grpcPort (Default Value): 8047
+router.entrypoints.hotPathLogEnabled (Default Value): true
+router.entrypoints.internalMaxConcurrentStreams (Default Value): 500
+router.entrypoints.internalPort (Default Value): 8046
+router.entrypoints.traefikApiPort (Default Value): 8049
+router.httpclient.requestTimeoutSecs (Default Value): 30
+router.lifecycle.shutdown.entrypointsGraceTimeout (Default Value): 10s
+router.lifecycle.shutdown.internalJobsGraceTimeout (Default Value): 7s
+router.logging.application.caller (Default Value): false
+router.logging.application.console (Default Value): true
+router.logging.application.filePath (Default Value): router-service.log
+router.logging.application.format (Default Value): jftext
+router.logging.application.level (Default Value): info
+router.logging.application.rotation.compress (Default Value): true
+router.logging.application.rotation.keepLastDecompressed (Default Value): 1
+router.logging.application.rotation.maxAgeDays (Default Value): 0
+router.logging.application.rotation.maxFiles (Default Value): 10
+router.logging.application.rotation.maxSizeMb (Default Value): 25
+router.logging.consoleLog.format (Default Value): jftext
+router.logging.request.filePath (Default Value): router-request.log
+router.logging.request.forwardedForLogging.enabled (Default Value): false
+router.logging.request.forwardedForLogging.header (Default Value): X-Forwarded-For
+router.logging.request.rotation.compress (Default Value): true
+router.logging.request.rotation.keepLastDecompressed (Default Value): 1
+router.logging.request.rotation.maxAgeDays (Default Value): 0
+router.logging.request.rotation.maxFiles (Default Value): 10
+router.logging.request.rotation.maxSizeMb (Default Value): 100
+router.logging.request.tokenIdLoggingEnabled (Default Value): false
+router.logging.request.verbose (Default Value): false
+router.logging.traefik.caller (Default Value): false
+router.logging.traefik.console (Default Value): false
+router.logging.traefik.filePath (Default Value): router-traefik.log
+router.logging.traefik.format (Default Value): jftext
+router.logging.traefik.level (Default Value): info
+router.logging.traefik.rotation.compress (Default Value): true
+router.logging.traefik.rotation.keepLastDecompressed (Default Value): 1
+router.logging.traefik.rotation.maxAgeDays (Default Value): 0
+router.logging.traefik.rotation.maxFiles (Default Value): 10
+router.logging.traefik.rotation.maxSizeMb (Default Value): 25
+router.masterKeyRemoval.heartbeatCount (Default Value): 3
+router.masterKeyRemoval.intervalSecs (Default Value): 60
+router.masterKeyRemoval.timeoutSecs (Default Value): 600
+router.metrics.tokenVerification.accessUrl (Default Value): 
+router.metrics.tokenVerification.revocableExpiryThresholdSeconds (Default Value): -1
+router.mtls.configCacheErrorExpirationSecs (Default Value): 15
+router.mtls.configCacheExpirationSecs (Default Value): 600
+router.multiTenant.cacheExpirySecs (Default Value): 86400
+router.multiTenant.cacheGcPeriodSecs (Default Value): 600
+router.multiTenant.transport.idleConnTimeoutSecs (Default Value): 5
+router.multiTenant.transport.insecureSkipVerify (Default Value): true
+router.probes.liveness.failOnLongFailingReadiness.enabled (Default Value): true
+router.probes.liveness.failOnLongFailingReadiness.failureDurationSecs (Default Value): 60
+router.profiling.enabled (Default Value): false
+router.profiling.pprofServerPort (Default Value): 6060
+router.profiling.pprofServerTimeoutSeconds (Default Value): 21600
+router.proxy.httpUrl (Default Value): 
+router.proxy.httpsUrl (Default Value): 
+router.proxy.ignoredHosts (Default Value): []
+router.redirectUnknownPathToArtifactoryEnabled (Default Value): false
+router.retry.enabled (Default Value): false
+router.retry.enabledOnUnavailable (Default Value): true
+router.security.cipherSuites (Default Value): TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_AES_128_GCM_SHA256,TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+router.serviceRegistry.accessUrl (Applicative Resolution): http://localhost:8040/access
+router.serviceRegistry.insecure (Default Value): false
+router.serviceRegistry.requestTimeout (Default Value): 15s
+router.serviceRegistry.skipJoinConnectivityTest (Default Value): false
+router.serviceRegistry.topologyServiceTokenExpirySecs (Default Value): 7200
+router.serviceRegistry.topologyUrl (Applicative Resolution): http://localhost:8020/topology
+router.serviceRegistry.useTopologyService (Default Value): false
+router.supportBundle.aggregationTimeout (Default Value): 1h0m0s
+router.topology.external.allowH2c (Default Value): true
+router.topology.external.healthRequestTimeoutSecs (Default Value): 5
+router.topology.external.protocolFinderCacheSecs (Default Value): 600
+router.topology.external.refresh.interval (Default Value): 3s
+router.topology.external.refresh.maxStaleHeartbeat (Default Value): 30s
+router.topology.external.skipIpCheck (Default Value): false
+router.topology.local.enableNodeStatusBroadcast (Default Value): true
+router.topology.local.healthCheck.healthyThreshold (Default Value): 2
+router.topology.local.healthCheck.interval (Default Value): 5s
+router.topology.local.healthCheck.requestTimeout (Default Value): 5s
+router.topology.local.healthCheck.unhealthyThreshold (Default Value): 2
+router.topology.local.ignorePersistedServices (Default Value): false
+router.topology.local.requiredServiceTypes (Environment Variable: JF_ROUTER_TOPOLOGY_LOCAL_REQUIREDSERVICETYPES): jfrt,jfac,jfmd,jffe,jfob,jfevt,jftpl
+shared.database.driver (File): org.postgresql.Driver
+shared.database.password (File): *****
+shared.database.type (File): postgresql
+shared.database.url (File): jdbc:postgresql://host.docker.internal:5432/artifactorydb
+shared.database.username (File): artifactory
+shared.jfrogUrl (Default Value): 
+shared.logging.consoleLog.format (Default Value): shared.logging.consoleLog.format
+shared.logging.enableJsonConsoleLogAppenders (Default Value): false
+shared.multiTenant.cellId (Default Value): 
+shared.multiTenant.enabled (Default Value): false
+shared.multiTenant.keyPrefix (Default Value): 
+shared.multiTenant.tenantRegistryClient.caCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.cacheExpirationSecs (Default Value): 21600
+shared.multiTenant.tenantRegistryClient.clientCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.clientCertKey (Default Value): *****
+shared.multiTenant.tenantRegistryClient.dialTimeoutSecs (Default Value): 10
+shared.multiTenant.tenantRegistryClient.endpoints (Default Value): []
+shared.multiTenant.tenantRegistryClient.requestTimeoutSecs (Default Value): 30
+shared.newrelic.appName (Default Value): 
+shared.newrelic.distributedTracerEnabled (Default Value): true
+shared.newrelic.enableDebugLog (Default Value): false
+shared.newrelic.enabled (Default Value): false
+shared.newrelic.licenseKey (Default Value): *****
+shared.node.availabilityZoneId (Default Value): 
+shared.node.id (Environment Variable: JF_SHARED_NODE_ID): 5edea333cc2e
+shared.node.ip (Environment Variable: JF_SHARED_NODE_IP): 172.19.0.3
+shared.node.name (Environment Variable: JF_SHARED_NODE_NAME): 5edea333cc2e
+shared.node.port (Default Value): 0
+shared.node.tlsEnabled (Default Value): false
+shared.restrictedmode.enabled (Environment Variable: JF_SHARED_RESTRICTEDMODE_ENABLED): true
+shared.security.bootstrapKeysReadTimeoutSecs (Default Value): 300
+shared.security.joinKeyFile (Default Value): etc/security/join.key
+shared.security.masterKeyExternal (Default Value): false
+shared.security.masterKeyFile (Default Value): etc/security/master.key
+system.yaml (Environment Variable: JF_SYSTEM_YAML): /opt/jfrog/artifactory/var/etc/system.yaml
+topology.grpcPort (Default Value): 8021
+topology.port (Default Value): 8020
+2025-03-12T02:09:12.299Z [jfrou] [INFO ] [21da8d0461c02352] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 5 seconds with 5m0s timeout
+2025-03-12T02:09:17.322Z [jfrou] [INFO ] [21da8d0461c02352] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 10 seconds with 5m0s timeout
+2025-03-12T02:09:22.334Z [jfrou] [INFO ] [21da8d0461c02352] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 15 seconds with 5m0s timeout
+2025-03-12T02:09:27.344Z [jfrou] [INFO ] [21da8d0461c02352] [security_keys.go:172          ] [main                ] [] - Master key is missing. Pending for 20 seconds with 5m0s timeout
+2025-03-12T02:09:32.363Z [jfrou] [INFO ] [21da8d0461c02352] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 25 seconds with 5m0s timeout
+2025-03-12T02:09:37.385Z [jfrou] [INFO ] [21da8d0461c02352] [bootstrap.go:144              ] [main                ] [] - System configuration encryption report:
+shared.database.password: encrypted successfully
+shared.multiTenant.tenantRegistryClient.clientCertKey: does not exist in the config file
+shared.newrelic.licenseKey: does not exist in the config file
+shared.security.joinKeyFile: file '/opt/jfrog/artifactory/var/etc/security/join.key' - already encrypted
+2025-03-12T02:09:37.409Z [jfrou] [INFO ] [21da8d0461c02352] [environment.go:63             ] [main                ] [] - MemoryLimit set to 0 (ratio: 0.90)
+2025-03-12T02:09:37.425Z [jfrou] [INFO ] [21da8d0461c02352] [bootstrap.go:99               ] [main                ] [] - JFrog Router Service ID: jfrou@01jp41tm476vn75da9kcaqn3gd
+2025-03-12T02:09:37.425Z [jfrou] [INFO ] [21da8d0461c02352] [bootstrap.go:100              ] [main                ] [] - JFrog Router Node ID: 5edea333cc2e
+2025-03-12T02:09:37.463Z [jfrou] [INFO ] [21da8d0461c02352] [trusted.go:36                 ] [main                ] [] - System cert pool contents were loaded as trusted CAs for TLS communication
+2025-03-12T02:09:37.469Z [jfrou] [INFO ] [21da8d0461c02352] [trusted.go:58                 ] [main                ] [] - No certificate to be loaded as trusted CAs found in []
+2025-03-12T02:09:37.469Z [jfrou] [INFO ] [21da8d0461c02352] [trusted.go:36                 ] [main                ] [] - System cert pool contents were loaded as trusted CAs for TLS communication
+2025-03-12T02:09:37.478Z [jfrou] [INFO ] [21da8d0461c02352] [trusted.go:58                 ] [main                ] [] - No certificate to be loaded as trusted CAs found in []
+2025-03-12T02:09:39.281Z [jfrou] [INFO ] [21da8d0461c02352] [config_holder.go:130          ] [main                ] [] - Configuration update detected
+2025-03-12T02:09:44.078Z [jfrou] [INFO ] [21da8d0461c02352] [join_executor.go:117          ] [main                ] [] - Cluster join: Trying to rejoin the cluster http://localhost:8040/access
+2025-03-12T02:09:46.102Z [jfrou] [INFO ] [21da8d0461c02352] [join_executor.go:214          ] [main                ] [] - Cluster join: Successfully joined the cluster. Using token with id ba8f751f-ddc1-470e-b584-c41e7022005c
+2025-03-12T02:09:46.114Z [jfrou] [INFO ] [21da8d0461c02352] [trusted.go:36                 ] [main                ] [] - System cert pool contents were loaded as trusted CAs for TLS communication
+2025-03-12T02:09:46.124Z [jfrou] [INFO ] [21da8d0461c02352] [trusted.go:56                 ] [main                ] [] - Following certificates were successfully loaded as trusted CAs for TLS communication:
+[/opt/jfrog/artifactory/var/data/router/keys/trusted/access-root-ca.crt]
+2025-03-12T02:09:46.208Z [jfrou] [INFO ] [21da8d0461c02352] [mtls_client.go:180            ] [main                ] [] - Starting access config update job to run every 10m0s
+2025-03-12T02:09:46.211Z [jfrou] [INFO ] [21da8d0461c02352] [traefik_config.go:116         ] [main                ] [] - Searching for Traefik configuration override values in file: /opt/jfrog/artifactory/var/etc/router/traefik.toml
+2025-03-12T02:09:46.212Z [jfrou] [INFO ] [21da8d0461c02352] [cal_topology_broadcaster.go:70] [main                ] [] - Starting local node health status broadcaster...
+2025-03-12T02:09:46.232Z [jfrou] [INFO ] [21da8d0461c02352] [server_handler.go:62          ] [main                ] [] - gRPC server listening on: localhost:8047
+2025-03-12T02:09:46.247Z [jfrou] [INFO ] [21da8d0461c02352] [registry_handler.go:114       ] [main                ] [] - Persisted local services: []
+2025-03-12T02:09:46.248Z [jfrou] [INFO ] [21da8d0461c02352] [service_registry.go:142       ] [main                ] [] - Registering Topology as local service
+2025-03-12T02:09:46.249Z [jfrou] [INFO ] [21da8d0461c02352] [local_topology.go:249         ] [main                ] [] - Adding local service. Service ID: jftpl@0000 , Node ID: 5edea333cc2e
+2025-03-12T02:09:46.272Z [jfrou] [INFO ] [21da8d0461c02352] [hot_paths_unix.go:25          ] [main                ] [] - Dump of the requests: start listening for SIGUSR2 signals
+2025-03-12T02:09:46.280Z [jfrou] [INFO ] [21da8d0461c02352] [handler.go:161                ] [main                ] [] - Traefik server started on ports: 8082 (external), 8046 (internal), 8049 (Traefik API)
+2025-03-12T02:09:46.456Z [jfrou] [INFO ] [21da8d0461c02352] [local_topology.go:136         ] [main                ] [] - Required service types: [jfrt jfac jfmd jffe jfob jfevt jftpl]
+2025-03-12T02:09:46.456Z [jfrou] [INFO ] [21da8d0461c02352] [main.go:57                    ] [main                ] [] - Router (jfrou) service initialization completed in 39.299 seconds. Listening on port: 8082
+2025-03-12T02:09:46.458Z [jfrou] [INFO ] [21da8d0461c02352] [pprof_server_unix.go:23       ] [main                ] [] - Starting SIGUSR2 listener for pprof server
+2025-03-12T02:09:50.895Z [jfrou] [WARN ] [08aee18421fbe207] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:09:50.897Z [jfrou] [WARN ] [08aee18421fbe207] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:09:51.467Z [jfrou] [WARN ] [6dba12f137dd4ad3] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:09:51.467Z [jfrou] [WARN ] [6dba12f137dd4ad3] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:09:51.685Z [jfrou] [WARN ] [19e8c6976eecc1c6] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 1 times: unexpected response status: 503 
+2025-03-12T02:09:56.462Z [jfrou] [WARN ] [4d2a418ca16d5e5d] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:09:56.462Z [jfrou] [WARN ] [4d2a418ca16d5e5d] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:10:01.463Z [jfrou] [WARN ] [79f28efaae876806] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:10:01.463Z [jfrou] [WARN ] [79f28efaae876806] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:10:01.477Z [jfrou] [WARN ] [79f28efaae876806] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 4 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:10:06.461Z [jfrou] [WARN ] [2cd81382e0b95a41] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:10:06.461Z [jfrou] [WARN ] [2cd81382e0b95a41] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:10:11.462Z [jfrou] [WARN ] [5b56b32074c82dbf] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:10:11.462Z [jfrou] [WARN ] [5b56b32074c82dbf] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:10:16.463Z [jfrou] [WARN ] [01e6f082c89ac613] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:10:16.463Z [jfrou] [WARN ] [01e6f082c89ac613] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:10:19.798Z [jfrou] [WARN ] [55576e62ca038bd2] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 11 times: unexpected response status: 503 
+2025-03-12T02:10:21.463Z [jfrou] [WARN ] [058c40c9abfc96e8] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:10:21.464Z [jfrou] [WARN ] [058c40c9abfc96e8] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:10:21.483Z [jfrou] [WARN ] [058c40c9abfc96e8] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 8 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:10:26.466Z [jfrou] [WARN ] [5df5baf41699ff10] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:10:26.466Z [jfrou] [WARN ] [5df5baf41699ff10] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:10:31.466Z [jfrou] [WARN ] [200815652f7a68ba] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:10:31.469Z [jfrou] [WARN ] [200815652f7a68ba] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:10:36.463Z [jfrou] [WARN ] [10d0a2682ea01936] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:10:36.464Z [jfrou] [WARN ] [10d0a2682ea01936] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:10:41.465Z [jfrou] [WARN ] [515b019cff570606] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:10:41.465Z [jfrou] [WARN ] [515b019cff570606] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:10:41.471Z [jfrou] [WARN ] [515b019cff570606] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 12 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:10:46.465Z [jfrou] [WARN ] [386ab0c097a7b01a] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:10:46.466Z [jfrou] [WARN ] [386ab0c097a7b01a] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:10:49.803Z [jfrou] [WARN ] [31edcd8b229fbb25] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 21 times: unexpected response status: 503 
+2025-03-12T02:10:51.466Z [jfrou] [WARN ] [2152c6498293ce8f] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:10:51.467Z [jfrou] [WARN ] [2152c6498293ce8f] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:10:56.466Z [jfrou] [WARN ] [3197b70940e7d764] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:10:56.467Z [jfrou] [WARN ] [3197b70940e7d764] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:11:01.467Z [jfrou] [WARN ] [57d369b2ced9ac66] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:11:01.467Z [jfrou] [WARN ] [57d369b2ced9ac66] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:11:01.475Z [jfrou] [WARN ] [57d369b2ced9ac66] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 16 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:11:06.466Z [jfrou] [WARN ] [20f69168a494941e] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:11:06.466Z [jfrou] [WARN ] [20f69168a494941e] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:11:11.469Z [jfrou] [WARN ] [18f426e9b797c1e9] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:11:11.471Z [jfrou] [WARN ] [18f426e9b797c1e9] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:11:16.467Z [jfrou] [WARN ] [383e0c556686101a] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:11:16.467Z [jfrou] [WARN ] [383e0c556686101a] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:11:18.811Z [jfrou] [WARN ] [47017c1bcd63f274] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 31 times: unexpected response status: 503 
+2025-03-12T02:11:21.467Z [jfrou] [WARN ] [66805905824dc9d3] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:11:21.468Z [jfrou] [WARN ] [66805905824dc9d3] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:11:21.475Z [jfrou] [WARN ] [66805905824dc9d3] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 20 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:11:26.469Z [jfrou] [WARN ] [7d63765c1aad45d0] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:11:26.470Z [jfrou] [WARN ] [7d63765c1aad45d0] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:11:31.469Z [jfrou] [WARN ] [1da6cada018eaf30] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:11:31.470Z [jfrou] [WARN ] [1da6cada018eaf30] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:11:36.469Z [jfrou] [WARN ] [5debd339381aa2cc] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:11:36.471Z [jfrou] [WARN ] [5debd339381aa2cc] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:11:41.470Z [jfrou] [WARN ] [30c38bfb2c32c047] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:11:41.471Z [jfrou] [WARN ] [30c38bfb2c32c047] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:11:41.480Z [jfrou] [WARN ] [30c38bfb2c32c047] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 24 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:11:46.470Z [jfrou] [WARN ] [4b421694b5fade70] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:11:46.472Z [jfrou] [WARN ] [4b421694b5fade70] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:11:49.814Z [jfrou] [WARN ] [2a30207be51cd86a] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 41 times: unexpected response status: 503 
+2025-03-12T02:11:51.471Z [jfrou] [WARN ] [3b41a7368b35a7a0] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:11:51.472Z [jfrou] [WARN ] [3b41a7368b35a7a0] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:11:56.470Z [jfrou] [WARN ] [1913c1d8b2d688a2] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:11:56.473Z [jfrou] [WARN ] [1913c1d8b2d688a2] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:12:01.472Z [jfrou] [WARN ] [630fa892d1dbf070] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:12:01.473Z [jfrou] [WARN ] [630fa892d1dbf070] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:12:01.480Z [jfrou] [WARN ] [630fa892d1dbf070] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 28 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:12:06.472Z [jfrou] [WARN ] [7a7959913431322f] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:12:06.473Z [jfrou] [WARN ] [7a7959913431322f] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:12:11.474Z [jfrou] [WARN ] [44174af125f055e4] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:12:11.475Z [jfrou] [WARN ] [44174af125f055e4] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:12:16.476Z [jfrou] [WARN ] [6e755903653f863c] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:12:16.476Z [jfrou] [WARN ] [6e755903653f863c] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:12:19.819Z [jfrou] [WARN ] [0d8eef6a0a4b40a3] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 51 times: unexpected response status: 503 
+2025-03-12T02:12:21.474Z [jfrou] [WARN ] [57ce5b477b78aa6c] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:12:21.475Z [jfrou] [WARN ] [57ce5b477b78aa6c] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:12:21.482Z [jfrou] [WARN ] [57ce5b477b78aa6c] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 32 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:12:26.475Z [jfrou] [WARN ] [361eeb46a0b34636] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:12:26.476Z [jfrou] [WARN ] [361eeb46a0b34636] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:12:31.475Z [jfrou] [WARN ] [0a672bf5667235b9] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:12:31.476Z [jfrou] [WARN ] [0a672bf5667235b9] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:12:36.473Z [jfrou] [WARN ] [02949bf79a8b3e74] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:12:36.473Z [jfrou] [WARN ] [02949bf79a8b3e74] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:12:41.474Z [jfrou] [WARN ] [7b08dd4b574a2749] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:12:41.475Z [jfrou] [WARN ] [7b08dd4b574a2749] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:12:41.481Z [jfrou] [WARN ] [7b08dd4b574a2749] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 36 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:12:46.475Z [jfrou] [WARN ] [3d69f3ffb569a45b] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:12:46.475Z [jfrou] [WARN ] [3d69f3ffb569a45b] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:12:48.826Z [jfrou] [WARN ] [26ecb569e50adfe3] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 61 times: unexpected response status: 503 
+2025-03-12T02:12:51.475Z [jfrou] [WARN ] [50511eb98bd0ca34] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:12:51.475Z [jfrou] [WARN ] [50511eb98bd0ca34] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:12:56.476Z [jfrou] [WARN ] [2b409fb3dfaae89c] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:12:56.476Z [jfrou] [WARN ] [2b409fb3dfaae89c] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:13:01.476Z [jfrou] [WARN ] [2e175c64bd4dff3a] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:13:01.476Z [jfrou] [WARN ] [2e175c64bd4dff3a] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:13:01.482Z [jfrou] [WARN ] [2e175c64bd4dff3a] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 40 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:13:06.476Z [jfrou] [WARN ] [562a03945ff87fd5] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:13:06.476Z [jfrou] [WARN ] [562a03945ff87fd5] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:13:11.476Z [jfrou] [WARN ] [78dbcd4966f5e675] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:13:11.476Z [jfrou] [WARN ] [78dbcd4966f5e675] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:13:16.477Z [jfrou] [WARN ] [176f2602f6769840] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:13:16.477Z [jfrou] [WARN ] [176f2602f6769840] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:13:19.831Z [jfrou] [WARN ] [254decc6490d9231] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 71 times: unexpected response status: 503 
+2025-03-12T02:13:21.478Z [jfrou] [WARN ] [586b1bf84e58c25e] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:13:21.478Z [jfrou] [WARN ] [586b1bf84e58c25e] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:13:21.484Z [jfrou] [WARN ] [586b1bf84e58c25e] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 44 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:13:26.477Z [jfrou] [WARN ] [365235065c98d9f4] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:13:26.478Z [jfrou] [WARN ] [365235065c98d9f4] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:13:31.478Z [jfrou] [WARN ] [1ea0b2bac0d2fee4] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:13:31.478Z [jfrou] [WARN ] [1ea0b2bac0d2fee4] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:13:36.476Z [jfrou] [WARN ] [0894e264c56490ce] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:13:36.477Z [jfrou] [WARN ] [0894e264c56490ce] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:13:41.477Z [jfrou] [WARN ] [2f1f66483c919d9e] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:13:41.477Z [jfrou] [WARN ] [2f1f66483c919d9e] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:13:41.483Z [jfrou] [WARN ] [2f1f66483c919d9e] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 48 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:13:46.479Z [jfrou] [WARN ] [652be8874859dcba] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:13:46.480Z [jfrou] [WARN ] [652be8874859dcba] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:13:49.833Z [jfrou] [WARN ] [73f7070b62393e6f] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 81 times: unexpected response status: 503 
+2025-03-12T02:13:51.479Z [jfrou] [WARN ] [53a575b75e58eaa8] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:13:51.479Z [jfrou] [WARN ] [53a575b75e58eaa8] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:13:56.479Z [jfrou] [WARN ] [3b02e661ecf6c85f] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:13:56.479Z [jfrou] [WARN ] [3b02e661ecf6c85f] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:14:01.480Z [jfrou] [WARN ] [5af35b3507f09568] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:14:01.480Z [jfrou] [WARN ] [5af35b3507f09568] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:14:01.485Z [jfrou] [WARN ] [5af35b3507f09568] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 52 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:14:06.479Z [jfrou] [WARN ] [659ea2ea402c7460] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:14:06.480Z [jfrou] [WARN ] [659ea2ea402c7460] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:14:11.479Z [jfrou] [WARN ] [51249b7ba9978d80] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:14:11.480Z [jfrou] [WARN ] [51249b7ba9978d80] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:14:16.480Z [jfrou] [WARN ] [7c83f3716041dbcb] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:14:16.480Z [jfrou] [WARN ] [7c83f3716041dbcb] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:14:18.838Z [jfrou] [WARN ] [1451028078f4e663] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 91 times: unexpected response status: 503 
+2025-03-12T02:14:21.482Z [jfrou] [WARN ] [4ddaad54dde83da4] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:14:21.483Z [jfrou] [WARN ] [4ddaad54dde83da4] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:14:21.491Z [jfrou] [WARN ] [4ddaad54dde83da4] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 56 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:14:26.482Z [jfrou] [WARN ] [7edc2f5a3c2cf33a] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:14:26.482Z [jfrou] [WARN ] [7edc2f5a3c2cf33a] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:14:31.484Z [jfrou] [WARN ] [5d9533d93871d450] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:14:31.485Z [jfrou] [WARN ] [5d9533d93871d450] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:14:36.483Z [jfrou] [WARN ] [7dca6599b3660778] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:14:36.483Z [jfrou] [WARN ] [7dca6599b3660778] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:14:41.483Z [jfrou] [WARN ] [5052d7ff73b48620] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:14:41.483Z [jfrou] [WARN ] [5052d7ff73b48620] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:14:41.491Z [jfrou] [WARN ] [5052d7ff73b48620] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 60 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:14:46.484Z [jfrou] [WARN ] [31bf21c59c4d10b4] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:14:46.485Z [jfrou] [WARN ] [31bf21c59c4d10b4] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:14:49.842Z [jfrou] [WARN ] [1b00c7dccc0c9b57] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 101 times: unexpected response status: 503 
+2025-03-12T02:14:51.483Z [jfrou] [WARN ] [6ac5476956ab1e2d] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:14:51.484Z [jfrou] [WARN ] [6ac5476956ab1e2d] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:14:56.485Z [jfrou] [WARN ] [73deb158372ffe72] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:14:56.486Z [jfrou] [WARN ] [73deb158372ffe72] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:15:01.485Z [jfrou] [WARN ] [60d51a50766055a1] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:15:01.486Z [jfrou] [WARN ] [60d51a50766055a1] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:15:01.492Z [jfrou] [WARN ] [60d51a50766055a1] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 64 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:15:06.487Z [jfrou] [WARN ] [047e60a697cebc30] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:15:06.487Z [jfrou] [WARN ] [047e60a697cebc30] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:15:11.487Z [jfrou] [WARN ] [70d4657a86cee226] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:15:11.488Z [jfrou] [WARN ] [70d4657a86cee226] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:15:16.488Z [jfrou] [WARN ] [681e4dc531886381] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:15:16.488Z [jfrou] [WARN ] [681e4dc531886381] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:15:19.849Z [jfrou] [WARN ] [45240398ce7fe6f2] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 111 times: unexpected response status: 503 
+2025-03-12T02:15:21.490Z [jfrou] [WARN ] [093568360a1d18b2] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:15:21.490Z [jfrou] [WARN ] [093568360a1d18b2] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:15:21.496Z [jfrou] [WARN ] [093568360a1d18b2] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 68 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:15:26.491Z [jfrou] [WARN ] [0d310cef071cf8f2] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:15:26.492Z [jfrou] [WARN ] [0d310cef071cf8f2] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:15:31.491Z [jfrou] [WARN ] [307e2b96f17c88a1] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:15:31.491Z [jfrou] [WARN ] [307e2b96f17c88a1] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:15:36.489Z [jfrou] [WARN ] [3bfe75bf292aaa44] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:15:36.490Z [jfrou] [WARN ] [3bfe75bf292aaa44] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:15:41.490Z [jfrou] [WARN ] [5efe1d557bd02859] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:15:41.490Z [jfrou] [WARN ] [5efe1d557bd02859] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:15:41.497Z [jfrou] [WARN ] [5efe1d557bd02859] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 72 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:15:46.492Z [jfrou] [WARN ] [5db7aed6d048ec0a] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:15:46.492Z [jfrou] [WARN ] [5db7aed6d048ec0a] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:15:48.853Z [jfrou] [WARN ] [6fe5de2b04e7c397] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 121 times: unexpected response status: 503 
+2025-03-12T02:15:51.492Z [jfrou] [WARN ] [0bfcce2cfb13162f] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:15:51.492Z [jfrou] [WARN ] [0bfcce2cfb13162f] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:15:56.492Z [jfrou] [WARN ] [7b0b3ef0ecefe182] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:15:56.492Z [jfrou] [WARN ] [7b0b3ef0ecefe182] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:16:01.492Z [jfrou] [WARN ] [5bf0b140c6728f6d] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:16:01.493Z [jfrou] [WARN ] [5bf0b140c6728f6d] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:16:01.499Z [jfrou] [WARN ] [5bf0b140c6728f6d] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 76 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:16:06.491Z [jfrou] [WARN ] [2c5281e1fcff6022] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:16:06.491Z [jfrou] [WARN ] [2c5281e1fcff6022] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:16:11.492Z [jfrou] [WARN ] [5cd2f124948f63eb] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:16:11.492Z [jfrou] [WARN ] [5cd2f124948f63eb] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:16:16.492Z [jfrou] [WARN ] [68a4a01845637064] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:16:16.493Z [jfrou] [WARN ] [68a4a01845637064] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:16:19.858Z [jfrou] [WARN ] [09de4495f4660286] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 131 times: unexpected response status: 503 
+2025-03-12T02:16:21.493Z [jfrou] [WARN ] [5547672dfc7452cd] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:16:21.493Z [jfrou] [WARN ] [5547672dfc7452cd] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:16:21.500Z [jfrou] [WARN ] [5547672dfc7452cd] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 80 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:16:26.494Z [jfrou] [WARN ] [60f269727790c62b] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:16:26.494Z [jfrou] [WARN ] [60f269727790c62b] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:16:31.497Z [jfrou] [WARN ] [224fb79c6342609d] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:16:31.497Z [jfrou] [WARN ] [224fb79c6342609d] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:16:36.494Z [jfrou] [WARN ] [5070eb5d55deccdf] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:16:36.494Z [jfrou] [WARN ] [5070eb5d55deccdf] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:16:41.493Z [jfrou] [WARN ] [4920d90019f56ef6] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:16:41.494Z [jfrou] [WARN ] [4920d90019f56ef6] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:16:41.500Z [jfrou] [WARN ] [4920d90019f56ef6] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 84 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:16:46.494Z [jfrou] [WARN ] [6565c2e51e5f7be5] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:16:46.494Z [jfrou] [WARN ] [6565c2e51e5f7be5] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:16:49.865Z [jfrou] [WARN ] [61921c047734d28b] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 141 times: unexpected response status: 503 
+2025-03-12T02:16:51.494Z [jfrou] [WARN ] [797f26b165cb1a41] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:16:51.494Z [jfrou] [WARN ] [797f26b165cb1a41] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:16:56.494Z [jfrou] [WARN ] [3b94b29401dc9c2a] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:16:56.494Z [jfrou] [WARN ] [3b94b29401dc9c2a] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:17:01.494Z [jfrou] [WARN ] [2a1ca1d33de04e82] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:17:01.495Z [jfrou] [WARN ] [2a1ca1d33de04e82] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:17:01.501Z [jfrou] [WARN ] [2a1ca1d33de04e82] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 88 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:17:06.496Z [jfrou] [WARN ] [6e4a007c1200ea04] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:17:06.496Z [jfrou] [WARN ] [6e4a007c1200ea04] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:17:11.496Z [jfrou] [WARN ] [4ddfccdb5f84d74b] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:17:11.497Z [jfrou] [WARN ] [4ddfccdb5f84d74b] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:17:16.496Z [jfrou] [WARN ] [7bb1b3b7704f9d36] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:17:16.496Z [jfrou] [WARN ] [7bb1b3b7704f9d36] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:17:18.871Z [jfrou] [WARN ] [1f6976ace0466c9a] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 151 times: unexpected response status: 503 
+2025-03-12T02:17:21.497Z [jfrou] [WARN ] [66b197c4ecdad1d2] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:17:21.497Z [jfrou] [WARN ] [66b197c4ecdad1d2] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:17:21.505Z [jfrou] [WARN ] [66b197c4ecdad1d2] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 92 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:17:26.497Z [jfrou] [WARN ] [03ca8d988b3a3b6e] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:17:26.497Z [jfrou] [WARN ] [03ca8d988b3a3b6e] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:17:31.498Z [jfrou] [WARN ] [28964afb48214799] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:17:31.498Z [jfrou] [WARN ] [28964afb48214799] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:17:36.497Z [jfrou] [WARN ] [0953e55bd40a8d47] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:17:36.497Z [jfrou] [WARN ] [0953e55bd40a8d47] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:17:41.498Z [jfrou] [WARN ] [4da92164e2a53f27] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:17:41.498Z [jfrou] [WARN ] [4da92164e2a53f27] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:17:41.507Z [jfrou] [WARN ] [4da92164e2a53f27] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 96 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:17:46.499Z [jfrou] [WARN ] [363011b0c5319bf4] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:17:46.499Z [jfrou] [WARN ] [363011b0c5319bf4] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:17:49.876Z [jfrou] [WARN ] [40b5a25e39e61199] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 161 times: unexpected response status: 503 
+2025-03-12T02:17:51.498Z [jfrou] [WARN ] [6a680190bff8dfb4] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:17:51.498Z [jfrou] [WARN ] [6a680190bff8dfb4] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:17:56.499Z [jfrou] [WARN ] [497b5e638bf14d24] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:17:56.499Z [jfrou] [WARN ] [497b5e638bf14d24] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:18:01.500Z [jfrou] [WARN ] [130c101035c6dbe0] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:18:01.501Z [jfrou] [WARN ] [130c101035c6dbe0] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:18:01.508Z [jfrou] [WARN ] [130c101035c6dbe0] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 100 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:18:06.499Z [jfrou] [WARN ] [44d37dd02df8e660] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:18:06.499Z [jfrou] [WARN ] [44d37dd02df8e660] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:18:11.499Z [jfrou] [WARN ] [35b707f838fd578b] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:18:11.500Z [jfrou] [WARN ] [35b707f838fd578b] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:18:16.500Z [jfrou] [WARN ] [05930a378593ea3e] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:18:16.500Z [jfrou] [WARN ] [05930a378593ea3e] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:18:19.880Z [jfrou] [WARN ] [639abc566931d210] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 171 times: unexpected response status: 503 
+2025-03-12T02:18:21.501Z [jfrou] [WARN ] [094d96244922b742] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:18:21.502Z [jfrou] [WARN ] [094d96244922b742] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:18:21.509Z [jfrou] [WARN ] [094d96244922b742] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 104 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:18:26.502Z [jfrou] [WARN ] [7725d99d7f66af08] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:18:26.502Z [jfrou] [WARN ] [7725d99d7f66af08] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:18:31.502Z [jfrou] [WARN ] [5f37b6fb903bb31a] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:18:31.503Z [jfrou] [WARN ] [5f37b6fb903bb31a] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:18:36.502Z [jfrou] [WARN ] [79fbd7ba7f0a21b2] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:18:36.503Z [jfrou] [WARN ] [79fbd7ba7f0a21b2] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:18:41.505Z [jfrou] [WARN ] [468fe3f5e11b76f3] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:18:41.506Z [jfrou] [WARN ] [468fe3f5e11b76f3] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:18:41.512Z [jfrou] [WARN ] [468fe3f5e11b76f3] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 108 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:18:46.505Z [jfrou] [WARN ] [4e9bb3d0ea8a3915] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:18:46.506Z [jfrou] [WARN ] [4e9bb3d0ea8a3915] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:18:48.887Z [jfrou] [WARN ] [1bf83068c455ba92] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 181 times: unexpected response status: 503 
+2025-03-12T02:18:51.506Z [jfrou] [WARN ] [2ce965297ed3ac31] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:18:51.506Z [jfrou] [WARN ] [2ce965297ed3ac31] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:18:56.506Z [jfrou] [WARN ] [051a30fcc587b517] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:18:56.507Z [jfrou] [WARN ] [051a30fcc587b517] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:19:01.507Z [jfrou] [WARN ] [233e1b0233ea77c8] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:19:01.507Z [jfrou] [WARN ] [233e1b0233ea77c8] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:19:01.513Z [jfrou] [WARN ] [233e1b0233ea77c8] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 112 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:19:06.506Z [jfrou] [WARN ] [7a5b6494b78a36b0] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:19:06.506Z [jfrou] [WARN ] [7a5b6494b78a36b0] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:19:11.506Z [jfrou] [WARN ] [04adea76e63fb90b] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:19:11.507Z [jfrou] [WARN ] [04adea76e63fb90b] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:19:16.507Z [jfrou] [WARN ] [3234af9064b660a0] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:19:16.507Z [jfrou] [WARN ] [3234af9064b660a0] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:19:19.892Z [jfrou] [WARN ] [5fbfd9a60bd1c1fa] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 191 times: unexpected response status: 503 
+2025-03-12T02:19:21.508Z [jfrou] [WARN ] [6f5df89293056b08] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:19:21.508Z [jfrou] [WARN ] [6f5df89293056b08] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:19:21.514Z [jfrou] [WARN ] [6f5df89293056b08] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 116 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:19:26.508Z [jfrou] [WARN ] [22af9d0bb51dc5cc] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:19:26.508Z [jfrou] [WARN ] [22af9d0bb51dc5cc] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:19:31.510Z [jfrou] [WARN ] [2052f54827fe46bd] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:19:31.510Z [jfrou] [WARN ] [2052f54827fe46bd] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:19:36.508Z [jfrou] [WARN ] [2d3f8514424e8cb4] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:19:36.508Z [jfrou] [WARN ] [2d3f8514424e8cb4] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:19:41.507Z [jfrou] [WARN ] [3dc2c81296b1f215] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:19:41.508Z [jfrou] [WARN ] [3dc2c81296b1f215] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:19:41.515Z [jfrou] [WARN ] [3dc2c81296b1f215] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 120 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:19:46.509Z [jfrou] [WARN ] [2eeeaaa7458f0412] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:19:46.509Z [jfrou] [WARN ] [2eeeaaa7458f0412] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:19:49.897Z [jfrou] [WARN ] [0ac36eedb7bd94ab] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 201 times: unexpected response status: 503 
+2025-03-12T02:19:51.510Z [jfrou] [WARN ] [4dd151631496c14d] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:19:51.510Z [jfrou] [WARN ] [4dd151631496c14d] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:19:56.511Z [jfrou] [WARN ] [7c5372936f22a5b5] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:19:56.511Z [jfrou] [WARN ] [7c5372936f22a5b5] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:20:01.511Z [jfrou] [WARN ] [3b927b5a300b6314] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:20:01.512Z [jfrou] [WARN ] [3b927b5a300b6314] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:20:01.517Z [jfrou] [WARN ] [3b927b5a300b6314] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 124 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:20:06.511Z [jfrou] [WARN ] [31a85380a8f3d748] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:20:06.511Z [jfrou] [WARN ] [31a85380a8f3d748] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:20:11.510Z [jfrou] [WARN ] [1c9a17864b770d5b] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:20:11.510Z [jfrou] [WARN ] [1c9a17864b770d5b] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:20:16.511Z [jfrou] [WARN ] [55c43a1012524441] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:20:16.511Z [jfrou] [WARN ] [55c43a1012524441] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:20:18.901Z [jfrou] [WARN ] [07f1b09c117517f3] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 211 times: unexpected response status: 503 
+2025-03-12T02:20:21.513Z [jfrou] [WARN ] [7331ba34a20c00f9] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:20:21.513Z [jfrou] [WARN ] [7331ba34a20c00f9] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:20:21.519Z [jfrou] [WARN ] [7331ba34a20c00f9] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 128 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:20:26.513Z [jfrou] [WARN ] [75841657977fcec8] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:20:26.513Z [jfrou] [WARN ] [75841657977fcec8] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:20:31.513Z [jfrou] [WARN ] [67caec032f4d5f06] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:20:31.514Z [jfrou] [WARN ] [67caec032f4d5f06] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:20:36.513Z [jfrou] [WARN ] [6bf3732674dff5a7] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:20:36.513Z [jfrou] [WARN ] [6bf3732674dff5a7] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:20:41.514Z [jfrou] [WARN ] [6f8c6c29b709b606] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:20:41.514Z [jfrou] [WARN ] [6f8c6c29b709b606] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:20:41.523Z [jfrou] [WARN ] [6f8c6c29b709b606] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 132 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:20:46.515Z [jfrou] [WARN ] [1b00d66cdee0ea4a] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:20:46.516Z [jfrou] [WARN ] [1b00d66cdee0ea4a] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:20:49.907Z [jfrou] [WARN ] [0fd16d5da50e3c42] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 221 times: unexpected response status: 503 
+2025-03-12T02:20:51.515Z [jfrou] [WARN ] [73358308f2b5d378] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:20:51.515Z [jfrou] [WARN ] [73358308f2b5d378] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:20:56.517Z [jfrou] [WARN ] [77364374157781dd] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:20:56.517Z [jfrou] [WARN ] [77364374157781dd] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:21:01.518Z [jfrou] [WARN ] [5e6fee2cfd4c9042] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:21:01.519Z [jfrou] [WARN ] [5e6fee2cfd4c9042] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:21:01.526Z [jfrou] [WARN ] [5e6fee2cfd4c9042] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 136 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:21:06.517Z [jfrou] [WARN ] [173d6bcdd4acc0a9] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:21:06.517Z [jfrou] [WARN ] [173d6bcdd4acc0a9] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:21:11.518Z [jfrou] [WARN ] [10e9f5c493b09701] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:21:11.518Z [jfrou] [WARN ] [10e9f5c493b09701] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:21:16.518Z [jfrou] [WARN ] [3a25a07464f4e088] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:21:16.518Z [jfrou] [WARN ] [3a25a07464f4e088] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:21:19.913Z [jfrou] [WARN ] [237703f324aebd11] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 231 times: unexpected response status: 503 
+2025-03-12T02:21:21.520Z [jfrou] [WARN ] [689434b754bddd25] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:21:21.521Z [jfrou] [WARN ] [689434b754bddd25] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:21:21.528Z [jfrou] [WARN ] [689434b754bddd25] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 140 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:21:26.520Z [jfrou] [WARN ] [0e7db846b1ecb0d5] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:21:26.522Z [jfrou] [WARN ] [0e7db846b1ecb0d5] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:21:31.519Z [jfrou] [WARN ] [237c1ca1d2c1a094] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:21:31.520Z [jfrou] [WARN ] [237c1ca1d2c1a094] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:21:36.518Z [jfrou] [WARN ] [6b1f903ffa0afbea] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:21:36.519Z [jfrou] [WARN ] [6b1f903ffa0afbea] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:21:41.519Z [jfrou] [WARN ] [5e39ba07198e4426] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:21:41.519Z [jfrou] [WARN ] [5e39ba07198e4426] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:21:41.525Z [jfrou] [WARN ] [5e39ba07198e4426] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 144 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:21:46.519Z [jfrou] [WARN ] [54f66a8616123ea4] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:21:46.520Z [jfrou] [WARN ] [54f66a8616123ea4] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:21:48.917Z [jfrou] [WARN ] [057ab825a6eb7cda] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 241 times: unexpected response status: 503 
+2025-03-12T02:21:51.520Z [jfrou] [WARN ] [5ec025a59e88c9bf] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:21:51.520Z [jfrou] [WARN ] [5ec025a59e88c9bf] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:21:56.521Z [jfrou] [WARN ] [2b620303644888e6] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:21:56.522Z [jfrou] [WARN ] [2b620303644888e6] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:22:01.522Z [jfrou] [WARN ] [2d4956eda675dda5] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:22:01.522Z [jfrou] [WARN ] [2d4956eda675dda5] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:22:01.527Z [jfrou] [WARN ] [2d4956eda675dda5] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 148 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:22:06.521Z [jfrou] [WARN ] [4aca3a80c02774b1] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:22:06.522Z [jfrou] [WARN ] [4aca3a80c02774b1] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:22:11.522Z [jfrou] [WARN ] [02886f53b9910bb2] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:22:11.522Z [jfrou] [WARN ] [02886f53b9910bb2] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:22:16.522Z [jfrou] [WARN ] [0cdf2b1400513512] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:22:16.523Z [jfrou] [WARN ] [0cdf2b1400513512] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:22:16.523Z [jfrou] [WARN ] [0cdf2b1400513512] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:22:19.923Z [jfrou] [WARN ] [0d2474496bac6d51] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 251 times: unexpected response status: 503 
+2025-03-12T02:22:21.523Z [jfrou] [WARN ] [2c4425d41955efa9] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:22:21.523Z [jfrou] [WARN ] [2c4425d41955efa9] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:22:21.524Z [jfrou] [WARN ] [2c4425d41955efa9] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:22:21.530Z [jfrou] [WARN ] [2c4425d41955efa9] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 152 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:22:26.523Z [jfrou] [WARN ] [506dc174f11882b8] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:22:26.523Z [jfrou] [WARN ] [506dc174f11882b8] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:22:26.524Z [jfrou] [WARN ] [506dc174f11882b8] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:22:31.524Z [jfrou] [WARN ] [6afb6e6c9f293827] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:22:31.525Z [jfrou] [WARN ] [6afb6e6c9f293827] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:22:31.525Z [jfrou] [WARN ] [6afb6e6c9f293827] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:22:36.524Z [jfrou] [WARN ] [68cc21eedea3b0c6] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:22:36.525Z [jfrou] [WARN ] [68cc21eedea3b0c6] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:22:36.526Z [jfrou] [WARN ] [68cc21eedea3b0c6] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:22:41.523Z [jfrou] [WARN ] [108f9920589e3aa0] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:22:41.524Z [jfrou] [WARN ] [108f9920589e3aa0] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:22:41.524Z [jfrou] [WARN ] [108f9920589e3aa0] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:22:41.529Z [jfrou] [WARN ] [108f9920589e3aa0] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 156 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:22:46.525Z [jfrou] [WARN ] [6ea87645b155b70a] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:22:46.526Z [jfrou] [WARN ] [6ea87645b155b70a] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:22:46.527Z [jfrou] [WARN ] [6ea87645b155b70a] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:22:49.928Z [jfrou] [WARN ] [0768ef5459baaec9] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 261 times: unexpected response status: 503 
+2025-03-12T02:22:51.524Z [jfrou] [WARN ] [2455a17ebebddc53] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:22:51.524Z [jfrou] [WARN ] [2455a17ebebddc53] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:22:51.525Z [jfrou] [WARN ] [2455a17ebebddc53] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:22:56.525Z [jfrou] [WARN ] [625d5f590f99e16a] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:22:56.526Z [jfrou] [WARN ] [625d5f590f99e16a] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:22:56.526Z [jfrou] [WARN ] [625d5f590f99e16a] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:23:01.526Z [jfrou] [WARN ] [586d4b70db816a75] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:23:01.527Z [jfrou] [WARN ] [586d4b70db816a75] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:23:01.528Z [jfrou] [WARN ] [586d4b70db816a75] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:23:01.534Z [jfrou] [WARN ] [586d4b70db816a75] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 160 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:23:06.528Z [jfrou] [WARN ] [34214d05844a2d2a] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:23:06.529Z [jfrou] [WARN ] [34214d05844a2d2a] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:23:06.530Z [jfrou] [WARN ] [34214d05844a2d2a] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:23:11.530Z [jfrou] [WARN ] [4684143efcb12f1d] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:23:11.531Z [jfrou] [WARN ] [4684143efcb12f1d] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:23:11.531Z [jfrou] [WARN ] [4684143efcb12f1d] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:23:16.529Z [jfrou] [WARN ] [39cc0a98cb1264b8] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:23:16.529Z [jfrou] [WARN ] [39cc0a98cb1264b8] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:23:16.529Z [jfrou] [WARN ] [39cc0a98cb1264b8] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:23:18.933Z [jfrou] [WARN ] [7cde744d3d1b7515] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 271 times: unexpected response status: 503 
+2025-03-12T02:23:21.530Z [jfrou] [WARN ] [2cb914e39d52c13f] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:23:21.530Z [jfrou] [WARN ] [2cb914e39d52c13f] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:23:21.531Z [jfrou] [WARN ] [2cb914e39d52c13f] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:23:21.536Z [jfrou] [WARN ] [2cb914e39d52c13f] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 164 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:23:26.530Z [jfrou] [WARN ] [56d6ea5eb340852b] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:23:26.530Z [jfrou] [WARN ] [56d6ea5eb340852b] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:23:26.531Z [jfrou] [WARN ] [56d6ea5eb340852b] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:23:31.530Z [jfrou] [WARN ] [1001bd3332bc1db9] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:23:31.530Z [jfrou] [WARN ] [1001bd3332bc1db9] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:23:31.531Z [jfrou] [WARN ] [1001bd3332bc1db9] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:23:36.529Z [jfrou] [WARN ] [54f39fa387834f50] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:23:36.530Z [jfrou] [WARN ] [54f39fa387834f50] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:23:36.530Z [jfrou] [WARN ] [54f39fa387834f50] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:23:41.529Z [jfrou] [WARN ] [1743ca6a84eccdd7] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:23:41.530Z [jfrou] [WARN ] [1743ca6a84eccdd7] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:23:41.530Z [jfrou] [WARN ] [1743ca6a84eccdd7] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:23:41.535Z [jfrou] [WARN ] [1743ca6a84eccdd7] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 168 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:23:46.530Z [jfrou] [WARN ] [2be905231339c49b] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:23:46.530Z [jfrou] [WARN ] [2be905231339c49b] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:23:46.531Z [jfrou] [WARN ] [2be905231339c49b] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:23:49.941Z [jfrou] [WARN ] [2b95cea4e9f5362c] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 281 times: unexpected response status: 503 
+2025-03-12T02:23:51.531Z [jfrou] [WARN ] [239e4ba49f6a9f42] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:23:51.531Z [jfrou] [WARN ] [239e4ba49f6a9f42] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:23:51.532Z [jfrou] [WARN ] [239e4ba49f6a9f42] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:23:56.533Z [jfrou] [WARN ] [5936fd8f5a65d890] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:23:56.534Z [jfrou] [WARN ] [5936fd8f5a65d890] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:23:56.534Z [jfrou] [WARN ] [5936fd8f5a65d890] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:24:01.532Z [jfrou] [WARN ] [1720b0d575c98b38] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:24:01.533Z [jfrou] [WARN ] [1720b0d575c98b38] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:24:01.534Z [jfrou] [WARN ] [1720b0d575c98b38] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:24:01.540Z [jfrou] [WARN ] [1720b0d575c98b38] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 172 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:24:06.530Z [jfrou] [WARN ] [080f398f88499cd7] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:24:06.531Z [jfrou] [WARN ] [080f398f88499cd7] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:24:06.531Z [jfrou] [WARN ] [080f398f88499cd7] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:24:11.531Z [jfrou] [WARN ] [7217907b802f6e9e] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:24:11.532Z [jfrou] [WARN ] [7217907b802f6e9e] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:24:11.532Z [jfrou] [WARN ] [7217907b802f6e9e] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:24:16.532Z [jfrou] [WARN ] [3edf37f8cce44250] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:24:16.533Z [jfrou] [WARN ] [3edf37f8cce44250] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:24:16.533Z [jfrou] [WARN ] [3edf37f8cce44250] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:24:19.943Z [jfrou] [WARN ] [2d1ffb79e9a5e833] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 291 times: unexpected response status: 503 
+2025-03-12T02:24:21.532Z [jfrou] [WARN ] [7b699c910ddaf1dd] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:24:21.533Z [jfrou] [WARN ] [7b699c910ddaf1dd] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:24:21.533Z [jfrou] [WARN ] [7b699c910ddaf1dd] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:24:21.540Z [jfrou] [WARN ] [7b699c910ddaf1dd] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 176 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:24:26.533Z [jfrou] [WARN ] [4c15711a4690be25] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:24:26.533Z [jfrou] [WARN ] [4c15711a4690be25] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:24:26.534Z [jfrou] [WARN ] [4c15711a4690be25] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:24:31.534Z [jfrou] [WARN ] [64c19b2c6406ae78] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:24:31.534Z [jfrou] [WARN ] [64c19b2c6406ae78] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:24:31.535Z [jfrou] [WARN ] [64c19b2c6406ae78] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:24:36.534Z [jfrou] [WARN ] [691859f07f9f0556] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:24:36.534Z [jfrou] [WARN ] [691859f07f9f0556] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:24:36.534Z [jfrou] [WARN ] [691859f07f9f0556] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:24:41.538Z [jfrou] [WARN ] [4865e4dd61067610] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:24:41.538Z [jfrou] [WARN ] [4865e4dd61067610] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:24:41.539Z [jfrou] [WARN ] [4865e4dd61067610] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:24:41.545Z [jfrou] [WARN ] [4865e4dd61067610] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 180 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:24:46.537Z [jfrou] [WARN ] [233a29c961072139] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:24:46.538Z [jfrou] [WARN ] [233a29c961072139] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:24:46.538Z [jfrou] [WARN ] [233a29c961072139] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:24:48.948Z [jfrou] [WARN ] [3c91b08bd398aef6] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 301 times: unexpected response status: 503 
+2025-03-12T02:24:51.539Z [jfrou] [WARN ] [3fd54b4ac4f0a744] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:24:51.539Z [jfrou] [WARN ] [3fd54b4ac4f0a744] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:24:51.540Z [jfrou] [WARN ] [3fd54b4ac4f0a744] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:24:56.539Z [jfrou] [WARN ] [3660dd3692f10b7d] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:24:56.540Z [jfrou] [WARN ] [3660dd3692f10b7d] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:24:56.540Z [jfrou] [WARN ] [3660dd3692f10b7d] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:25:01.539Z [jfrou] [WARN ] [1ec19419c59c0795] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:25:01.540Z [jfrou] [WARN ] [1ec19419c59c0795] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:25:01.540Z [jfrou] [WARN ] [1ec19419c59c0795] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:25:01.546Z [jfrou] [WARN ] [1ec19419c59c0795] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 184 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:25:06.538Z [jfrou] [WARN ] [4759375cd47c31bf] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:25:06.539Z [jfrou] [WARN ] [4759375cd47c31bf] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:25:06.539Z [jfrou] [WARN ] [4759375cd47c31bf] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:25:11.539Z [jfrou] [WARN ] [11f004a0ed7adfc8] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:25:11.539Z [jfrou] [WARN ] [11f004a0ed7adfc8] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:25:11.540Z [jfrou] [WARN ] [11f004a0ed7adfc8] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:25:16.539Z [jfrou] [WARN ] [708b336b92fc2a50] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:25:16.540Z [jfrou] [WARN ] [708b336b92fc2a50] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:25:16.540Z [jfrou] [WARN ] [708b336b92fc2a50] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:25:18.958Z [jfrou] [WARN ] [59bb802d44a97b09] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 311 times: unexpected response status: 503 
+2025-03-12T02:25:21.540Z [jfrou] [WARN ] [6cc5cd301f8be40b] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:25:21.541Z [jfrou] [WARN ] [6cc5cd301f8be40b] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:25:21.541Z [jfrou] [WARN ] [6cc5cd301f8be40b] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:25:21.546Z [jfrou] [WARN ] [6cc5cd301f8be40b] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 188 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:25:26.540Z [jfrou] [WARN ] [7488634cc30d1aeb] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:25:26.541Z [jfrou] [WARN ] [7488634cc30d1aeb] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:25:26.541Z [jfrou] [WARN ] [7488634cc30d1aeb] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:25:31.541Z [jfrou] [WARN ] [5f0244f9700eb95a] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:25:31.541Z [jfrou] [WARN ] [5f0244f9700eb95a] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:25:31.542Z [jfrou] [WARN ] [5f0244f9700eb95a] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:25:36.540Z [jfrou] [WARN ] [22f37bd7289ba7be] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:25:36.541Z [jfrou] [WARN ] [22f37bd7289ba7be] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:25:36.541Z [jfrou] [WARN ] [22f37bd7289ba7be] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:25:41.541Z [jfrou] [WARN ] [35817d9a352029ae] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:25:41.541Z [jfrou] [WARN ] [35817d9a352029ae] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:25:41.541Z [jfrou] [WARN ] [35817d9a352029ae] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:25:41.546Z [jfrou] [WARN ] [35817d9a352029ae] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 192 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:25:46.541Z [jfrou] [WARN ] [0edaf7ee57af4f3a] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:25:46.542Z [jfrou] [WARN ] [0edaf7ee57af4f3a] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:25:46.542Z [jfrou] [WARN ] [0edaf7ee57af4f3a] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:25:48.964Z [jfrou] [WARN ] [45b12e7a0b5714fe] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 321 times: unexpected response status: 503 
+2025-03-12T02:25:51.541Z [jfrou] [WARN ] [2521f5a3f0c0d848] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:25:51.542Z [jfrou] [WARN ] [2521f5a3f0c0d848] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:25:51.542Z [jfrou] [WARN ] [2521f5a3f0c0d848] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:25:56.542Z [jfrou] [WARN ] [76fa9bb59e51d425] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:25:56.543Z [jfrou] [WARN ] [76fa9bb59e51d425] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:25:56.543Z [jfrou] [WARN ] [76fa9bb59e51d425] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:26:01.543Z [jfrou] [WARN ] [451ecb5b32472f0c] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:26:01.543Z [jfrou] [WARN ] [451ecb5b32472f0c] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:26:01.544Z [jfrou] [WARN ] [451ecb5b32472f0c] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:26:01.549Z [jfrou] [WARN ] [451ecb5b32472f0c] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 196 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:26:06.543Z [jfrou] [WARN ] [56e50b41d5dcb9a2] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:26:06.543Z [jfrou] [WARN ] [56e50b41d5dcb9a2] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:26:06.544Z [jfrou] [WARN ] [56e50b41d5dcb9a2] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:26:11.543Z [jfrou] [WARN ] [0c8af8e88199993d] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:26:11.544Z [jfrou] [WARN ] [0c8af8e88199993d] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:26:11.544Z [jfrou] [WARN ] [0c8af8e88199993d] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:26:16.544Z [jfrou] [WARN ] [586ebccc8197e073] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:26:16.545Z [jfrou] [WARN ] [586ebccc8197e073] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:26:16.545Z [jfrou] [WARN ] [586ebccc8197e073] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:26:18.968Z [jfrou] [WARN ] [7fb667be40dae238] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 331 times: unexpected response status: 503 
+2025-03-12T02:26:21.544Z [jfrou] [WARN ] [0651f9875977fef1] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:26:21.545Z [jfrou] [WARN ] [0651f9875977fef1] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:26:21.545Z [jfrou] [WARN ] [0651f9875977fef1] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:26:21.551Z [jfrou] [WARN ] [0651f9875977fef1] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 200 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:26:26.545Z [jfrou] [WARN ] [0117c40b2799987f] [healthcheck.go:70             ] [main                ] [] - Checking health of service 'jftpl_0000-5edea333cc2e' using URL 'http://localhost:8020/topology/api/v1/system/readiness' returned unexpected response status: 503
+2025-03-12T02:26:26.545Z [jfrou] [WARN ] [0117c40b2799987f] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:26:26.546Z [jfrou] [WARN ] [0117c40b2799987f] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:26:31.546Z [jfrou] [WARN ] [0999f16ecd27975f] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:26:31.546Z [jfrou] [WARN ] [0999f16ecd27975f] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:26:36.544Z [jfrou] [WARN ] [73657ca5c908bad9] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:26:36.544Z [jfrou] [WARN ] [73657ca5c908bad9] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:26:41.546Z [jfrou] [WARN ] [08d8fcfde2441ab1] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:26:41.546Z [jfrou] [WARN ] [08d8fcfde2441ab1] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:26:41.554Z [jfrou] [WARN ] [08d8fcfde2441ab1] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 204 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:26:46.547Z [jfrou] [WARN ] [6529393050f5eecd] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:26:46.548Z [jfrou] [WARN ] [6529393050f5eecd] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:26:48.976Z [jfrou] [WARN ] [31c1ff5ce0846985] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 341 times: unexpected response status: 503 
+2025-03-12T02:26:51.548Z [jfrou] [WARN ] [333be5ca7313f394] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:26:51.548Z [jfrou] [WARN ] [333be5ca7313f394] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:26:56.548Z [jfrou] [WARN ] [74cd7d80ca8899bd] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:26:56.549Z [jfrou] [WARN ] [74cd7d80ca8899bd] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:27:01.549Z [jfrou] [WARN ] [656fba4cf184efab] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:27:01.549Z [jfrou] [WARN ] [656fba4cf184efab] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:27:01.557Z [jfrou] [WARN ] [656fba4cf184efab] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 208 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:27:06.554Z [jfrou] [WARN ] [391efeea3fa28067] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:27:06.554Z [jfrou] [WARN ] [391efeea3fa28067] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:27:11.548Z [jfrou] [WARN ] [6d8d4cf33a5a468d] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:27:11.549Z [jfrou] [WARN ] [6d8d4cf33a5a468d] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:27:16.549Z [jfrou] [WARN ] [277a7bb4d15d9452] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:27:16.549Z [jfrou] [WARN ] [277a7bb4d15d9452] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:27:18.979Z [jfrou] [WARN ] [72968f7b064567b0] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 351 times: unexpected response status: 503 
+2025-03-12T02:27:21.549Z [jfrou] [WARN ] [42012b0b746e1b01] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:27:21.549Z [jfrou] [WARN ] [42012b0b746e1b01] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:27:21.556Z [jfrou] [WARN ] [42012b0b746e1b01] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 212 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:27:26.550Z [jfrou] [WARN ] [0603a53da3403b05] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:27:26.551Z [jfrou] [WARN ] [0603a53da3403b05] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:27:31.550Z [jfrou] [WARN ] [26679e638bf45cf4] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:27:31.551Z [jfrou] [WARN ] [26679e638bf45cf4] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:27:36.550Z [jfrou] [WARN ] [11a8fbf5d4d3f812] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:27:36.551Z [jfrou] [WARN ] [11a8fbf5d4d3f812] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:27:41.552Z [jfrou] [WARN ] [72613d02bfe69d0d] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:27:41.553Z [jfrou] [WARN ] [72613d02bfe69d0d] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:27:41.559Z [jfrou] [WARN ] [72613d02bfe69d0d] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 216 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:27:46.551Z [jfrou] [WARN ] [621f2469a2a83346] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:27:46.552Z [jfrou] [WARN ] [621f2469a2a83346] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:27:48.982Z [jfrou] [WARN ] [04e7fef4ff7b8036] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 361 times: unexpected response status: 503 
+2025-03-12T02:27:51.550Z [jfrou] [WARN ] [6e93d53a4971199f] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:27:51.551Z [jfrou] [WARN ] [6e93d53a4971199f] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:27:56.551Z [jfrou] [WARN ] [227ee3fb46d51061] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:27:56.552Z [jfrou] [WARN ] [227ee3fb46d51061] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:28:01.552Z [jfrou] [WARN ] [100ac3aece2f14a6] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:28:01.552Z [jfrou] [WARN ] [100ac3aece2f14a6] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:28:01.558Z [jfrou] [WARN ] [100ac3aece2f14a6] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 220 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:28:06.551Z [jfrou] [WARN ] [2105fc8954ac4764] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:28:06.551Z [jfrou] [WARN ] [2105fc8954ac4764] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:28:11.554Z [jfrou] [WARN ] [0d86e4b2d06777fd] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:28:11.555Z [jfrou] [WARN ] [0d86e4b2d06777fd] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:28:16.555Z [jfrou] [WARN ] [588215d0901def72] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:28:16.555Z [jfrou] [WARN ] [588215d0901def72] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:28:18.989Z [jfrou] [WARN ] [2f74b56f711449b1] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 371 times: unexpected response status: 503 
+2025-03-12T02:28:21.554Z [jfrou] [WARN ] [19602a9472df2d25] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:28:21.555Z [jfrou] [WARN ] [19602a9472df2d25] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:28:21.561Z [jfrou] [WARN ] [19602a9472df2d25] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 224 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:28:26.555Z [jfrou] [WARN ] [3f8b471e52f2e9bd] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:28:26.556Z [jfrou] [WARN ] [3f8b471e52f2e9bd] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:28:31.556Z [jfrou] [WARN ] [5614a7cf57aa6f63] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:28:31.556Z [jfrou] [WARN ] [5614a7cf57aa6f63] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:28:36.554Z [jfrou] [WARN ] [68d472c0769d9537] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:28:36.555Z [jfrou] [WARN ] [68d472c0769d9537] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:28:37.222Z [jfrou] [INFO ] [21da8d0461c02352] [config_holder.go:130          ] [main                ] [] - Configuration update detected
+2025-03-12T02:28:37.225Z [jfrou] [WARN ] [21da8d0461c02352] [routing_handler.go:407        ] [main                ] [] - No external routes detected, the traefik external routes will be emptied
+2025-03-12T02:28:37.236Z [jfrou] [INFO ] [21da8d0461c02352] [traefik_config.go:116         ] [main                ] [] - Searching for Traefik configuration override values in file: /opt/jfrog/artifactory/var/etc/router/traefik.toml
+2025-03-12T02:28:37.240Z [jfrou] [ERROR] [21da8d0461c02352] [config_holder.go:135          ] [main                ] [] - Failed running config update listener 'Configure Request Logger': create global traefik configuration: setting enforced override values: open /opt/jfrog/artifactory/var/etc/security/keys/trusted: no such file or directory
+2025-03-12T02:28:41.555Z [jfrou] [WARN ] [44bc5bc9228b3377] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:28:41.556Z [jfrou] [WARN ] [44bc5bc9228b3377] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:28:41.561Z [jfrou] [WARN ] [44bc5bc9228b3377] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 228 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:28:46.557Z [jfrou] [WARN ] [0bd18d7c17ea54fb] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:28:46.557Z [jfrou] [WARN ] [0bd18d7c17ea54fb] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:28:48.999Z [jfrou] [WARN ] [2a64d19bab8c3f2f] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 381 times: unexpected response status: 503 
+2025-03-12T02:28:51.557Z [jfrou] [WARN ] [4015431fabb03871] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:28:51.557Z [jfrou] [WARN ] [4015431fabb03871] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:28:56.557Z [jfrou] [WARN ] [0d787e822d5edf61] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:28:56.557Z [jfrou] [WARN ] [0d787e822d5edf61] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:29:01.558Z [jfrou] [WARN ] [3ff3f3033062586a] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:29:01.559Z [jfrou] [WARN ] [3ff3f3033062586a] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:29:01.564Z [jfrou] [WARN ] [3ff3f3033062586a] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 232 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:29:06.557Z [jfrou] [WARN ] [69c7f0b9d504ff68] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:29:06.557Z [jfrou] [WARN ] [69c7f0b9d504ff68] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:29:11.557Z [jfrou] [WARN ] [0030cf61099ca866] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:29:11.557Z [jfrou] [WARN ] [0030cf61099ca866] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:29:16.557Z [jfrou] [WARN ] [20c5f4aef91b9738] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:29:16.558Z [jfrou] [WARN ] [20c5f4aef91b9738] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:29:17.218Z [jfrou] [INFO ] [21da8d0461c02352] [config_holder.go:130          ] [main                ] [] - Configuration update detected
+2025-03-12T02:29:17.219Z [jfrou] [WARN ] [21da8d0461c02352] [routing_handler.go:407        ] [main                ] [] - No external routes detected, the traefik external routes will be emptied
+2025-03-12T02:29:17.229Z [jfrou] [INFO ] [21da8d0461c02352] [traefik_config.go:116         ] [main                ] [] - Searching for Traefik configuration override values in file: /opt/jfrog/artifactory/var/etc/router/traefik.toml
+2025-03-12T02:29:17.232Z [jfrou] [ERROR] [21da8d0461c02352] [config_holder.go:135          ] [main                ] [] - Failed running config update listener 'Configure Request Logger': create global traefik configuration: setting enforced override values: open /opt/jfrog/artifactory/var/etc/security/keys/trusted: no such file or directory
+2025-03-12T02:29:19.003Z [jfrou] [WARN ] [5ae8e05c2238a4ec] [external_topology.go:309      ] [main                ] [] - Failed fetching external topology from Service Registry 391 times: unexpected response status: 503 
+2025-03-12T02:29:21.558Z [jfrou] [WARN ] [4fdcc8a636f8f833] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:29:21.559Z [jfrou] [WARN ] [4fdcc8a636f8f833] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:29:21.562Z [jfrou] [WARN ] [4fdcc8a636f8f833] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 236 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:29:26.559Z [jfrou] [WARN ] [599d302cbe0ea7f9] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:29:26.559Z [jfrou] [WARN ] [599d302cbe0ea7f9] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:29:31.560Z [jfrou] [WARN ] [060d12b632b28bb6] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:29:31.560Z [jfrou] [WARN ] [060d12b632b28bb6] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:29:36.558Z [jfrou] [WARN ] [1f0f0e10a695863e] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:29:36.558Z [jfrou] [WARN ] [1f0f0e10a695863e] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:29:41.559Z [jfrou] [WARN ] [14ac5faac04f1e43] [local_topology_helper.go:68   ] [main                ] [] - Missing required services: [jfrt jfac jfmd jffe jfob jfevt]
+2025-03-12T02:29:41.559Z [jfrou] [WARN ] [14ac5faac04f1e43] [local_topology.go:371         ] [main                ] [] - Readiness test failed with the following error: "required node services are missing or unhealthy"
+2025-03-12T02:29:41.564Z [jfrou] [WARN ] [14ac5faac04f1e43] [local_topology.go:176         ] [main                ] [] - periodic send heartbeat failed for 240 consecutive times. Last error: failed sending heartbeat information to service registry: failed closing gRPC client: rpc error: code = Unimplemented desc = unexpected HTTP status code received from server: 404 (Not Found); transport: received unexpected content-type "text/plain; charset=utf-8"
+2025-03-12T02:29:50.424Z [jfrou] [INFO ] [0da58d99b985cf3f] [bootstrap.go:91               ] [main                ] [] - Router (jfrou) service initialization started. Version: 7.149.1-1 Revision: 619561f935520ad047fe4f06257b4bfe068500bf PID: 3582 Home: /opt/jfrog/artifactory
+2025-03-12T02:29:50.428Z [jfrou] [INFO ] [0da58d99b985cf3f] [bootstrap.go:94               ] [main                ] [] - JFrog Router IP: 172.19.0.3
+2025-03-12T02:29:50.430Z [jfrou] [INFO ] [0da58d99b985cf3f] [bootstrap.go:95               ] [main                ] [] - Effective configuration:
+access (File): <nil>
+access.http.port (Default Value): 8040
+access.useexternaltopology (Environment Variable: JF_ACCESS_USEEXTERNALTOPOLOGY): true
+artifactory.pid (Environment Variable: JF_ARTIFACTORY_PID): /opt/jfrog/artifactory/var/work/run/artifactory.pid
+artifactory.user (Environment Variable: JF_ARTIFACTORY_USER): artifactory
+configVersion (File): 1
+legacy.artifactory.pid (Environment Variable: JF_LEGACY_ARTIFACTORY_PID): /opt/jfrog/artifactory/app/run/artifactory.pid
+product.data.internal (Environment Variable: JF_PRODUCT_DATA_INTERNAL): /var/opt/jfrog/artifactory
+product.home (Environment Variable: JF_PRODUCT_HOME): /opt/jfrog/artifactory
+router.autoMemLimitRatio (Default Value): 0.9
+router.availabilityZoneOptimization.loggingIntervalSecs (Default Value): 600
+router.encryptSystemConfig (Default Value): true
+router.entrypoints.externalHost (Default Value): 
+router.entrypoints.externalMaxConcurrentStreams (Default Value): 500
+router.entrypoints.externalPort (Default Value): 8082
+router.entrypoints.grpcPort (Default Value): 8047
+router.entrypoints.hotPathLogEnabled (Default Value): true
+router.entrypoints.internalMaxConcurrentStreams (Default Value): 500
+router.entrypoints.internalPort (Default Value): 8046
+router.entrypoints.traefikApiPort (Default Value): 8049
+router.httpclient.requestTimeoutSecs (Default Value): 30
+router.lifecycle.shutdown.entrypointsGraceTimeout (Default Value): 10s
+router.lifecycle.shutdown.internalJobsGraceTimeout (Default Value): 7s
+router.logging.application.caller (Default Value): false
+router.logging.application.console (Default Value): true
+router.logging.application.filePath (Default Value): router-service.log
+router.logging.application.format (Default Value): jftext
+router.logging.application.level (Default Value): info
+router.logging.application.rotation.compress (Default Value): true
+router.logging.application.rotation.keepLastDecompressed (Default Value): 1
+router.logging.application.rotation.maxAgeDays (Default Value): 0
+router.logging.application.rotation.maxFiles (Default Value): 10
+router.logging.application.rotation.maxSizeMb (Default Value): 25
+router.logging.consoleLog.format (Default Value): jftext
+router.logging.request.filePath (Default Value): router-request.log
+router.logging.request.forwardedForLogging.enabled (Default Value): false
+router.logging.request.forwardedForLogging.header (Default Value): X-Forwarded-For
+router.logging.request.rotation.compress (Default Value): true
+router.logging.request.rotation.keepLastDecompressed (Default Value): 1
+router.logging.request.rotation.maxAgeDays (Default Value): 0
+router.logging.request.rotation.maxFiles (Default Value): 10
+router.logging.request.rotation.maxSizeMb (Default Value): 100
+router.logging.request.tokenIdLoggingEnabled (Default Value): false
+router.logging.request.verbose (Default Value): false
+router.logging.traefik.caller (Default Value): false
+router.logging.traefik.console (Default Value): false
+router.logging.traefik.filePath (Default Value): router-traefik.log
+router.logging.traefik.format (Default Value): jftext
+router.logging.traefik.level (Default Value): info
+router.logging.traefik.rotation.compress (Default Value): true
+router.logging.traefik.rotation.keepLastDecompressed (Default Value): 1
+router.logging.traefik.rotation.maxAgeDays (Default Value): 0
+router.logging.traefik.rotation.maxFiles (Default Value): 10
+router.logging.traefik.rotation.maxSizeMb (Default Value): 25
+router.masterKeyRemoval.heartbeatCount (Default Value): 3
+router.masterKeyRemoval.intervalSecs (Default Value): 60
+router.masterKeyRemoval.timeoutSecs (Default Value): 600
+router.metrics.tokenVerification.accessUrl (Default Value): 
+router.metrics.tokenVerification.revocableExpiryThresholdSeconds (Default Value): -1
+router.mtls.configCacheErrorExpirationSecs (Default Value): 15
+router.mtls.configCacheExpirationSecs (Default Value): 600
+router.multiTenant.cacheExpirySecs (Default Value): 86400
+router.multiTenant.cacheGcPeriodSecs (Default Value): 600
+router.multiTenant.transport.idleConnTimeoutSecs (Default Value): 5
+router.multiTenant.transport.insecureSkipVerify (Default Value): true
+router.probes.liveness.failOnLongFailingReadiness.enabled (Default Value): true
+router.probes.liveness.failOnLongFailingReadiness.failureDurationSecs (Default Value): 60
+router.profiling.enabled (Default Value): false
+router.profiling.pprofServerPort (Default Value): 6060
+router.profiling.pprofServerTimeoutSeconds (Default Value): 21600
+router.proxy.httpUrl (Default Value): 
+router.proxy.httpsUrl (Default Value): 
+router.proxy.ignoredHosts (Default Value): []
+router.redirectUnknownPathToArtifactoryEnabled (Default Value): false
+router.retry.enabled (Default Value): false
+router.retry.enabledOnUnavailable (Default Value): true
+router.security.cipherSuites (Default Value): TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_AES_128_GCM_SHA256,TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+router.serviceRegistry.accessUrl (Applicative Resolution): http://localhost:8040/access
+router.serviceRegistry.insecure (Default Value): false
+router.serviceRegistry.requestTimeout (Default Value): 15s
+router.serviceRegistry.skipJoinConnectivityTest (Default Value): false
+router.serviceRegistry.topologyServiceTokenExpirySecs (Default Value): 7200
+router.serviceRegistry.topologyUrl (Applicative Resolution): http://localhost:8020/topology
+router.serviceRegistry.useTopologyService (Default Value): false
+router.supportBundle.aggregationTimeout (Default Value): 1h0m0s
+router.topology.external.allowH2c (Default Value): true
+router.topology.external.healthRequestTimeoutSecs (Default Value): 5
+router.topology.external.protocolFinderCacheSecs (Default Value): 600
+router.topology.external.refresh.interval (Default Value): 3s
+router.topology.external.refresh.maxStaleHeartbeat (Default Value): 30s
+router.topology.external.skipIpCheck (Default Value): false
+router.topology.local.enableNodeStatusBroadcast (Default Value): true
+router.topology.local.healthCheck.healthyThreshold (Default Value): 2
+router.topology.local.healthCheck.interval (Default Value): 5s
+router.topology.local.healthCheck.requestTimeout (Default Value): 5s
+router.topology.local.healthCheck.unhealthyThreshold (Default Value): 2
+router.topology.local.ignorePersistedServices (Default Value): false
+router.topology.local.requiredServiceTypes (Environment Variable: JF_ROUTER_TOPOLOGY_LOCAL_REQUIREDSERVICETYPES): jfrt,jfac,jfmd,jffe,jfob,jfevt,jftpl
+shared.database (File): <nil>
+shared.extrajavaopts (Environment Variable: JF_SHARED_EXTRAJAVAOPTS): -Xms512m -Xmx2g
+shared.jfrogUrl (Default Value): 
+shared.logging.consoleLog.format (Default Value): shared.logging.consoleLog.format
+shared.logging.enableJsonConsoleLogAppenders (Default Value): false
+shared.multiTenant.cellId (Default Value): 
+shared.multiTenant.enabled (Default Value): false
+shared.multiTenant.keyPrefix (Default Value): 
+shared.multiTenant.tenantRegistryClient.caCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.cacheExpirationSecs (Default Value): 21600
+shared.multiTenant.tenantRegistryClient.clientCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.clientCertKey (Default Value): *****
+shared.multiTenant.tenantRegistryClient.dialTimeoutSecs (Default Value): 10
+shared.multiTenant.tenantRegistryClient.endpoints (Default Value): []
+shared.multiTenant.tenantRegistryClient.requestTimeoutSecs (Default Value): 30
+shared.newrelic.appName (Default Value): 
+shared.newrelic.distributedTracerEnabled (Default Value): true
+shared.newrelic.enableDebugLog (Default Value): false
+shared.newrelic.enabled (Default Value): false
+shared.newrelic.licenseKey (Default Value): *****
+shared.node (File): <nil>
+shared.node.availabilityZoneId (Default Value): 
+shared.node.id (Environment Variable: JF_SHARED_NODE_ID): cc136bdf3558
+shared.node.ip (Environment Variable: JF_SHARED_NODE_IP): 172.19.0.3
+shared.node.name (Environment Variable: JF_SHARED_NODE_NAME): cc136bdf3558
+shared.node.port (Default Value): 0
+shared.node.tlsEnabled (Default Value): false
+shared.restrictedmode.enabled (Environment Variable: JF_SHARED_RESTRICTEDMODE_ENABLED): true
+shared.security (File): <nil>
+shared.security.bootstrapKeysReadTimeoutSecs (Default Value): 300
+shared.security.joinKeyFile (Default Value): etc/security/join.key
+shared.security.masterKeyExternal (Default Value): false
+shared.security.masterKeyFile (Default Value): etc/security/master.key
+system.yaml (Environment Variable: JF_SYSTEM_YAML): /opt/jfrog/artifactory/var/etc/system.yaml
+topology.grpcPort (Default Value): 8021
+topology.port (Default Value): 8020
+2025-03-12T02:29:55.451Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 5 seconds with 5m0s timeout
+2025-03-12T02:30:00.467Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 10 seconds with 5m0s timeout
+2025-03-12T02:30:05.481Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 15 seconds with 5m0s timeout
+2025-03-12T02:30:10.489Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 20 seconds with 5m0s timeout
+2025-03-12T02:30:15.505Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 25 seconds with 5m0s timeout
+2025-03-12T02:30:20.522Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 30 seconds with 5m0s timeout
+2025-03-12T02:30:25.534Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 35 seconds with 5m0s timeout
+2025-03-12T02:30:30.548Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 40 seconds with 5m0s timeout
+2025-03-12T02:30:35.560Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 45 seconds with 5m0s timeout
+2025-03-12T02:30:40.573Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 50 seconds with 5m0s timeout
+2025-03-12T02:30:45.591Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 55 seconds with 5m0s timeout
+2025-03-12T02:30:50.617Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 60 seconds with 5m0s timeout
+2025-03-12T02:30:55.634Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 65 seconds with 5m0s timeout
+2025-03-12T08:14:07.981Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 85 seconds with 5m0s timeout
+2025-03-12T08:14:13.451Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 90 seconds with 5m0s timeout
+2025-03-12T14:23:27.736Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 95 seconds with 5m0s timeout
+2025-03-12T14:23:32.963Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 100 seconds with 5m0s timeout
+2025-03-12T14:23:38.021Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 105 seconds with 5m0s timeout
+2025-03-12T14:23:42.093Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 110 seconds with 5m0s timeout
+2025-03-12T14:23:47.417Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 115 seconds with 5m0s timeout
+2025-03-12T14:23:57.453Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 125 seconds with 5m0s timeout
+2025-03-12T14:24:02.494Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 130 seconds with 5m0s timeout
+2025-03-12T14:24:07.625Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 135 seconds with 5m0s timeout
+2025-03-12T14:24:12.644Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 140 seconds with 5m0s timeout
+2025-03-12T14:24:17.665Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 145 seconds with 5m0s timeout
+2025-03-12T14:24:22.690Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 150 seconds with 5m0s timeout
+2025-03-12T14:24:27.706Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 155 seconds with 5m0s timeout
+2025-03-12T14:24:32.722Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 160 seconds with 5m0s timeout
+2025-03-12T14:24:37.735Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 165 seconds with 5m0s timeout
+2025-03-12T14:24:42.749Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 170 seconds with 5m0s timeout
+2025-03-12T14:24:47.763Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 175 seconds with 5m0s timeout
+2025-03-12T14:24:52.778Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 180 seconds with 5m0s timeout
+2025-03-12T14:24:57.797Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 185 seconds with 5m0s timeout
+2025-03-12T14:25:02.823Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 190 seconds with 5m0s timeout
+2025-03-12T14:25:07.847Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 195 seconds with 5m0s timeout
+2025-03-12T14:25:12.865Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 200 seconds with 5m0s timeout
+2025-03-12T14:25:17.887Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 205 seconds with 5m0s timeout
+2025-03-12T14:25:22.899Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 210 seconds with 5m0s timeout
+2025-03-12T14:25:27.924Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 215 seconds with 5m0s timeout
+2025-03-12T14:25:32.945Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 220 seconds with 5m0s timeout
+2025-03-12T14:25:37.972Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 225 seconds with 5m0s timeout
+2025-03-12T14:25:42.990Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 230 seconds with 5m0s timeout
+2025-03-12T14:25:48.015Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 235 seconds with 5m0s timeout
+2025-03-12T14:25:52.029Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 240 seconds with 5m0s timeout
+2025-03-12T14:25:57.056Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 245 seconds with 5m0s timeout
+2025-03-12T14:26:02.122Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 250 seconds with 5m0s timeout
+2025-03-12T14:26:07.143Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 255 seconds with 5m0s timeout
+2025-03-12T14:26:12.158Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 260 seconds with 5m0s timeout
+2025-03-12T14:26:17.176Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 265 seconds with 5m0s timeout
+2025-03-12T14:26:22.191Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 270 seconds with 5m0s timeout
+2025-03-12T14:26:27.209Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 275 seconds with 5m0s timeout
+2025-03-12T14:26:32.225Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 280 seconds with 5m0s timeout
+2025-03-12T14:26:37.245Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 285 seconds with 5m0s timeout
+2025-03-12T14:26:42.258Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 290 seconds with 5m0s timeout
+2025-03-12T14:26:47.275Z [jfrou] [INFO ] [0da58d99b985cf3f] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 295 seconds with 5m0s timeout
+2025-03-12T14:26:52.012Z [jfrou] [FATAL] [0da58d99b985cf3f] [bootstrap.go:113              ] [main                ] [] - Security keys resolution errors: Cluster join: Failed resolving join key: failed resolving 'shared.security.joinKey' key; file does not exist: /opt/jfrog/artifactory/var/etc/security/join.key

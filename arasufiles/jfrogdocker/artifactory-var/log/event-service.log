@@ -1,0 +1,395 @@
+2025-03-12T02:09:07.610Z [jfevt] [INFO ] [162c784e984af0b7] [bootstrap.go:56               ] [main                ] [                ] - Effective configuration:
+access.useexternaltopology (Environment Variable: JF_ACCESS_USEEXTERNALTOPOLOGY): true
+artifactory.pid (Environment Variable: JF_ARTIFACTORY_PID): /opt/jfrog/artifactory/var/work/run/artifactory.pid
+artifactory.user (Environment Variable: JF_ARTIFACTORY_USER): artifactory
+event.accessClient.joinTimeout (Default Value): 5m
+event.accessClient.pingTimeout (Default Value): 5m
+event.artifactoryClient.request.timeout (Default Value): 5s
+event.baseUrlCache.interval (Default Value): 5m
+event.customWebhooks.enabled (Default Value): true
+event.customWebhooks.maxIdleConnections (Default Value): 100
+event.customWebhooks.maxIdleConnectionsPerHost (Default Value): 100
+event.customWebhooks.retryCount (Default Value): 5
+event.customWebhooks.retryWaitMillis (Default Value): 10000
+event.customWebhooks.sizeLimits.headersMaxCount (Default Value): 50
+event.customWebhooks.sizeLimits.headersMaxSizeBytes (Default Value): 5120
+event.customWebhooks.sizeLimits.payloadMaxSizeBytes (Default Value): 51200
+event.customWebhooks.sizeLimits.secretsMaxCount (Default Value): 50
+event.customWebhooks.sizeLimits.secretsMaxSizeBytes (Default Value): 5120
+event.customWebhooks.timeoutMillis (Default Value): 30000
+event.customWebhooks.tlsInsecure (Default Value): false
+event.domainCache.interval (Default Value): 5m
+event.grpcPort (Default Value): 8062
+event.logging.application.caller (Default Value): false
+event.logging.application.console (Default Value): true
+event.logging.application.filePath (Default Value): event-service.log
+event.logging.application.format (Default Value): jftext
+event.logging.application.level (Default Value): info
+event.logging.application.rotation.compress (Default Value): true
+event.logging.application.rotation.keepLastDecompressed (Default Value): 1
+event.logging.application.rotation.maxAgeDays (Default Value): 365
+event.logging.application.rotation.maxFiles (Default Value): 10
+event.logging.application.rotation.maxSizeMb (Default Value): 25
+event.logging.consoleLog.format (Default Value): jftext
+event.logging.metrics.console (Default Value): false
+event.logging.metrics.filePath (Default Value): event-metrics.log
+event.logging.metrics.rotation.compress (Default Value): true
+event.logging.metrics.rotation.keepLastDecompressed (Default Value): 1
+event.logging.metrics.rotation.maxAgeDays (Default Value): 365
+event.logging.metrics.rotation.maxFiles (Default Value): 10
+event.logging.metrics.rotation.maxSizeMb (Default Value): 25
+event.logging.outgoingRequest.console (Default Value): false
+event.logging.outgoingRequest.filePath (Default Value): event-webhook-request-out.log
+event.logging.outgoingRequest.rotation.compress (Default Value): true
+event.logging.outgoingRequest.rotation.keepLastDecompressed (Default Value): 1
+event.logging.outgoingRequest.rotation.maxAgeDays (Default Value): 365
+event.logging.outgoingRequest.rotation.maxFiles (Default Value): 10
+event.logging.outgoingRequest.rotation.maxSizeMb (Default Value): 25
+event.logging.request.console (Default Value): false
+event.logging.request.filePath (Default Value): event-request.log
+event.logging.request.rotation.compress (Default Value): true
+event.logging.request.rotation.keepLastDecompressed (Default Value): 1
+event.logging.request.rotation.maxAgeDays (Default Value): 365
+event.logging.request.rotation.maxFiles (Default Value): 10
+event.logging.request.rotation.maxSizeMb (Default Value): 25
+event.logging.troubleshooting.console (Default Value): false
+event.logging.troubleshooting.filePath (Default Value): event-troubleshooting.log
+event.logging.troubleshooting.rotation.compress (Default Value): true
+event.logging.troubleshooting.rotation.keepLastDecompressed (Default Value): 1
+event.logging.troubleshooting.rotation.maxAgeDays (Default Value): 365
+event.logging.troubleshooting.rotation.maxFiles (Default Value): 10
+event.logging.troubleshooting.rotation.maxSizeMb (Default Value): 25
+event.metrics.enabled (Default Value): false
+event.metrics.exclude (Default Value): []
+event.metrics.interval (Default Value): 10s
+event.metrics.logPeriodically (Default Value): true
+event.metrics.tokenVerification.accessUrl (Default Value): 
+event.metrics.tokenVerification.retryBackoffInitialIntervalMillis (Default Value): 500
+event.metrics.tokenVerification.retryBackoffMaxElapsedTimeMillis (Default Value): 0
+event.metrics.tokenVerification.retryBackoffMaxIntervalMillis (Default Value): 3600000
+event.metrics.tokenVerification.revocableExpiryThresholdSeconds (Default Value): -1
+event.metrics.triggers.enabled (Default Value): true
+event.metrics.triggers.intervalMillis (Default Value): 20000
+event.metrics.triggers.limit (Default Value): 1000000
+event.port (Default Value): 8061
+event.profiling.enabled (Default Value): false
+event.proxyCache.interval (Default Value): 5m
+event.rateLimit.burstSize (Default Value): 10000
+event.rateLimit.frequency (Default Value): 1000
+event.rateLimit.maxConcurrentHandlers (Default Value): 50000
+event.security.blacklist.enabled (Default Value): true
+event.security.blacklist.timeoutMillis (Default Value): 5000
+event.shutdownWaitForRouterTimeoutSecs (Default Value): 10
+event.supportBundle.aggregationTimeout (Default Value): 1h
+event.tokenCache.timeout (Default Value): 1m
+event.troubleshooting.enabled (Default Value): false
+event.troubleshooting.keepAliveIntervalMillis (Default Value): 10000
+event.troubleshooting.redis.addresses (Default Value): []
+event.troubleshooting.redis.blockTimeoutMillis (Default Value): 0
+event.troubleshooting.redis.cleanupIntervalMillis (Default Value): 30000
+event.troubleshooting.redis.dialTimeoutMillis (Default Value): 0
+event.troubleshooting.redis.password (Default Value): *****
+event.troubleshooting.redis.readTimeoutMillis (Default Value): 0
+event.troubleshooting.redis.serverType (Default Value): single
+event.troubleshooting.redis.streamBatchSize (Default Value): 1000
+event.troubleshooting.redis.streamMaxLen (Default Value): 10000
+event.troubleshooting.redis.tlsEnabled (Default Value): false
+event.troubleshooting.redis.tlsInsecure (Default Value): false
+event.troubleshooting.redis.username (Default Value): 
+event.troubleshooting.redis.writeTimeoutMillis (Default Value): 0
+event.troubleshooting.storageType (Default Value): log
+event.troubleshooting.streamIdSuffix (Default Value): troubleshooting
+event.webhooks.maxIdleConnections (Default Value): 100
+event.webhooks.maxIdleConnectionsPerHost (Default Value): 100
+event.webhooks.retryCount (Default Value): 5
+event.webhooks.retryWait (Default Value): 10s
+event.webhooks.sizeLimits.headersMaxCount (Default Value): 50
+event.webhooks.sizeLimits.headersMaxSizeBytes (Default Value): 5120
+event.webhooks.timeout (Default Value): 30s
+event.webhooks.tlsInsecure (Default Value): false
+event.webhooks.urlStrictPolicy (Default Value): true
+legacy.artifactory.pid (Environment Variable: JF_LEGACY_ARTIFACTORY_PID): /opt/jfrog/artifactory/app/run/artifactory.pid
+metadata.accessclient.url (Environment Variable: JF_METADATA_ACCESSCLIENT_URL): http://localhost:8081/access
+product.data.internal (Environment Variable: JF_PRODUCT_DATA_INTERNAL): /var/opt/jfrog/artifactory
+product.home (Environment Variable: JF_PRODUCT_HOME): /opt/jfrog/artifactory
+router.entrypoints.internalPort (Default Value): 8046
+router.topology.local.requiredservicetypes (Environment Variable: JF_ROUTER_TOPOLOGY_LOCAL_REQUIREDSERVICETYPES): jfrt,jfac,jfmd,jffe,jfob,jfevt,jftpl
+shared.database.driver (File): org.postgresql.Driver
+shared.database.password (File): *****
+shared.database.type (File): postgresql
+shared.database.url (File): jdbc:postgresql://host.docker.internal:5432/artifactorydb
+shared.database.username (File): artifactory
+shared.multiTenant.cellId (Default Value): 
+shared.multiTenant.enabled (Default Value): false
+shared.multiTenant.tenantRegistryClient.caCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.cacheExpirationSecs (Default Value): 21600
+shared.multiTenant.tenantRegistryClient.clientCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.clientCertKey (Default Value): *****
+shared.multiTenant.tenantRegistryClient.dialTimeoutSecs (Default Value): 10
+shared.multiTenant.tenantRegistryClient.endpoints (Default Value): 
+shared.multiTenant.tenantRegistryClient.pingCacheExpirationSecs (Default Value): 15
+shared.multiTenant.tenantRegistryClient.pingTimeoutSecs (Default Value): 1
+shared.multiTenant.tenantRegistryClient.requestTimeoutSecs (Default Value): 30
+shared.newrelic.appName (Default Value): 
+shared.newrelic.distributedTracerEnabled (Default Value): true
+shared.newrelic.enableDebugLog (Default Value): false
+shared.newrelic.enabled (Default Value): false
+shared.newrelic.licenseKey (Default Value): *****
+shared.node.id (Environment Variable: JF_SHARED_NODE_ID): 5edea333cc2e
+shared.node.ip (Environment Variable: JF_SHARED_NODE_IP): 172.19.0.3
+shared.node.name (Environment Variable: JF_SHARED_NODE_NAME): 5edea333cc2e
+shared.openTelemetry.distributedTracerEnabled (Default Value): true
+shared.openTelemetry.enabled (Default Value): false
+shared.openTelemetry.endpoint (Default Value): 
+shared.openTelemetry.exportPace (Default Value): 0s
+shared.openTelemetry.labels (Default Value): 
+shared.openTelemetry.metricsEnabled (Default Value): false
+shared.openTelemetry.token (Default Value): *****
+shared.openTelemetry.useGrpcExporters (Default Value): true
+shared.restrictedmode.enabled (Environment Variable: JF_SHARED_RESTRICTEDMODE_ENABLED): true
+shared.security.ExposeApplicationHeaders (Default Value): false
+shared.security.bootstrapKeysReadTimeoutSecs (Default Value): 120
+shared.security.joinKeyFile (Default Value): etc/security/join.key
+shared.security.masterKeyFile (Default Value): etc/security/master.key
+system.yaml (Environment Variable: JF_SYSTEM_YAML): /opt/jfrog/artifactory/var/etc/system.yaml [startup]
+2025-03-12T02:09:12.626Z [jfevt] [INFO ] [162c784e984af0b7] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 5 seconds with 2m0s timeout [startup]
+2025-03-12T02:09:17.641Z [jfevt] [INFO ] [162c784e984af0b7] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 10 seconds with 2m0s timeout [startup]
+2025-03-12T02:09:22.650Z [jfevt] [INFO ] [162c784e984af0b7] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 15 seconds with 2m0s timeout [startup]
+2025-03-12T02:09:27.660Z [jfevt] [INFO ] [162c784e984af0b7] [security_keys.go:172          ] [main                ] [                ] - Master key is missing. Pending for 20 seconds with 2m0s timeout [startup]
+2025-03-12T02:09:32.728Z [jfevt] [INFO ] [162c784e984af0b7] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 25 seconds with 2m0s timeout [startup]
+2025-03-12T02:09:41.754Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 5: Service registry ping failed, will retry. Error: Error while trying to connect to local router at address 'http://localhost:8046/access/api/v1/system/ping': Get "http://localhost:8046/access/api/v1/system/ping": dial tcp [::1]:8046: connect: connection refused [startup]
+2025-03-12T02:09:46.765Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 10: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:09:51.775Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 15: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:09:56.782Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 20: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:10:01.792Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 25: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:10:06.801Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 30: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:10:11.809Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 35: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:10:16.821Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 40: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:10:21.831Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 45: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:10:26.842Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 50: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:10:31.867Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 55: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:10:36.880Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 60: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:10:41.890Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 65: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:10:46.897Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 70: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:10:51.906Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 75: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:10:56.915Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 80: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:11:01.925Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 85: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:11:06.932Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 90: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:11:11.942Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 95: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:11:16.957Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 100: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:11:21.966Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 105: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:11:26.975Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 110: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:11:31.984Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 115: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:11:36.992Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 120: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:11:42.001Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 125: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:11:47.010Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 130: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:11:52.019Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 135: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:11:57.028Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 140: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:12:02.037Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 145: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:12:07.047Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 150: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:12:12.059Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 155: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:12:17.066Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 160: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:12:22.075Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 165: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:12:27.083Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 170: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:12:32.094Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 175: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:12:37.102Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 180: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:12:42.112Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 185: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:12:47.122Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 190: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:12:52.132Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 195: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:12:57.142Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 200: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:13:02.149Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 205: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:13:07.157Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 210: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:13:12.166Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 215: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:13:17.174Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 220: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:13:22.183Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 225: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:13:27.191Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 230: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:13:32.198Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 235: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:13:37.207Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 240: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:13:42.216Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 245: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:13:47.224Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 250: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:13:52.234Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 255: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:13:57.243Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 260: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:14:02.255Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 265: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:14:07.264Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 270: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:14:12.273Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 275: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:14:17.281Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 280: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:14:22.291Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 285: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:14:27.299Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 290: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:14:32.308Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 295: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:14:37.317Z [jfevt] [INFO ] [162c784e984af0b7] [access_thin_client.go:101     ] [main                ] [                ] - Cluster join: Retry 300: Service registry ping failed, will retry. Error: Failed to ping access, response status: 404 Not Found (returned 404) [startup]
+2025-03-12T02:29:50.873Z [jfevt] [INFO ] [40117f771f224c14] [bootstrap.go:56               ] [main                ] [                ] - Effective configuration:
+access (File): <nil>
+access.useexternaltopology (Environment Variable: JF_ACCESS_USEEXTERNALTOPOLOGY): true
+artifactory.pid (Environment Variable: JF_ARTIFACTORY_PID): /opt/jfrog/artifactory/var/work/run/artifactory.pid
+artifactory.user (Environment Variable: JF_ARTIFACTORY_USER): artifactory
+configVersion (File): 1
+event.accessClient.joinTimeout (Default Value): 5m
+event.accessClient.pingTimeout (Default Value): 5m
+event.artifactoryClient.request.timeout (Default Value): 5s
+event.baseUrlCache.interval (Default Value): 5m
+event.customWebhooks.enabled (Default Value): true
+event.customWebhooks.maxIdleConnections (Default Value): 100
+event.customWebhooks.maxIdleConnectionsPerHost (Default Value): 100
+event.customWebhooks.retryCount (Default Value): 5
+event.customWebhooks.retryWaitMillis (Default Value): 10000
+event.customWebhooks.sizeLimits.headersMaxCount (Default Value): 50
+event.customWebhooks.sizeLimits.headersMaxSizeBytes (Default Value): 5120
+event.customWebhooks.sizeLimits.payloadMaxSizeBytes (Default Value): 51200
+event.customWebhooks.sizeLimits.secretsMaxCount (Default Value): 50
+event.customWebhooks.sizeLimits.secretsMaxSizeBytes (Default Value): 5120
+event.customWebhooks.timeoutMillis (Default Value): 30000
+event.customWebhooks.tlsInsecure (Default Value): false
+event.domainCache.interval (Default Value): 5m
+event.grpcPort (Default Value): 8062
+event.logging.application.caller (Default Value): false
+event.logging.application.console (Default Value): true
+event.logging.application.filePath (Default Value): event-service.log
+event.logging.application.format (Default Value): jftext
+event.logging.application.level (Default Value): info
+event.logging.application.rotation.compress (Default Value): true
+event.logging.application.rotation.keepLastDecompressed (Default Value): 1
+event.logging.application.rotation.maxAgeDays (Default Value): 365
+event.logging.application.rotation.maxFiles (Default Value): 10
+event.logging.application.rotation.maxSizeMb (Default Value): 25
+event.logging.consoleLog.format (Default Value): jftext
+event.logging.metrics.console (Default Value): false
+event.logging.metrics.filePath (Default Value): event-metrics.log
+event.logging.metrics.rotation.compress (Default Value): true
+event.logging.metrics.rotation.keepLastDecompressed (Default Value): 1
+event.logging.metrics.rotation.maxAgeDays (Default Value): 365
+event.logging.metrics.rotation.maxFiles (Default Value): 10
+event.logging.metrics.rotation.maxSizeMb (Default Value): 25
+event.logging.outgoingRequest.console (Default Value): false
+event.logging.outgoingRequest.filePath (Default Value): event-webhook-request-out.log
+event.logging.outgoingRequest.rotation.compress (Default Value): true
+event.logging.outgoingRequest.rotation.keepLastDecompressed (Default Value): 1
+event.logging.outgoingRequest.rotation.maxAgeDays (Default Value): 365
+event.logging.outgoingRequest.rotation.maxFiles (Default Value): 10
+event.logging.outgoingRequest.rotation.maxSizeMb (Default Value): 25
+event.logging.request.console (Default Value): false
+event.logging.request.filePath (Default Value): event-request.log
+event.logging.request.rotation.compress (Default Value): true
+event.logging.request.rotation.keepLastDecompressed (Default Value): 1
+event.logging.request.rotation.maxAgeDays (Default Value): 365
+event.logging.request.rotation.maxFiles (Default Value): 10
+event.logging.request.rotation.maxSizeMb (Default Value): 25
+event.logging.troubleshooting.console (Default Value): false
+event.logging.troubleshooting.filePath (Default Value): event-troubleshooting.log
+event.logging.troubleshooting.rotation.compress (Default Value): true
+event.logging.troubleshooting.rotation.keepLastDecompressed (Default Value): 1
+event.logging.troubleshooting.rotation.maxAgeDays (Default Value): 365
+event.logging.troubleshooting.rotation.maxFiles (Default Value): 10
+event.logging.troubleshooting.rotation.maxSizeMb (Default Value): 25
+event.metrics.enabled (Default Value): false
+event.metrics.exclude (Default Value): []
+event.metrics.interval (Default Value): 10s
+event.metrics.logPeriodically (Default Value): true
+event.metrics.tokenVerification.accessUrl (Default Value): 
+event.metrics.tokenVerification.retryBackoffInitialIntervalMillis (Default Value): 500
+event.metrics.tokenVerification.retryBackoffMaxElapsedTimeMillis (Default Value): 0
+event.metrics.tokenVerification.retryBackoffMaxIntervalMillis (Default Value): 3600000
+event.metrics.tokenVerification.revocableExpiryThresholdSeconds (Default Value): -1
+event.metrics.triggers.enabled (Default Value): true
+event.metrics.triggers.intervalMillis (Default Value): 20000
+event.metrics.triggers.limit (Default Value): 1000000
+event.port (Default Value): 8061
+event.profiling.enabled (Default Value): false
+event.proxyCache.interval (Default Value): 5m
+event.rateLimit.burstSize (Default Value): 10000
+event.rateLimit.frequency (Default Value): 1000
+event.rateLimit.maxConcurrentHandlers (Default Value): 50000
+event.security.blacklist.enabled (Default Value): true
+event.security.blacklist.timeoutMillis (Default Value): 5000
+event.shutdownWaitForRouterTimeoutSecs (Default Value): 10
+event.supportBundle.aggregationTimeout (Default Value): 1h
+event.tokenCache.timeout (Default Value): 1m
+event.troubleshooting.enabled (Default Value): false
+event.troubleshooting.keepAliveIntervalMillis (Default Value): 10000
+event.troubleshooting.redis.addresses (Default Value): []
+event.troubleshooting.redis.blockTimeoutMillis (Default Value): 0
+event.troubleshooting.redis.cleanupIntervalMillis (Default Value): 30000
+event.troubleshooting.redis.dialTimeoutMillis (Default Value): 0
+event.troubleshooting.redis.password (Default Value): *****
+event.troubleshooting.redis.readTimeoutMillis (Default Value): 0
+event.troubleshooting.redis.serverType (Default Value): single
+event.troubleshooting.redis.streamBatchSize (Default Value): 1000
+event.troubleshooting.redis.streamMaxLen (Default Value): 10000
+event.troubleshooting.redis.tlsEnabled (Default Value): false
+event.troubleshooting.redis.tlsInsecure (Default Value): false
+event.troubleshooting.redis.username (Default Value): 
+event.troubleshooting.redis.writeTimeoutMillis (Default Value): 0
+event.troubleshooting.storageType (Default Value): log
+event.troubleshooting.streamIdSuffix (Default Value): troubleshooting
+event.webhooks.maxIdleConnections (Default Value): 100
+event.webhooks.maxIdleConnectionsPerHost (Default Value): 100
+event.webhooks.retryCount (Default Value): 5
+event.webhooks.retryWait (Default Value): 10s
+event.webhooks.sizeLimits.headersMaxCount (Default Value): 50
+event.webhooks.sizeLimits.headersMaxSizeBytes (Default Value): 5120
+event.webhooks.timeout (Default Value): 30s
+event.webhooks.tlsInsecure (Default Value): false
+event.webhooks.urlStrictPolicy (Default Value): true
+legacy.artifactory.pid (Environment Variable: JF_LEGACY_ARTIFACTORY_PID): /opt/jfrog/artifactory/app/run/artifactory.pid
+metadata.accessclient.url (Environment Variable: JF_METADATA_ACCESSCLIENT_URL): http://localhost:8081/access
+product.data.internal (Environment Variable: JF_PRODUCT_DATA_INTERNAL): /var/opt/jfrog/artifactory
+product.home (Environment Variable: JF_PRODUCT_HOME): /opt/jfrog/artifactory
+router.entrypoints.internalPort (Default Value): 8046
+router.topology.local.requiredservicetypes (Environment Variable: JF_ROUTER_TOPOLOGY_LOCAL_REQUIREDSERVICETYPES): jfrt,jfac,jfmd,jffe,jfob,jfevt,jftpl
+shared.database (File): <nil>
+shared.extrajavaopts (Environment Variable: JF_SHARED_EXTRAJAVAOPTS): -Xms512m -Xmx2g
+shared.multiTenant.cellId (Default Value): 
+shared.multiTenant.enabled (Default Value): false
+shared.multiTenant.tenantRegistryClient.caCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.cacheExpirationSecs (Default Value): 21600
+shared.multiTenant.tenantRegistryClient.clientCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.clientCertKey (Default Value): *****
+shared.multiTenant.tenantRegistryClient.dialTimeoutSecs (Default Value): 10
+shared.multiTenant.tenantRegistryClient.endpoints (Default Value): 
+shared.multiTenant.tenantRegistryClient.pingCacheExpirationSecs (Default Value): 15
+shared.multiTenant.tenantRegistryClient.pingTimeoutSecs (Default Value): 1
+shared.multiTenant.tenantRegistryClient.requestTimeoutSecs (Default Value): 30
+shared.newrelic.appName (Default Value): 
+shared.newrelic.distributedTracerEnabled (Default Value): true
+shared.newrelic.enableDebugLog (Default Value): false
+shared.newrelic.enabled (Default Value): false
+shared.newrelic.licenseKey (Default Value): *****
+shared.node (File): <nil>
+shared.node.id (Environment Variable: JF_SHARED_NODE_ID): cc136bdf3558
+shared.node.ip (Environment Variable: JF_SHARED_NODE_IP): 172.19.0.3
+shared.node.name (Environment Variable: JF_SHARED_NODE_NAME): cc136bdf3558
+shared.openTelemetry.distributedTracerEnabled (Default Value): true
+shared.openTelemetry.enabled (Default Value): false
+shared.openTelemetry.endpoint (Default Value): 
+shared.openTelemetry.exportPace (Default Value): 0s
+shared.openTelemetry.labels (Default Value): 
+shared.openTelemetry.metricsEnabled (Default Value): false
+shared.openTelemetry.token (Default Value): *****
+shared.openTelemetry.useGrpcExporters (Default Value): true
+shared.restrictedmode.enabled (Environment Variable: JF_SHARED_RESTRICTEDMODE_ENABLED): true
+shared.security (File): <nil>
+shared.security.ExposeApplicationHeaders (Default Value): false
+shared.security.bootstrapKeysReadTimeoutSecs (Default Value): 120
+shared.security.joinKeyFile (Default Value): etc/security/join.key
+shared.security.masterKeyFile (Default Value): etc/security/master.key
+system.yaml (Environment Variable: JF_SYSTEM_YAML): /opt/jfrog/artifactory/var/etc/system.yaml [startup]
+2025-03-12T02:29:55.921Z [jfevt] [INFO ] [40117f771f224c14] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 5 seconds with 2m0s timeout [startup]
+2025-03-12T02:30:00.933Z [jfevt] [INFO ] [40117f771f224c14] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 10 seconds with 2m0s timeout [startup]
+2025-03-12T02:30:05.946Z [jfevt] [INFO ] [40117f771f224c14] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 15 seconds with 2m0s timeout [startup]
+2025-03-12T02:30:10.956Z [jfevt] [INFO ] [40117f771f224c14] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 20 seconds with 2m0s timeout [startup]
+2025-03-12T02:30:15.972Z [jfevt] [INFO ] [40117f771f224c14] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 25 seconds with 2m0s timeout [startup]
+2025-03-12T02:30:20.989Z [jfevt] [INFO ] [40117f771f224c14] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 30 seconds with 2m0s timeout [startup]
+2025-03-12T02:30:26.003Z [jfevt] [INFO ] [40117f771f224c14] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 35 seconds with 2m0s timeout [startup]
+2025-03-12T02:30:31.016Z [jfevt] [INFO ] [40117f771f224c14] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 40 seconds with 2m0s timeout [startup]
+2025-03-12T02:30:36.034Z [jfevt] [INFO ] [40117f771f224c14] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 45 seconds with 2m0s timeout [startup]
+2025-03-12T02:30:41.058Z [jfevt] [INFO ] [40117f771f224c14] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 50 seconds with 2m0s timeout [startup]
+2025-03-12T02:30:46.082Z [jfevt] [INFO ] [40117f771f224c14] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 55 seconds with 2m0s timeout [startup]
+2025-03-12T02:30:51.105Z [jfevt] [INFO ] [40117f771f224c14] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 60 seconds with 2m0s timeout [startup]
+2025-03-12T02:30:56.128Z [jfevt] [INFO ] [40117f771f224c14] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 65 seconds with 2m0s timeout [startup]
+2025-03-12T08:14:07.993Z [jfevt] [INFO ] [40117f771f224c14] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 85 seconds with 2m0s timeout [startup]
+2025-03-12T14:23:23.405Z [jfevt] [INFO ] [40117f771f224c14] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 90 seconds with 2m0s timeout [startup]
+2025-03-12T14:23:27.736Z [jfevt] [INFO ] [40117f771f224c14] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 95 seconds with 2m0s timeout [startup]
+2025-03-12T14:23:32.963Z [jfevt] [INFO ] [40117f771f224c14] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 100 seconds with 2m0s timeout [startup]
+2025-03-12T14:23:38.026Z [jfevt] [INFO ] [40117f771f224c14] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 105 seconds with 2m0s timeout [startup]
+2025-03-12T14:23:43.096Z [jfevt] [INFO ] [40117f771f224c14] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 110 seconds with 2m0s timeout [startup]
+2025-03-12T14:23:48.391Z [jfevt] [INFO ] [40117f771f224c14] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 115 seconds with 2m0s timeout [startup]
+2025-03-12T14:23:52.502Z [jfevt] [FATAL] [40117f771f224c14] [bootstrap.go:161              ] [main                ] [                ] - Cluster join: Failed resolving join key: failed resolving 'shared.security.joinKey' key; file does not exist: /opt/jfrog/artifactory/var/etc/security/join.key [startup]

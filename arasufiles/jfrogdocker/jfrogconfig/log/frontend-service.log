@@ -1,0 +1,40 @@
+2025-03-12T15:38:19.801Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - frontend (jffe) service initialization started. Version: 1.63.8 Revision: 10000008 PID: 4306 Home: /opt/jfrog/artifactory
+2025-03-12T15:38:19.805Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - Starting FE server in ST mode
+2025-03-12T15:38:19.808Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - attempting pinging artifactory for 180 retires and 1.0s interval for total of 3 minutes
+2025-03-12T15:38:28.897Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 10
+2025-03-12T15:38:28.904Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 10 failed with code : ECONNREFUSED
+2025-03-12T15:38:38.957Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 20
+2025-03-12T15:38:38.959Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 20 failed with code : ECONNREFUSED
+2025-03-12T15:38:48.994Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 30
+2025-03-12T15:38:48.997Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 30 failed with code : ECONNREFUSED
+2025-03-12T15:38:59.029Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 40
+2025-03-12T15:38:59.032Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 40 failed with code : ECONNREFUSED
+2025-03-12T15:39:09.071Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 50
+2025-03-12T15:39:09.073Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 50 failed with code : ECONNREFUSED
+2025-03-12T15:39:19.116Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 60
+2025-03-12T15:39:19.120Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 60 failed with code : ECONNREFUSED
+2025-03-12T15:39:29.163Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 70
+2025-03-12T15:39:29.165Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 70 failed with code : ECONNREFUSED
+2025-03-12T15:39:39.196Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 80
+2025-03-12T15:39:39.199Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 80 failed with code : ECONNREFUSED
+2025-03-12T15:39:49.237Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 90
+2025-03-12T15:39:49.239Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 90 failed with code : ECONNREFUSED
+2025-03-12T15:39:59.276Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 100
+2025-03-12T15:39:59.279Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 100 failed with code : ECONNREFUSED
+2025-03-12T15:40:09.316Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 110
+2025-03-12T15:40:09.320Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 110 failed with code : ECONNREFUSED
+2025-03-12T15:40:19.353Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 120
+2025-03-12T15:40:19.357Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 120 failed with code : ECONNREFUSED
+2025-03-12T15:40:29.395Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 130
+2025-03-12T15:40:29.398Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 130 failed with code : ECONNREFUSED
+2025-03-12T15:40:39.429Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 140
+2025-03-12T15:40:39.433Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 140 failed with code : ECONNREFUSED
+2025-03-12T15:40:49.472Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 150
+2025-03-12T15:40:49.476Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 150 failed with code : ECONNREFUSED
+2025-03-12T15:40:59.514Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 160
+2025-03-12T15:40:59.518Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 160 failed with code : ECONNREFUSED
+2025-03-12T15:41:09.549Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 170
+2025-03-12T15:41:09.554Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 170 failed with code : ECONNREFUSED
+2025-03-12T15:41:19.590Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory, attempt number 180
+2025-03-12T15:41:19.593Z [jffe ] [[34M[INFO ][39M] [] [frontend-service.log] [main                ] - pinging artifactory attempt number 180 failed with code : ECONNREFUSED
+2025-03-12T15:41:20.595Z [jffe ] [[31M[1M[ERROR][22M[39M] [] [frontend-service.log] [main                ] - Error starting application - Error: Failed pinging artifactory for 180connect ECONNREFUSED 127.0.0.1:8046

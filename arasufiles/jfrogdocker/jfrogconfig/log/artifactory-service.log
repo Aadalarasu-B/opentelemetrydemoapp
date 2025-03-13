@@ -1,0 +1,250 @@
+2025-03-12T14:54:17.333Z [jfrt ] [INFO ] [c7a109e852c3a37b] [o.a.c.h.HaNodeProperties:65   ] [Catalina-utility-2  ] - Artifactory is running in non-clustered mode.
+2025-03-12T14:54:17.571Z [jfrt ] [INFO ] [c7a109e852c3a37b] [tifactoryHomeConfigListener:85] [Catalina-utility-2  ] - Resolved Home: '/opt/jfrog/artifactory
+2025-03-12T14:54:17.754Z [jfrt ] [INFO ] [c7a109e852c3a37b] [o.a.c.h.ArtifactoryHome:1012  ] [Catalina-utility-2  ] - Setting '' to system property 'spring.profiles.active'
+2025-03-12T14:54:18.141Z [jfrt ] [WARN ] [c7a109e852c3a37b] [c.z.h.u.DriverDataSource:70   ] [Catalina-utility-2  ] - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2025-03-12T14:54:18.148Z [jfrt ] [ERROR] [c7a109e852c3a37b] [d.d.l.DbDistributeLocksDao:510] [Catalina-utility-2  ] - Unable to detect database version Driver org.apache.derby.jdbc.EmbeddedDriver claims to not accept jdbcUrl, jdbc:postgresql://postgres:5432/artifactorydb
+2025-03-12T14:54:18.203Z [jfrt ] [INFO ] [c7a109e852c3a37b] [o.a.c.h.ArtifactoryHome:1012  ] [Catalina-utility-2  ] - Setting '' to system property 'spring.profiles.active'
+2025-03-12T14:54:18.235Z [jfrt ] [INFO ] [                ] [o.j.c.w.FileWatcher:146       ] [file-watcher-poller ] - Starting watch of folder configurations
+2025-03-12T14:54:18.366Z [jfrt ] [WARN ] [c7a109e852c3a37b] [c.z.h.u.DriverDataSource:70   ] [Catalina-utility-2  ] - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2025-03-12T14:54:18.371Z [jfrt ] [ERROR] [c7a109e852c3a37b] [o.a.c.VersionProviderImpl:113 ] [Catalina-utility-2  ] - Failed to resolve version information: Driver org.apache.derby.jdbc.EmbeddedDriver claims to not accept jdbcUrl, jdbc:postgresql://postgres:5432/artifactorydb
+2025-03-12T14:54:18.376Z [jfrt ] [ERROR] [c7a109e852c3a37b] [tifactoryHomeConfigListener:55] [Catalina-utility-2  ] - Failed initializing Home. Caught exception: 
+java.lang.IllegalStateException: Driver org.apache.derby.jdbc.EmbeddedDriver claims to not accept jdbcUrl, jdbc:postgresql://postgres:5432/artifactorydb
+	at org.artifactory.converter.VersionProviderImpl.init(VersionProviderImpl.java:114)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initVersion(BasicConfigurationManager.java:160)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initArtifactoryInstallation(BasicConfigurationManager.java:139)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initialize(BasicConfigurationManager.java:126)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.initBasicConfigManager(ArtifactoryHomeConfigListener.java:61)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.contextInitialized(ArtifactoryHomeConfigListener.java:53)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4494)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4946)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:662)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:689)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1888)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.RuntimeException: Driver org.apache.derby.jdbc.EmbeddedDriver claims to not accept jdbcUrl, jdbc:postgresql://postgres:5432/artifactorydb
+	at com.zaxxer.hikari.util.DriverDataSource.<init>(DriverDataSource.java:110)
+	at com.zaxxer.hikari.pool.PoolBase.initializeDataSource(PoolBase.java:325)
+	at com.zaxxer.hikari.pool.PoolBase.<init>(PoolBase.java:114)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:108)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.jfrog.storage.wrapper.JFrogDataSourceWrapper.getConnection(JFrogDataSourceWrapper.java:104)
+	at org.jfrog.storage.wrapper.JFrogDataSourceWrapper.invoke(JFrogDataSourceWrapper.java:73)
+	at jdk.proxy4/jdk.proxy4.$Proxy18.getConnection(Unknown Source)
+	at org.jfrog.storage.util.DbUtils.withMetadata(DbUtils.java:763)
+	at org.jfrog.storage.util.DbUtils.tableExists(DbUtils.java:273)
+	at org.artifactory.common.config.db.DbVersionDao.isDbPropertiesTableExists(DbVersionDao.java:62)
+	at org.artifactory.converter.VersionProviderImpl.tryToResolveFromDb(VersionProviderImpl.java:202)
+	at org.artifactory.converter.VersionProviderImpl.getCompoundVersionDetailsFromDbIfExists(VersionProviderImpl.java:127)
+	at org.artifactory.converter.VersionProviderImpl.loadOriginalDbVersion(VersionProviderImpl.java:148)
+	at org.artifactory.converter.VersionProviderImpl.init(VersionProviderImpl.java:109)
+	... 20 common frames omitted
+2025-03-12T14:54:18.385Z [jfrt ] [ERROR] [c7a109e852c3a37b] [actoryContextConfigListener:90] [Catalina-utility-2  ] - Failed initializing Artifactory context: Artifactory home not initialized.
+2025-03-12T15:05:10.932Z [jfrt ] [INFO ] [ed3ad6799c38367e] [o.a.c.h.HaNodeProperties:65   ] [Catalina-utility-2  ] - Artifactory is running in non-clustered mode.
+2025-03-12T15:05:11.118Z [jfrt ] [INFO ] [ed3ad6799c38367e] [tifactoryHomeConfigListener:85] [Catalina-utility-2  ] - Resolved Home: '/opt/jfrog/artifactory
+2025-03-12T15:05:11.265Z [jfrt ] [INFO ] [ed3ad6799c38367e] [o.a.c.h.ArtifactoryHome:1012  ] [Catalina-utility-2  ] - Setting '' to system property 'spring.profiles.active'
+2025-03-12T15:05:11.518Z [jfrt ] [WARN ] [ed3ad6799c38367e] [c.z.h.u.DriverDataSource:70   ] [Catalina-utility-2  ] - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2025-03-12T15:05:11.522Z [jfrt ] [ERROR] [ed3ad6799c38367e] [d.d.l.DbDistributeLocksDao:510] [Catalina-utility-2  ] - Unable to detect database version Driver org.apache.derby.jdbc.EmbeddedDriver claims to not accept jdbcUrl, jdbc:postgresql://postgres:5432/artifactorydb
+2025-03-12T15:05:11.566Z [jfrt ] [INFO ] [ed3ad6799c38367e] [o.a.c.h.ArtifactoryHome:1012  ] [Catalina-utility-2  ] - Setting '' to system property 'spring.profiles.active'
+2025-03-12T15:05:11.585Z [jfrt ] [INFO ] [                ] [o.j.c.w.FileWatcher:146       ] [file-watcher-poller ] - Starting watch of folder configurations
+2025-03-12T15:05:11.629Z [jfrt ] [WARN ] [ed3ad6799c38367e] [c.z.h.u.DriverDataSource:70   ] [Catalina-utility-2  ] - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2025-03-12T15:05:11.632Z [jfrt ] [ERROR] [ed3ad6799c38367e] [o.a.c.VersionProviderImpl:113 ] [Catalina-utility-2  ] - Failed to resolve version information: Driver org.apache.derby.jdbc.EmbeddedDriver claims to not accept jdbcUrl, jdbc:postgresql://postgres:5432/artifactorydb
+2025-03-12T15:05:11.637Z [jfrt ] [ERROR] [ed3ad6799c38367e] [tifactoryHomeConfigListener:55] [Catalina-utility-2  ] - Failed initializing Home. Caught exception: 
+java.lang.IllegalStateException: Driver org.apache.derby.jdbc.EmbeddedDriver claims to not accept jdbcUrl, jdbc:postgresql://postgres:5432/artifactorydb
+	at org.artifactory.converter.VersionProviderImpl.init(VersionProviderImpl.java:114)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initVersion(BasicConfigurationManager.java:160)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initArtifactoryInstallation(BasicConfigurationManager.java:139)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initialize(BasicConfigurationManager.java:126)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.initBasicConfigManager(ArtifactoryHomeConfigListener.java:61)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.contextInitialized(ArtifactoryHomeConfigListener.java:53)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4494)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4946)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:662)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:689)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1888)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.RuntimeException: Driver org.apache.derby.jdbc.EmbeddedDriver claims to not accept jdbcUrl, jdbc:postgresql://postgres:5432/artifactorydb
+	at com.zaxxer.hikari.util.DriverDataSource.<init>(DriverDataSource.java:110)
+	at com.zaxxer.hikari.pool.PoolBase.initializeDataSource(PoolBase.java:325)
+	at com.zaxxer.hikari.pool.PoolBase.<init>(PoolBase.java:114)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:108)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.jfrog.storage.wrapper.JFrogDataSourceWrapper.getConnection(JFrogDataSourceWrapper.java:104)
+	at org.jfrog.storage.wrapper.JFrogDataSourceWrapper.invoke(JFrogDataSourceWrapper.java:73)
+	at jdk.proxy3/jdk.proxy3.$Proxy5.getConnection(Unknown Source)
+	at org.jfrog.storage.util.DbUtils.withMetadata(DbUtils.java:763)
+	at org.jfrog.storage.util.DbUtils.tableExists(DbUtils.java:273)
+	at org.artifactory.common.config.db.DbVersionDao.isDbPropertiesTableExists(DbVersionDao.java:62)
+	at org.artifactory.converter.VersionProviderImpl.tryToResolveFromDb(VersionProviderImpl.java:202)
+	at org.artifactory.converter.VersionProviderImpl.getCompoundVersionDetailsFromDbIfExists(VersionProviderImpl.java:127)
+	at org.artifactory.converter.VersionProviderImpl.loadOriginalDbVersion(VersionProviderImpl.java:148)
+	at org.artifactory.converter.VersionProviderImpl.init(VersionProviderImpl.java:109)
+	... 20 common frames omitted
+2025-03-12T15:05:11.643Z [jfrt ] [ERROR] [ed3ad6799c38367e] [actoryContextConfigListener:90] [Catalina-utility-2  ] - Failed initializing Artifactory context: Artifactory home not initialized.
+2025-03-12T15:14:40.967Z [jfrt ] [INFO ] [ff972891864a354e] [o.a.c.h.HaNodeProperties:65   ] [Catalina-utility-2  ] - Artifactory is running in non-clustered mode.
+2025-03-12T15:14:41.140Z [jfrt ] [INFO ] [ff972891864a354e] [tifactoryHomeConfigListener:85] [Catalina-utility-2  ] - Resolved Home: '/opt/jfrog/artifactory
+2025-03-12T15:14:41.305Z [jfrt ] [INFO ] [ff972891864a354e] [o.a.c.h.ArtifactoryHome:1012  ] [Catalina-utility-2  ] - Setting '' to system property 'spring.profiles.active'
+2025-03-12T15:14:41.625Z [jfrt ] [WARN ] [ff972891864a354e] [c.z.h.u.DriverDataSource:70   ] [Catalina-utility-2  ] - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2025-03-12T15:14:41.629Z [jfrt ] [ERROR] [ff972891864a354e] [d.d.l.DbDistributeLocksDao:510] [Catalina-utility-2  ] - Unable to detect database version Driver org.apache.derby.jdbc.EmbeddedDriver claims to not accept jdbcUrl, jdbc:postgresql://postgres:5432/artifactorydb
+2025-03-12T15:14:41.665Z [jfrt ] [INFO ] [ff972891864a354e] [o.a.c.h.ArtifactoryHome:1012  ] [Catalina-utility-2  ] - Setting '' to system property 'spring.profiles.active'
+2025-03-12T15:14:41.684Z [jfrt ] [INFO ] [                ] [o.j.c.w.FileWatcher:146       ] [file-watcher-poller ] - Starting watch of folder configurations
+2025-03-12T15:14:41.727Z [jfrt ] [WARN ] [ff972891864a354e] [c.z.h.u.DriverDataSource:70   ] [Catalina-utility-2  ] - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2025-03-12T15:14:41.730Z [jfrt ] [ERROR] [ff972891864a354e] [o.a.c.VersionProviderImpl:113 ] [Catalina-utility-2  ] - Failed to resolve version information: Driver org.apache.derby.jdbc.EmbeddedDriver claims to not accept jdbcUrl, jdbc:postgresql://postgres:5432/artifactorydb
+2025-03-12T15:14:41.735Z [jfrt ] [ERROR] [ff972891864a354e] [tifactoryHomeConfigListener:55] [Catalina-utility-2  ] - Failed initializing Home. Caught exception: 
+java.lang.IllegalStateException: Driver org.apache.derby.jdbc.EmbeddedDriver claims to not accept jdbcUrl, jdbc:postgresql://postgres:5432/artifactorydb
+	at org.artifactory.converter.VersionProviderImpl.init(VersionProviderImpl.java:114)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initVersion(BasicConfigurationManager.java:160)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initArtifactoryInstallation(BasicConfigurationManager.java:139)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initialize(BasicConfigurationManager.java:126)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.initBasicConfigManager(ArtifactoryHomeConfigListener.java:61)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.contextInitialized(ArtifactoryHomeConfigListener.java:53)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4494)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4946)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:662)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:689)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1888)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.RuntimeException: Driver org.apache.derby.jdbc.EmbeddedDriver claims to not accept jdbcUrl, jdbc:postgresql://postgres:5432/artifactorydb
+	at com.zaxxer.hikari.util.DriverDataSource.<init>(DriverDataSource.java:110)
+	at com.zaxxer.hikari.pool.PoolBase.initializeDataSource(PoolBase.java:325)
+	at com.zaxxer.hikari.pool.PoolBase.<init>(PoolBase.java:114)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:108)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.jfrog.storage.wrapper.JFrogDataSourceWrapper.getConnection(JFrogDataSourceWrapper.java:104)
+	at org.jfrog.storage.wrapper.JFrogDataSourceWrapper.invoke(JFrogDataSourceWrapper.java:73)
+	at jdk.proxy3/jdk.proxy3.$Proxy11.getConnection(Unknown Source)
+	at org.jfrog.storage.util.DbUtils.withMetadata(DbUtils.java:763)
+	at org.jfrog.storage.util.DbUtils.tableExists(DbUtils.java:273)
+	at org.artifactory.common.config.db.DbVersionDao.isDbPropertiesTableExists(DbVersionDao.java:62)
+	at org.artifactory.converter.VersionProviderImpl.tryToResolveFromDb(VersionProviderImpl.java:202)
+	at org.artifactory.converter.VersionProviderImpl.getCompoundVersionDetailsFromDbIfExists(VersionProviderImpl.java:127)
+	at org.artifactory.converter.VersionProviderImpl.loadOriginalDbVersion(VersionProviderImpl.java:148)
+	at org.artifactory.converter.VersionProviderImpl.init(VersionProviderImpl.java:109)
+	... 20 common frames omitted
+2025-03-12T15:14:41.740Z [jfrt ] [ERROR] [ff972891864a354e] [actoryContextConfigListener:90] [Catalina-utility-2  ] - Failed initializing Artifactory context: Artifactory home not initialized.
+2025-03-12T15:23:48.367Z [jfrt ] [INFO ] [67404f51044d30e0] [o.a.c.h.HaNodeProperties:65   ] [Catalina-utility-2  ] - Artifactory is running in non-clustered mode.
+2025-03-12T15:23:48.753Z [jfrt ] [INFO ] [67404f51044d30e0] [tifactoryHomeConfigListener:85] [Catalina-utility-2  ] - Resolved Home: '/opt/jfrog/artifactory
+2025-03-12T15:23:49.098Z [jfrt ] [INFO ] [67404f51044d30e0] [o.a.c.h.ArtifactoryHome:1012  ] [Catalina-utility-2  ] - Setting '' to system property 'spring.profiles.active'
+2025-03-12T15:23:49.682Z [jfrt ] [WARN ] [67404f51044d30e0] [c.z.h.u.DriverDataSource:70   ] [Catalina-utility-2  ] - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2025-03-12T15:23:49.702Z [jfrt ] [ERROR] [67404f51044d30e0] [d.d.l.DbDistributeLocksDao:510] [Catalina-utility-2  ] - Unable to detect database version Driver org.apache.derby.jdbc.EmbeddedDriver claims to not accept jdbcUrl, jdbc:postgresql://postgres:5432/artifactorydb
+2025-03-12T15:23:49.799Z [jfrt ] [INFO ] [67404f51044d30e0] [o.a.c.h.ArtifactoryHome:1012  ] [Catalina-utility-2  ] - Setting '' to system property 'spring.profiles.active'
+2025-03-12T15:23:49.885Z [jfrt ] [INFO ] [                ] [o.j.c.w.FileWatcher:146       ] [file-watcher-poller ] - Starting watch of folder configurations
+2025-03-12T15:23:50.005Z [jfrt ] [WARN ] [67404f51044d30e0] [c.z.h.u.DriverDataSource:70   ] [Catalina-utility-2  ] - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2025-03-12T15:23:50.012Z [jfrt ] [ERROR] [67404f51044d30e0] [o.a.c.VersionProviderImpl:113 ] [Catalina-utility-2  ] - Failed to resolve version information: Driver org.apache.derby.jdbc.EmbeddedDriver claims to not accept jdbcUrl, jdbc:postgresql://postgres:5432/artifactorydb
+2025-03-12T15:23:50.020Z [jfrt ] [ERROR] [67404f51044d30e0] [tifactoryHomeConfigListener:55] [Catalina-utility-2  ] - Failed initializing Home. Caught exception: 
+java.lang.IllegalStateException: Driver org.apache.derby.jdbc.EmbeddedDriver claims to not accept jdbcUrl, jdbc:postgresql://postgres:5432/artifactorydb
+	at org.artifactory.converter.VersionProviderImpl.init(VersionProviderImpl.java:114)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initVersion(BasicConfigurationManager.java:160)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initArtifactoryInstallation(BasicConfigurationManager.java:139)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initialize(BasicConfigurationManager.java:126)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.initBasicConfigManager(ArtifactoryHomeConfigListener.java:61)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.contextInitialized(ArtifactoryHomeConfigListener.java:53)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4494)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4946)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:662)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:689)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1888)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.RuntimeException: Driver org.apache.derby.jdbc.EmbeddedDriver claims to not accept jdbcUrl, jdbc:postgresql://postgres:5432/artifactorydb
+	at com.zaxxer.hikari.util.DriverDataSource.<init>(DriverDataSource.java:110)
+	at com.zaxxer.hikari.pool.PoolBase.initializeDataSource(PoolBase.java:325)
+	at com.zaxxer.hikari.pool.PoolBase.<init>(PoolBase.java:114)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:108)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.jfrog.storage.wrapper.JFrogDataSourceWrapper.getConnection(JFrogDataSourceWrapper.java:104)
+	at org.jfrog.storage.wrapper.JFrogDataSourceWrapper.invoke(JFrogDataSourceWrapper.java:73)
+	at jdk.proxy3/jdk.proxy3.$Proxy6.getConnection(Unknown Source)
+	at org.jfrog.storage.util.DbUtils.withMetadata(DbUtils.java:763)
+	at org.jfrog.storage.util.DbUtils.tableExists(DbUtils.java:273)
+	at org.artifactory.common.config.db.DbVersionDao.isDbPropertiesTableExists(DbVersionDao.java:62)
+	at org.artifactory.converter.VersionProviderImpl.tryToResolveFromDb(VersionProviderImpl.java:202)
+	at org.artifactory.converter.VersionProviderImpl.getCompoundVersionDetailsFromDbIfExists(VersionProviderImpl.java:127)
+	at org.artifactory.converter.VersionProviderImpl.loadOriginalDbVersion(VersionProviderImpl.java:148)
+	at org.artifactory.converter.VersionProviderImpl.init(VersionProviderImpl.java:109)
+	... 20 common frames omitted
+2025-03-12T15:23:50.034Z [jfrt ] [ERROR] [67404f51044d30e0] [actoryContextConfigListener:90] [Catalina-utility-2  ] - Failed initializing Artifactory context: Artifactory home not initialized.
+2025-03-12T15:38:22.457Z [jfrt ] [INFO ] [5b81bd4efc00ad48] [o.a.c.h.HaNodeProperties:65   ] [Catalina-utility-2  ] - Artifactory is running in non-clustered mode.
+2025-03-12T15:38:22.719Z [jfrt ] [INFO ] [5b81bd4efc00ad48] [tifactoryHomeConfigListener:85] [Catalina-utility-2  ] - Resolved Home: '/opt/jfrog/artifactory
+2025-03-12T15:38:22.922Z [jfrt ] [INFO ] [5b81bd4efc00ad48] [o.a.c.h.ArtifactoryHome:1012  ] [Catalina-utility-2  ] - Setting '' to system property 'spring.profiles.active'
+2025-03-12T15:38:23.320Z [jfrt ] [WARN ] [5b81bd4efc00ad48] [c.z.h.u.DriverDataSource:70   ] [Catalina-utility-2  ] - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2025-03-12T15:38:23.323Z [jfrt ] [ERROR] [5b81bd4efc00ad48] [d.d.l.DbDistributeLocksDao:510] [Catalina-utility-2  ] - Unable to detect database version Driver org.apache.derby.jdbc.EmbeddedDriver claims to not accept jdbcUrl, jdbc:postgresql://postgres:5432/artifactorydb
+2025-03-12T15:38:23.373Z [jfrt ] [INFO ] [5b81bd4efc00ad48] [o.a.c.h.ArtifactoryHome:1012  ] [Catalina-utility-2  ] - Setting '' to system property 'spring.profiles.active'
+2025-03-12T15:38:23.400Z [jfrt ] [INFO ] [                ] [o.j.c.w.FileWatcher:146       ] [file-watcher-poller ] - Starting watch of folder configurations
+2025-03-12T15:38:23.481Z [jfrt ] [WARN ] [5b81bd4efc00ad48] [c.z.h.u.DriverDataSource:70   ] [Catalina-utility-2  ] - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2025-03-12T15:38:23.484Z [jfrt ] [ERROR] [5b81bd4efc00ad48] [o.a.c.VersionProviderImpl:113 ] [Catalina-utility-2  ] - Failed to resolve version information: Driver org.apache.derby.jdbc.EmbeddedDriver claims to not accept jdbcUrl, jdbc:postgresql://postgres:5432/artifactorydb
+2025-03-12T15:38:23.488Z [jfrt ] [ERROR] [5b81bd4efc00ad48] [tifactoryHomeConfigListener:55] [Catalina-utility-2  ] - Failed initializing Home. Caught exception: 
+java.lang.IllegalStateException: Driver org.apache.derby.jdbc.EmbeddedDriver claims to not accept jdbcUrl, jdbc:postgresql://postgres:5432/artifactorydb
+	at org.artifactory.converter.VersionProviderImpl.init(VersionProviderImpl.java:114)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initVersion(BasicConfigurationManager.java:160)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initArtifactoryInstallation(BasicConfigurationManager.java:139)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initialize(BasicConfigurationManager.java:126)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.initBasicConfigManager(ArtifactoryHomeConfigListener.java:61)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.contextInitialized(ArtifactoryHomeConfigListener.java:53)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4494)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4946)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:662)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:689)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1888)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.RuntimeException: Driver org.apache.derby.jdbc.EmbeddedDriver claims to not accept jdbcUrl, jdbc:postgresql://postgres:5432/artifactorydb
+	at com.zaxxer.hikari.util.DriverDataSource.<init>(DriverDataSource.java:110)
+	at com.zaxxer.hikari.pool.PoolBase.initializeDataSource(PoolBase.java:325)
+	at com.zaxxer.hikari.pool.PoolBase.<init>(PoolBase.java:114)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:108)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.jfrog.storage.wrapper.JFrogDataSourceWrapper.getConnection(JFrogDataSourceWrapper.java:104)
+	at org.jfrog.storage.wrapper.JFrogDataSourceWrapper.invoke(JFrogDataSourceWrapper.java:73)
+	at jdk.proxy3/jdk.proxy3.$Proxy5.getConnection(Unknown Source)
+	at org.jfrog.storage.util.DbUtils.withMetadata(DbUtils.java:763)
+	at org.jfrog.storage.util.DbUtils.tableExists(DbUtils.java:273)
+	at org.artifactory.common.config.db.DbVersionDao.isDbPropertiesTableExists(DbVersionDao.java:62)
+	at org.artifactory.converter.VersionProviderImpl.tryToResolveFromDb(VersionProviderImpl.java:202)
+	at org.artifactory.converter.VersionProviderImpl.getCompoundVersionDetailsFromDbIfExists(VersionProviderImpl.java:127)
+	at org.artifactory.converter.VersionProviderImpl.loadOriginalDbVersion(VersionProviderImpl.java:148)
+	at org.artifactory.converter.VersionProviderImpl.init(VersionProviderImpl.java:109)
+	... 20 common frames omitted
+2025-03-12T15:38:23.493Z [jfrt ] [ERROR] [5b81bd4efc00ad48] [actoryContextConfigListener:90] [Catalina-utility-2  ] - Failed initializing Artifactory context: Artifactory home not initialized.

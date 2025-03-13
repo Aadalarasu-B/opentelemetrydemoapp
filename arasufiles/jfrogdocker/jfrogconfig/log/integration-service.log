@@ -1,0 +1,516 @@
+2025-03-12T14:54:07.941Z [jfint] [INFO ] [754499987ee3aeef] [bootstrap.go:68               ] [main                ] [                ] - Effective configuration:
+artifactory.pid (Environment Variable: JF_ARTIFACTORY_PID): /opt/jfrog/artifactory/app/run/artifactory.pid
+artifactory.user (Environment Variable: JF_ARTIFACTORY_USER): artifactory
+configVersion (File): 1
+integration.accessClient.joinTimeoutMillis (Default Value): 180000
+integration.accessClient.pingTimeoutMillis (Default Value): 120000
+integration.artifactoryClient.request.timeoutMillis (Default Value): 5000
+integration.callHome.cronExpression (Default Value): 
+integration.callHome.enabled (Default Value): false
+integration.callHome.timeoutMillis (Default Value): 120000
+integration.callHome.url (Default Value): 
+integration.eventClient.request.timeoutMillis (Default Value): 5000
+integration.gitClient.lockExpirationTimeoutSeconds (Default Value): 1800
+integration.gitClient.request.timeoutMillis (Default Value): 120000
+integration.gitClient.writeGitHooksTimeoutSeconds (Default Value): 600
+integration.grpcPort (Default Value): 8072
+integration.logging.application.caller (Default Value): false
+integration.logging.application.console (Default Value): true
+integration.logging.application.filePath (Default Value): integration-service.log
+integration.logging.application.format (Default Value): jftext
+integration.logging.application.level (Default Value): info
+integration.logging.application.rotation.compress (Default Value): true
+integration.logging.application.rotation.keepLastDecompressed (Default Value): 1
+integration.logging.application.rotation.maxAgeDays (Default Value): 365
+integration.logging.application.rotation.maxFiles (Default Value): 10
+integration.logging.application.rotation.maxSizeMb (Default Value): 25
+integration.logging.metrics.console (Default Value): false
+integration.logging.metrics.filePath (Default Value): integration-metrics.log
+integration.logging.metrics.rotation.compress (Default Value): true
+integration.logging.metrics.rotation.keepLastDecompressed (Default Value): 1
+integration.logging.metrics.rotation.maxAgeDays (Default Value): 365
+integration.logging.metrics.rotation.maxFiles (Default Value): 10
+integration.logging.metrics.rotation.maxSizeMb (Default Value): 25
+integration.logging.request.console (Default Value): false
+integration.logging.request.filePath (Default Value): integration-request.log
+integration.logging.request.rotation.compress (Default Value): true
+integration.logging.request.rotation.keepLastDecompressed (Default Value): 1
+integration.logging.request.rotation.maxAgeDays (Default Value): 365
+integration.logging.request.rotation.maxFiles (Default Value): 10
+integration.logging.request.rotation.maxSizeMb (Default Value): 25
+integration.metrics.enabled (Default Value): false
+integration.metrics.exclude (Default Value): []
+integration.metrics.intervalMillis (Default Value): 10000
+integration.port (Default Value): 8071
+integration.profiling.enabled (Default Value): false
+integration.security.blacklist.enabled (Default Value): true
+integration.security.blacklist.timeoutMillis (Default Value): 5000
+integration.security.includeIntegrationToken (Default Value): *****
+integration.smtpClient.insecure (Default Value): true
+integration.smtpClient.minTlsVersion (Default Value): 1.2
+integration.smtpClient.timeoutSecs (Default Value): 300
+integration.supportBundle.aggregationTimeoutMillis (Default Value): 3600000
+integration.tokenCache.timeoutMillis (Default Value): 60000
+metadata.accessclient.url (Environment Variable: JF_METADATA_ACCESSCLIENT_URL): http://localhost:8081/access
+product.data.internal (Environment Variable: JF_PRODUCT_DATA_INTERNAL): /var/opt/jfrog/artifactory
+product.home (Environment Variable: JF_PRODUCT_HOME): /opt/jfrog/artifactory
+router.entrypoints.internalPort (Default Value): 8046
+router.topology.local.requiredservicetypes (Environment Variable: JF_ROUTER_TOPOLOGY_LOCAL_REQUIREDSERVICETYPES): jfrt,jfac,jfmd,jffe,jfob,jfint,jfevt
+shared.database (File): <nil>
+shared.database.password (Environment Variable: JF_SHARED_DATABASE_PASSWORD): *****
+shared.database.type (Environment Variable: JF_SHARED_DATABASE_TYPE): postgresql
+shared.database.url (Environment Variable: JF_SHARED_DATABASE_URL): jdbc:postgresql://postgres:5432/artifactorydb
+shared.database.user (Environment Variable: JF_SHARED_DATABASE_USER): artifactory
+shared.extrajavaopts (Environment Variable: JF_SHARED_EXTRAJAVAOPTS): -Xms512m -Xmx2g
+shared.multiTenant.enabled (Default Value): false
+shared.multiTenant.tenantRegistryClient.caCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.cacheExpirationSecs (Default Value): 21600
+shared.multiTenant.tenantRegistryClient.clientCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.clientCertKey (Default Value): *****
+shared.multiTenant.tenantRegistryClient.dialTimeoutSecs (Default Value): 10
+shared.multiTenant.tenantRegistryClient.endpoints (Default Value): 
+shared.multiTenant.tenantRegistryClient.pingCacheExpirationSecs (Default Value): 15
+shared.multiTenant.tenantRegistryClient.pingTimeoutSecs (Default Value): 1
+shared.multiTenant.tenantRegistryClient.requestTimeoutSecs (Default Value): 30
+shared.newrelic.appName (Default Value): 
+shared.newrelic.distributedTracerEnabled (Default Value): true
+shared.newrelic.enableDebugLog (Default Value): false
+shared.newrelic.enabled (Default Value): false
+shared.newrelic.licenseKey (Default Value): *****
+shared.node (File): <nil>
+shared.node.id (Environment Variable: JF_SHARED_NODE_ID): eaa950cc8403
+shared.node.ip (Environment Variable: JF_SHARED_NODE_IP): 172.19.0.3
+shared.node.name (Environment Variable: JF_SHARED_NODE_NAME): eaa950cc8403
+shared.security (File): <nil>
+shared.security.ExposeApplicationHeaders (Default Value): false
+shared.security.bootstrapKeysReadTimeoutSecs (Default Value): 120
+shared.security.joinKeyFile (Default Value): etc/security/join.key
+shared.security.masterKeyFile (Default Value): etc/security/master.key
+system.yaml (Environment Variable: JF_SYSTEM_YAML): /opt/jfrog/artifactory/var/etc/system.yaml [startup]
+2025-03-12T14:54:13.001Z [jfint] [INFO ] [754499987ee3aeef] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 5 seconds with 2m0s timeout [startup]
+2025-03-12T14:54:18.288Z [jfint] [INFO ] [754499987ee3aeef] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 10 seconds with 2m0s timeout [startup]
+2025-03-12T14:54:23.331Z [jfint] [INFO ] [754499987ee3aeef] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 15 seconds with 2m0s timeout [startup]
+2025-03-12T14:54:28.345Z [jfint] [INFO ] [754499987ee3aeef] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 20 seconds with 2m0s timeout [startup]
+2025-03-12T14:54:33.432Z [jfint] [INFO ] [754499987ee3aeef] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 25 seconds with 2m0s timeout [startup]
+2025-03-12T14:54:38.470Z [jfint] [INFO ] [754499987ee3aeef] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 30 seconds with 2m0s timeout [startup]
+2025-03-12T14:54:43.664Z [jfint] [INFO ] [754499987ee3aeef] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 35 seconds with 2m0s timeout [startup]
+2025-03-12T14:54:48.702Z [jfint] [INFO ] [754499987ee3aeef] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 40 seconds with 2m0s timeout [startup]
+2025-03-12T14:54:53.861Z [jfint] [INFO ] [754499987ee3aeef] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 45 seconds with 2m0s timeout [startup]
+2025-03-12T14:54:58.911Z [jfint] [INFO ] [754499987ee3aeef] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 50 seconds with 2m0s timeout [startup]
+2025-03-12T14:55:08.144Z [jfint] [INFO ] [754499987ee3aeef] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 60 seconds with 2m0s timeout [startup]
+2025-03-12T14:55:13.160Z [jfint] [INFO ] [754499987ee3aeef] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 65 seconds with 2m0s timeout [startup]
+2025-03-12T14:55:18.293Z [jfint] [INFO ] [754499987ee3aeef] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 70 seconds with 2m0s timeout [startup]
+2025-03-12T14:55:23.305Z [jfint] [INFO ] [754499987ee3aeef] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 75 seconds with 2m0s timeout [startup]
+2025-03-12T14:55:28.627Z [jfint] [INFO ] [754499987ee3aeef] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 80 seconds with 2m0s timeout [startup]
+2025-03-12T14:55:33.660Z [jfint] [INFO ] [754499987ee3aeef] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 85 seconds with 2m0s timeout [startup]
+2025-03-12T14:55:38.738Z [jfint] [INFO ] [754499987ee3aeef] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 90 seconds with 2m0s timeout [startup]
+2025-03-12T14:55:43.840Z [jfint] [INFO ] [754499987ee3aeef] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 95 seconds with 2m0s timeout [startup]
+2025-03-12T14:55:48.849Z [jfint] [INFO ] [754499987ee3aeef] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 100 seconds with 2m0s timeout [startup]
+2025-03-12T14:55:53.932Z [jfint] [INFO ] [754499987ee3aeef] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 105 seconds with 2m0s timeout [startup]
+2025-03-12T14:55:57.945Z [jfint] [INFO ] [754499987ee3aeef] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 110 seconds with 2m0s timeout [startup]
+2025-03-12T14:56:03.082Z [jfint] [INFO ] [754499987ee3aeef] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 115 seconds with 2m0s timeout [startup]
+2025-03-12T14:56:07.938Z [jfint] [FATAL] [754499987ee3aeef] [bootstrap.go:146              ] [main                ] [                ] - Cluster join: Failed resolving join key: failed resolving 'shared.security.joinKey' key; file does not exist: /opt/jfrog/artifactory/var/etc/security/join.key [startup]
+2025-03-12T15:05:07.767Z [jfint] [INFO ] [23252eaa5c2ebafd] [bootstrap.go:68               ] [main                ] [                ] - Effective configuration:
+artifactory.pid (Environment Variable: JF_ARTIFACTORY_PID): /opt/jfrog/artifactory/app/run/artifactory.pid
+artifactory.user (Environment Variable: JF_ARTIFACTORY_USER): artifactory
+configVersion (File): 1
+integration.accessClient.joinTimeoutMillis (Default Value): 180000
+integration.accessClient.pingTimeoutMillis (Default Value): 120000
+integration.artifactoryClient.request.timeoutMillis (Default Value): 5000
+integration.callHome.cronExpression (Default Value): 
+integration.callHome.enabled (Default Value): false
+integration.callHome.timeoutMillis (Default Value): 120000
+integration.callHome.url (Default Value): 
+integration.eventClient.request.timeoutMillis (Default Value): 5000
+integration.gitClient.lockExpirationTimeoutSeconds (Default Value): 1800
+integration.gitClient.request.timeoutMillis (Default Value): 120000
+integration.gitClient.writeGitHooksTimeoutSeconds (Default Value): 600
+integration.grpcPort (Default Value): 8072
+integration.logging.application.caller (Default Value): false
+integration.logging.application.console (Default Value): true
+integration.logging.application.filePath (Default Value): integration-service.log
+integration.logging.application.format (Default Value): jftext
+integration.logging.application.level (Default Value): info
+integration.logging.application.rotation.compress (Default Value): true
+integration.logging.application.rotation.keepLastDecompressed (Default Value): 1
+integration.logging.application.rotation.maxAgeDays (Default Value): 365
+integration.logging.application.rotation.maxFiles (Default Value): 10
+integration.logging.application.rotation.maxSizeMb (Default Value): 25
+integration.logging.metrics.console (Default Value): false
+integration.logging.metrics.filePath (Default Value): integration-metrics.log
+integration.logging.metrics.rotation.compress (Default Value): true
+integration.logging.metrics.rotation.keepLastDecompressed (Default Value): 1
+integration.logging.metrics.rotation.maxAgeDays (Default Value): 365
+integration.logging.metrics.rotation.maxFiles (Default Value): 10
+integration.logging.metrics.rotation.maxSizeMb (Default Value): 25
+integration.logging.request.console (Default Value): false
+integration.logging.request.filePath (Default Value): integration-request.log
+integration.logging.request.rotation.compress (Default Value): true
+integration.logging.request.rotation.keepLastDecompressed (Default Value): 1
+integration.logging.request.rotation.maxAgeDays (Default Value): 365
+integration.logging.request.rotation.maxFiles (Default Value): 10
+integration.logging.request.rotation.maxSizeMb (Default Value): 25
+integration.metrics.enabled (Default Value): false
+integration.metrics.exclude (Default Value): []
+integration.metrics.intervalMillis (Default Value): 10000
+integration.port (Default Value): 8071
+integration.profiling.enabled (Default Value): false
+integration.security.blacklist.enabled (Default Value): true
+integration.security.blacklist.timeoutMillis (Default Value): 5000
+integration.security.includeIntegrationToken (Default Value): *****
+integration.smtpClient.insecure (Default Value): true
+integration.smtpClient.minTlsVersion (Default Value): 1.2
+integration.smtpClient.timeoutSecs (Default Value): 300
+integration.supportBundle.aggregationTimeoutMillis (Default Value): 3600000
+integration.tokenCache.timeoutMillis (Default Value): 60000
+metadata.accessclient.url (Environment Variable: JF_METADATA_ACCESSCLIENT_URL): http://localhost:8081/access
+product.data.internal (Environment Variable: JF_PRODUCT_DATA_INTERNAL): /var/opt/jfrog/artifactory
+product.home (Environment Variable: JF_PRODUCT_HOME): /opt/jfrog/artifactory
+router.entrypoints.internalPort (Default Value): 8046
+router.topology.local.requiredservicetypes (Environment Variable: JF_ROUTER_TOPOLOGY_LOCAL_REQUIREDSERVICETYPES): jfrt,jfac,jfmd,jffe,jfob,jfint,jfevt
+shared.database (File): <nil>
+shared.database.password (Environment Variable: JF_SHARED_DATABASE_PASSWORD): *****
+shared.database.type (Environment Variable: JF_SHARED_DATABASE_TYPE): postgresql
+shared.database.url (Environment Variable: JF_SHARED_DATABASE_URL): jdbc:postgresql://postgres:5432/artifactorydb
+shared.database.user (Environment Variable: JF_SHARED_DATABASE_USER): artifactory
+shared.extrajavaopts (Environment Variable: JF_SHARED_EXTRAJAVAOPTS): -Xms512m -Xmx2g
+shared.multiTenant.enabled (Default Value): false
+shared.multiTenant.tenantRegistryClient.caCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.cacheExpirationSecs (Default Value): 21600
+shared.multiTenant.tenantRegistryClient.clientCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.clientCertKey (Default Value): *****
+shared.multiTenant.tenantRegistryClient.dialTimeoutSecs (Default Value): 10
+shared.multiTenant.tenantRegistryClient.endpoints (Default Value): 
+shared.multiTenant.tenantRegistryClient.pingCacheExpirationSecs (Default Value): 15
+shared.multiTenant.tenantRegistryClient.pingTimeoutSecs (Default Value): 1
+shared.multiTenant.tenantRegistryClient.requestTimeoutSecs (Default Value): 30
+shared.newrelic.appName (Default Value): 
+shared.newrelic.distributedTracerEnabled (Default Value): true
+shared.newrelic.enableDebugLog (Default Value): false
+shared.newrelic.enabled (Default Value): false
+shared.newrelic.licenseKey (Default Value): *****
+shared.node (File): <nil>
+shared.node.id (Environment Variable: JF_SHARED_NODE_ID): eaa950cc8403
+shared.node.ip (Environment Variable: JF_SHARED_NODE_IP): 172.19.0.3
+shared.node.name (Environment Variable: JF_SHARED_NODE_NAME): eaa950cc8403
+shared.security (File): <nil>
+shared.security.ExposeApplicationHeaders (Default Value): false
+shared.security.bootstrapKeysReadTimeoutSecs (Default Value): 120
+shared.security.joinKeyFile (Default Value): etc/security/join.key
+shared.security.masterKeyFile (Default Value): etc/security/master.key
+system.yaml (Environment Variable: JF_SYSTEM_YAML): /opt/jfrog/artifactory/var/etc/system.yaml [startup]
+2025-03-12T15:05:12.784Z [jfint] [INFO ] [23252eaa5c2ebafd] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 5 seconds with 2m0s timeout [startup]
+2025-03-12T15:05:17.917Z [jfint] [INFO ] [23252eaa5c2ebafd] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 10 seconds with 2m0s timeout [startup]
+2025-03-12T15:05:23.064Z [jfint] [INFO ] [23252eaa5c2ebafd] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 15 seconds with 2m0s timeout [startup]
+2025-03-12T15:05:28.088Z [jfint] [INFO ] [23252eaa5c2ebafd] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 20 seconds with 2m0s timeout [startup]
+2025-03-12T15:05:33.206Z [jfint] [INFO ] [23252eaa5c2ebafd] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 25 seconds with 2m0s timeout [startup]
+2025-03-12T15:05:38.310Z [jfint] [INFO ] [23252eaa5c2ebafd] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 30 seconds with 2m0s timeout [startup]
+2025-03-12T15:05:43.421Z [jfint] [INFO ] [23252eaa5c2ebafd] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 35 seconds with 2m0s timeout [startup]
+2025-03-12T15:05:52.780Z [jfint] [INFO ] [23252eaa5c2ebafd] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 45 seconds with 2m0s timeout [startup]
+2025-03-12T15:05:57.924Z [jfint] [INFO ] [23252eaa5c2ebafd] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 50 seconds with 2m0s timeout [startup]
+2025-03-12T15:06:02.946Z [jfint] [INFO ] [23252eaa5c2ebafd] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 55 seconds with 2m0s timeout [startup]
+2025-03-12T15:06:08.078Z [jfint] [INFO ] [23252eaa5c2ebafd] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 60 seconds with 2m0s timeout [startup]
+2025-03-12T15:06:13.085Z [jfint] [INFO ] [23252eaa5c2ebafd] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 65 seconds with 2m0s timeout [startup]
+2025-03-12T15:06:18.294Z [jfint] [INFO ] [23252eaa5c2ebafd] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 70 seconds with 2m0s timeout [startup]
+2025-03-12T15:06:23.342Z [jfint] [INFO ] [23252eaa5c2ebafd] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 75 seconds with 2m0s timeout [startup]
+2025-03-12T15:06:28.354Z [jfint] [INFO ] [23252eaa5c2ebafd] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 80 seconds with 2m0s timeout [startup]
+2025-03-12T15:06:33.529Z [jfint] [INFO ] [23252eaa5c2ebafd] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 85 seconds with 2m0s timeout [startup]
+2025-03-12T15:06:38.539Z [jfint] [INFO ] [23252eaa5c2ebafd] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 90 seconds with 2m0s timeout [startup]
+2025-03-12T15:06:43.668Z [jfint] [INFO ] [23252eaa5c2ebafd] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 95 seconds with 2m0s timeout [startup]
+2025-03-12T15:06:48.679Z [jfint] [INFO ] [23252eaa5c2ebafd] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 100 seconds with 2m0s timeout [startup]
+2025-03-12T15:06:57.881Z [jfint] [INFO ] [23252eaa5c2ebafd] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 110 seconds with 2m0s timeout [startup]
+2025-03-12T15:07:02.894Z [jfint] [INFO ] [23252eaa5c2ebafd] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 115 seconds with 2m0s timeout [startup]
+2025-03-12T15:07:07.761Z [jfint] [FATAL] [23252eaa5c2ebafd] [bootstrap.go:146              ] [main                ] [                ] - Cluster join: Failed resolving join key: failed resolving 'shared.security.joinKey' key; file does not exist: /opt/jfrog/artifactory/var/etc/security/join.key [startup]
+2025-03-12T15:14:37.268Z [jfint] [INFO ] [51e4111dcb884aa0] [bootstrap.go:68               ] [main                ] [                ] - Effective configuration:
+artifactory.pid (Environment Variable: JF_ARTIFACTORY_PID): /opt/jfrog/artifactory/app/run/artifactory.pid
+artifactory.user (Environment Variable: JF_ARTIFACTORY_USER): artifactory
+configVersion (File): 1
+integration.accessClient.joinTimeoutMillis (Default Value): 180000
+integration.accessClient.pingTimeoutMillis (Default Value): 120000
+integration.artifactoryClient.request.timeoutMillis (Default Value): 5000
+integration.callHome.cronExpression (Default Value): 
+integration.callHome.enabled (Default Value): false
+integration.callHome.timeoutMillis (Default Value): 120000
+integration.callHome.url (Default Value): 
+integration.eventClient.request.timeoutMillis (Default Value): 5000
+integration.gitClient.lockExpirationTimeoutSeconds (Default Value): 1800
+integration.gitClient.request.timeoutMillis (Default Value): 120000
+integration.gitClient.writeGitHooksTimeoutSeconds (Default Value): 600
+integration.grpcPort (Default Value): 8072
+integration.logging.application.caller (Default Value): false
+integration.logging.application.console (Default Value): true
+integration.logging.application.filePath (Default Value): integration-service.log
+integration.logging.application.format (Default Value): jftext
+integration.logging.application.level (Default Value): info
+integration.logging.application.rotation.compress (Default Value): true
+integration.logging.application.rotation.keepLastDecompressed (Default Value): 1
+integration.logging.application.rotation.maxAgeDays (Default Value): 365
+integration.logging.application.rotation.maxFiles (Default Value): 10
+integration.logging.application.rotation.maxSizeMb (Default Value): 25
+integration.logging.metrics.console (Default Value): false
+integration.logging.metrics.filePath (Default Value): integration-metrics.log
+integration.logging.metrics.rotation.compress (Default Value): true
+integration.logging.metrics.rotation.keepLastDecompressed (Default Value): 1
+integration.logging.metrics.rotation.maxAgeDays (Default Value): 365
+integration.logging.metrics.rotation.maxFiles (Default Value): 10
+integration.logging.metrics.rotation.maxSizeMb (Default Value): 25
+integration.logging.request.console (Default Value): false
+integration.logging.request.filePath (Default Value): integration-request.log
+integration.logging.request.rotation.compress (Default Value): true
+integration.logging.request.rotation.keepLastDecompressed (Default Value): 1
+integration.logging.request.rotation.maxAgeDays (Default Value): 365
+integration.logging.request.rotation.maxFiles (Default Value): 10
+integration.logging.request.rotation.maxSizeMb (Default Value): 25
+integration.metrics.enabled (Default Value): false
+integration.metrics.exclude (Default Value): []
+integration.metrics.intervalMillis (Default Value): 10000
+integration.port (Default Value): 8071
+integration.profiling.enabled (Default Value): false
+integration.security.blacklist.enabled (Default Value): true
+integration.security.blacklist.timeoutMillis (Default Value): 5000
+integration.security.includeIntegrationToken (Default Value): *****
+integration.smtpClient.insecure (Default Value): true
+integration.smtpClient.minTlsVersion (Default Value): 1.2
+integration.smtpClient.timeoutSecs (Default Value): 300
+integration.supportBundle.aggregationTimeoutMillis (Default Value): 3600000
+integration.tokenCache.timeoutMillis (Default Value): 60000
+metadata.accessclient.url (Environment Variable: JF_METADATA_ACCESSCLIENT_URL): http://localhost:8081/access
+product.data.internal (Environment Variable: JF_PRODUCT_DATA_INTERNAL): /var/opt/jfrog/artifactory
+product.home (Environment Variable: JF_PRODUCT_HOME): /opt/jfrog/artifactory
+router.entrypoints.internalPort (Default Value): 8046
+router.topology.local.requiredservicetypes (Environment Variable: JF_ROUTER_TOPOLOGY_LOCAL_REQUIREDSERVICETYPES): jfrt,jfac,jfmd,jffe,jfob,jfint,jfevt
+shared.database (File): <nil>
+shared.database.password (Environment Variable: JF_SHARED_DATABASE_PASSWORD): *****
+shared.database.type (Environment Variable: JF_SHARED_DATABASE_TYPE): postgresql
+shared.database.url (Environment Variable: JF_SHARED_DATABASE_URL): jdbc:postgresql://postgres:5432/artifactorydb
+shared.database.user (Environment Variable: JF_SHARED_DATABASE_USER): artifactory
+shared.extrajavaopts (Environment Variable: JF_SHARED_EXTRAJAVAOPTS): -Xms512m -Xmx2g
+shared.multiTenant.enabled (Default Value): false
+shared.multiTenant.tenantRegistryClient.caCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.cacheExpirationSecs (Default Value): 21600
+shared.multiTenant.tenantRegistryClient.clientCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.clientCertKey (Default Value): *****
+shared.multiTenant.tenantRegistryClient.dialTimeoutSecs (Default Value): 10
+shared.multiTenant.tenantRegistryClient.endpoints (Default Value): 
+shared.multiTenant.tenantRegistryClient.pingCacheExpirationSecs (Default Value): 15
+shared.multiTenant.tenantRegistryClient.pingTimeoutSecs (Default Value): 1
+shared.multiTenant.tenantRegistryClient.requestTimeoutSecs (Default Value): 30
+shared.newrelic.appName (Default Value): 
+shared.newrelic.distributedTracerEnabled (Default Value): true
+shared.newrelic.enableDebugLog (Default Value): false
+shared.newrelic.enabled (Default Value): false
+shared.newrelic.licenseKey (Default Value): *****
+shared.node (File): <nil>
+shared.node.id (Environment Variable: JF_SHARED_NODE_ID): c9d950aef59c
+shared.node.ip (Environment Variable: JF_SHARED_NODE_IP): 172.19.0.3
+shared.node.name (Environment Variable: JF_SHARED_NODE_NAME): c9d950aef59c
+shared.security (File): <nil>
+shared.security.ExposeApplicationHeaders (Default Value): false
+shared.security.bootstrapKeysReadTimeoutSecs (Default Value): 120
+shared.security.joinKeyFile (Default Value): etc/security/join.key
+shared.security.masterKeyFile (Default Value): etc/security/master.key
+system.yaml (Environment Variable: JF_SYSTEM_YAML): /opt/jfrog/artifactory/var/etc/system.yaml [startup]
+2025-03-12T15:14:42.285Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 5 seconds with 2m0s timeout [startup]
+2025-03-12T15:14:47.335Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 10 seconds with 2m0s timeout [startup]
+2025-03-12T15:14:52.358Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 15 seconds with 2m0s timeout [startup]
+2025-03-12T15:14:57.381Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 20 seconds with 2m0s timeout [startup]
+2025-03-12T15:15:02.396Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 25 seconds with 2m0s timeout [startup]
+2025-03-12T15:15:07.409Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 30 seconds with 2m0s timeout [startup]
+2025-03-12T15:15:12.421Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 35 seconds with 2m0s timeout [startup]
+2025-03-12T15:15:17.439Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 40 seconds with 2m0s timeout [startup]
+2025-03-12T15:15:22.453Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 45 seconds with 2m0s timeout [startup]
+2025-03-12T15:15:27.468Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 50 seconds with 2m0s timeout [startup]
+2025-03-12T15:15:32.482Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 55 seconds with 2m0s timeout [startup]
+2025-03-12T15:15:37.501Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 60 seconds with 2m0s timeout [startup]
+2025-03-12T15:15:42.514Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 65 seconds with 2m0s timeout [startup]
+2025-03-12T15:15:47.538Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 70 seconds with 2m0s timeout [startup]
+2025-03-12T15:15:52.553Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 75 seconds with 2m0s timeout [startup]
+2025-03-12T15:15:57.576Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 80 seconds with 2m0s timeout [startup]
+2025-03-12T15:16:02.591Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 85 seconds with 2m0s timeout [startup]
+2025-03-12T15:16:07.610Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 90 seconds with 2m0s timeout [startup]
+2025-03-12T15:16:12.628Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 95 seconds with 2m0s timeout [startup]
+2025-03-12T15:16:17.650Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 100 seconds with 2m0s timeout [startup]
+2025-03-12T15:16:22.666Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 105 seconds with 2m0s timeout [startup]
+2025-03-12T15:16:27.686Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 110 seconds with 2m0s timeout [startup]
+2025-03-12T15:16:32.699Z [jfint] [INFO ] [51e4111dcb884aa0] [security_keys.go:185          ] [main                ] [                ] - Cluster join: Join key is missing. Pending for 115 seconds with 2m0s timeout [startup]
+2025-03-12T15:16:37.262Z [jfint] [FATAL] [51e4111dcb884aa0] [bootstrap.go:146              ] [main                ] [                ] - Cluster join: Failed resolving join key: failed resolving 'shared.security.joinKey' key; file does not exist: /opt/jfrog/artifactory/var/etc/security/join.key [startup]
+2025-03-12T15:23:40.683Z [jfint] [INFO ] [717058d934c23d99] [bootstrap.go:68               ] [main                ] [                ] - Effective configuration:
+artifactory.pid (Environment Variable: JF_ARTIFACTORY_PID): /opt/jfrog/artifactory/app/run/artifactory.pid
+artifactory.user (Environment Variable: JF_ARTIFACTORY_USER): artifactory
+configVersion (File): 1
+integration.accessClient.joinTimeoutMillis (Default Value): 180000
+integration.accessClient.pingTimeoutMillis (Default Value): 120000
+integration.artifactoryClient.request.timeoutMillis (Default Value): 5000
+integration.callHome.cronExpression (Default Value): 
+integration.callHome.enabled (Default Value): false
+integration.callHome.timeoutMillis (Default Value): 120000
+integration.callHome.url (Default Value): 
+integration.eventClient.request.timeoutMillis (Default Value): 5000
+integration.gitClient.lockExpirationTimeoutSeconds (Default Value): 1800
+integration.gitClient.request.timeoutMillis (Default Value): 120000
+integration.gitClient.writeGitHooksTimeoutSeconds (Default Value): 600
+integration.grpcPort (Default Value): 8072
+integration.logging.application.caller (Default Value): false
+integration.logging.application.console (Default Value): true
+integration.logging.application.filePath (Default Value): integration-service.log
+integration.logging.application.format (Default Value): jftext
+integration.logging.application.level (Default Value): info
+integration.logging.application.rotation.compress (Default Value): true
+integration.logging.application.rotation.keepLastDecompressed (Default Value): 1
+integration.logging.application.rotation.maxAgeDays (Default Value): 365
+integration.logging.application.rotation.maxFiles (Default Value): 10
+integration.logging.application.rotation.maxSizeMb (Default Value): 25
+integration.logging.metrics.console (Default Value): false
+integration.logging.metrics.filePath (Default Value): integration-metrics.log
+integration.logging.metrics.rotation.compress (Default Value): true
+integration.logging.metrics.rotation.keepLastDecompressed (Default Value): 1
+integration.logging.metrics.rotation.maxAgeDays (Default Value): 365
+integration.logging.metrics.rotation.maxFiles (Default Value): 10
+integration.logging.metrics.rotation.maxSizeMb (Default Value): 25
+integration.logging.request.console (Default Value): false
+integration.logging.request.filePath (Default Value): integration-request.log
+integration.logging.request.rotation.compress (Default Value): true
+integration.logging.request.rotation.keepLastDecompressed (Default Value): 1
+integration.logging.request.rotation.maxAgeDays (Default Value): 365
+integration.logging.request.rotation.maxFiles (Default Value): 10
+integration.logging.request.rotation.maxSizeMb (Default Value): 25
+integration.metrics.enabled (Default Value): false
+integration.metrics.exclude (Default Value): []
+integration.metrics.intervalMillis (Default Value): 10000
+integration.port (Default Value): 8071
+integration.profiling.enabled (Default Value): false
+integration.security.blacklist.enabled (Default Value): true
+integration.security.blacklist.timeoutMillis (Default Value): 5000
+integration.security.includeIntegrationToken (Default Value): *****
+integration.smtpClient.insecure (Default Value): true
+integration.smtpClient.minTlsVersion (Default Value): 1.2
+integration.smtpClient.timeoutSecs (Default Value): 300
+integration.supportBundle.aggregationTimeoutMillis (Default Value): 3600000
+integration.tokenCache.timeoutMillis (Default Value): 60000
+metadata.accessclient.url (Environment Variable: JF_METADATA_ACCESSCLIENT_URL): http://localhost:8081/access
+product.data.internal (Environment Variable: JF_PRODUCT_DATA_INTERNAL): /var/opt/jfrog/artifactory
+product.home (Environment Variable: JF_PRODUCT_HOME): /opt/jfrog/artifactory
+router.entrypoints.internalPort (Default Value): 8046
+router.topology.local.requiredservicetypes (Environment Variable: JF_ROUTER_TOPOLOGY_LOCAL_REQUIREDSERVICETYPES): jfrt,jfac,jfmd,jffe,jfob,jfint,jfevt
+shared.database (File): <nil>
+shared.database.password (Environment Variable: JF_SHARED_DATABASE_PASSWORD): *****
+shared.database.type (Environment Variable: JF_SHARED_DATABASE_TYPE): postgresql
+shared.database.url (Environment Variable: JF_SHARED_DATABASE_URL): jdbc:postgresql://postgres:5432/artifactorydb
+shared.database.user (Environment Variable: JF_SHARED_DATABASE_USER): artifactory
+shared.extrajavaopts (Environment Variable: JF_SHARED_EXTRAJAVAOPTS): -Xms512m -Xmx2g
+shared.multiTenant.enabled (Default Value): false
+shared.multiTenant.tenantRegistryClient.caCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.cacheExpirationSecs (Default Value): 21600
+shared.multiTenant.tenantRegistryClient.clientCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.clientCertKey (Default Value): *****
+shared.multiTenant.tenantRegistryClient.dialTimeoutSecs (Default Value): 10
+shared.multiTenant.tenantRegistryClient.endpoints (Default Value): 
+shared.multiTenant.tenantRegistryClient.pingCacheExpirationSecs (Default Value): 15
+shared.multiTenant.tenantRegistryClient.pingTimeoutSecs (Default Value): 1
+shared.multiTenant.tenantRegistryClient.requestTimeoutSecs (Default Value): 30
+shared.newrelic.appName (Default Value): 
+shared.newrelic.distributedTracerEnabled (Default Value): true
+shared.newrelic.enableDebugLog (Default Value): false
+shared.newrelic.enabled (Default Value): false
+shared.newrelic.licenseKey (Default Value): *****
+shared.node (File): <nil>
+shared.node.id (Environment Variable: JF_SHARED_NODE_ID): c9d950aef59c
+shared.node.ip (Environment Variable: JF_SHARED_NODE_IP): 172.19.0.3
+shared.node.name (Environment Variable: JF_SHARED_NODE_NAME): c9d950aef59c
+shared.security (File): <nil>
+shared.security.ExposeApplicationHeaders (Default Value): false
+shared.security.bootstrapKeysReadTimeoutSecs (Default Value): 120
+shared.security.joinKeyFile (Default Value): etc/security/join.key
+shared.security.masterKeyFile (Default Value): etc/security/master.key
+system.yaml (Environment Variable: JF_SYSTEM_YAML): /opt/jfrog/artifactory/var/etc/system.yaml [startup]
+2025-03-12T15:23:40.703Z [jfint] [FATAL] [717058d934c23d99] [bootstrap.go:146              ] [main                ] [                ] - Cluster join: Failed resolving join key: Corrupted join key: encoding/hex: invalid byte: U+0069 'i' [startup]
+2025-03-12T15:38:18.165Z [jfint] [INFO ] [3f2c968b1278235c] [bootstrap.go:68               ] [main                ] [                ] - Effective configuration:
+artifactory.pid (Environment Variable: JF_ARTIFACTORY_PID): /opt/jfrog/artifactory/app/run/artifactory.pid
+artifactory.user (Environment Variable: JF_ARTIFACTORY_USER): artifactory
+configVersion (File): 1
+integration.accessClient.joinTimeoutMillis (Default Value): 180000
+integration.accessClient.pingTimeoutMillis (Default Value): 120000
+integration.artifactoryClient.request.timeoutMillis (Default Value): 5000
+integration.callHome.cronExpression (Default Value): 
+integration.callHome.enabled (Default Value): false
+integration.callHome.timeoutMillis (Default Value): 120000
+integration.callHome.url (Default Value): 
+integration.eventClient.request.timeoutMillis (Default Value): 5000
+integration.gitClient.lockExpirationTimeoutSeconds (Default Value): 1800
+integration.gitClient.request.timeoutMillis (Default Value): 120000
+integration.gitClient.writeGitHooksTimeoutSeconds (Default Value): 600
+integration.grpcPort (Default Value): 8072
+integration.logging.application.caller (Default Value): false
+integration.logging.application.console (Default Value): true
+integration.logging.application.filePath (Default Value): integration-service.log
+integration.logging.application.format (Default Value): jftext
+integration.logging.application.level (Default Value): info
+integration.logging.application.rotation.compress (Default Value): true
+integration.logging.application.rotation.keepLastDecompressed (Default Value): 1
+integration.logging.application.rotation.maxAgeDays (Default Value): 365
+integration.logging.application.rotation.maxFiles (Default Value): 10
+integration.logging.application.rotation.maxSizeMb (Default Value): 25
+integration.logging.metrics.console (Default Value): false
+integration.logging.metrics.filePath (Default Value): integration-metrics.log
+integration.logging.metrics.rotation.compress (Default Value): true
+integration.logging.metrics.rotation.keepLastDecompressed (Default Value): 1
+integration.logging.metrics.rotation.maxAgeDays (Default Value): 365
+integration.logging.metrics.rotation.maxFiles (Default Value): 10
+integration.logging.metrics.rotation.maxSizeMb (Default Value): 25
+integration.logging.request.console (Default Value): false
+integration.logging.request.filePath (Default Value): integration-request.log
+integration.logging.request.rotation.compress (Default Value): true
+integration.logging.request.rotation.keepLastDecompressed (Default Value): 1
+integration.logging.request.rotation.maxAgeDays (Default Value): 365
+integration.logging.request.rotation.maxFiles (Default Value): 10
+integration.logging.request.rotation.maxSizeMb (Default Value): 25
+integration.metrics.enabled (Default Value): false
+integration.metrics.exclude (Default Value): []
+integration.metrics.intervalMillis (Default Value): 10000
+integration.port (Default Value): 8071
+integration.profiling.enabled (Default Value): false
+integration.security.blacklist.enabled (Default Value): true
+integration.security.blacklist.timeoutMillis (Default Value): 5000
+integration.security.includeIntegrationToken (Default Value): *****
+integration.smtpClient.insecure (Default Value): true
+integration.smtpClient.minTlsVersion (Default Value): 1.2
+integration.smtpClient.timeoutSecs (Default Value): 300
+integration.supportBundle.aggregationTimeoutMillis (Default Value): 3600000
+integration.tokenCache.timeoutMillis (Default Value): 60000
+metadata.accessclient.url (Environment Variable: JF_METADATA_ACCESSCLIENT_URL): http://localhost:8081/access
+product.data.internal (Environment Variable: JF_PRODUCT_DATA_INTERNAL): /var/opt/jfrog/artifactory
+product.home (Environment Variable: JF_PRODUCT_HOME): /opt/jfrog/artifactory
+router.entrypoints.internalPort (Default Value): 8046
+router.topology.local.requiredservicetypes (Environment Variable: JF_ROUTER_TOPOLOGY_LOCAL_REQUIREDSERVICETYPES): jfrt,jfac,jfmd,jffe,jfob,jfint,jfevt
+shared.database (File): <nil>
+shared.database.password (Environment Variable: JF_SHARED_DATABASE_PASSWORD): *****
+shared.database.type (Environment Variable: JF_SHARED_DATABASE_TYPE): postgresql
+shared.database.url (Environment Variable: JF_SHARED_DATABASE_URL): jdbc:postgresql://postgres:5432/artifactorydb
+shared.database.user (Environment Variable: JF_SHARED_DATABASE_USER): artifactory
+shared.extrajavaopts (Environment Variable: JF_SHARED_EXTRAJAVAOPTS): -Xms512m -Xmx2g
+shared.multiTenant.enabled (Default Value): false
+shared.multiTenant.tenantRegistryClient.caCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.cacheExpirationSecs (Default Value): 21600
+shared.multiTenant.tenantRegistryClient.clientCert (Default Value): 
+shared.multiTenant.tenantRegistryClient.clientCertKey (Default Value): *****
+shared.multiTenant.tenantRegistryClient.dialTimeoutSecs (Default Value): 10
+shared.multiTenant.tenantRegistryClient.endpoints (Default Value): 
+shared.multiTenant.tenantRegistryClient.pingCacheExpirationSecs (Default Value): 15
+shared.multiTenant.tenantRegistryClient.pingTimeoutSecs (Default Value): 1
+shared.multiTenant.tenantRegistryClient.requestTimeoutSecs (Default Value): 30
+shared.newrelic.appName (Default Value): 
+shared.newrelic.distributedTracerEnabled (Default Value): true
+shared.newrelic.enableDebugLog (Default Value): false
+shared.newrelic.enabled (Default Value): false
+shared.newrelic.licenseKey (Default Value): *****
+shared.node (File): <nil>
+shared.node.id (Environment Variable: JF_SHARED_NODE_ID): c9d950aef59c
+shared.node.ip (Environment Variable: JF_SHARED_NODE_IP): 172.19.0.3
+shared.node.name (Environment Variable: JF_SHARED_NODE_NAME): c9d950aef59c
+shared.security (File): <nil>
+shared.security.ExposeApplicationHeaders (Default Value): false
+shared.security.bootstrapKeysReadTimeoutSecs (Default Value): 120
+shared.security.joinKeyFile (Default Value): etc/security/join.key
+shared.security.masterKeyFile (Default Value): etc/security/master.key
+system.yaml (Environment Variable: JF_SYSTEM_YAML): /opt/jfrog/artifactory/var/etc/system.yaml [startup]
+2025-03-12T15:38:18.179Z [jfint] [FATAL] [3f2c968b1278235c] [bootstrap.go:146              ] [main                ] [                ] - Cluster join: Failed resolving join key: Corrupted join key: encoding/hex: invalid byte: U+0069 'i' [startup]

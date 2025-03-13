@@ -1,0 +1,123 @@
+2025-03-12T14:54:11.976Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 5 seconds with 2m0s timeout [init]
+2025-03-12T14:54:17.264Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 10 seconds with 2m0s timeout [init]
+2025-03-12T14:54:22.329Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 15 seconds with 2m0s timeout [init]
+2025-03-12T14:54:27.363Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 20 seconds with 2m0s timeout [init]
+2025-03-12T14:54:32.488Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 25 seconds with 2m0s timeout [init]
+2025-03-12T14:54:37.602Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 30 seconds with 2m0s timeout [init]
+2025-03-12T14:54:42.649Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 35 seconds with 2m0s timeout [init]
+2025-03-12T14:54:47.745Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 40 seconds with 2m0s timeout [init]
+2025-03-12T14:54:52.807Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 45 seconds with 2m0s timeout [init]
+2025-03-12T14:54:57.898Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 50 seconds with 2m0s timeout [init]
+2025-03-12T14:55:03.039Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 55 seconds with 2m0s timeout [init]
+2025-03-12T14:55:07.154Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 60 seconds with 2m0s timeout [init]
+2025-03-12T14:55:12.171Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 65 seconds with 2m0s timeout [init]
+2025-03-12T14:55:17.291Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 70 seconds with 2m0s timeout [init]
+2025-03-12T14:55:22.303Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 75 seconds with 2m0s timeout [init]
+2025-03-12T14:55:27.541Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 80 seconds with 2m0s timeout [init]
+2025-03-12T14:55:32.644Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 85 seconds with 2m0s timeout [init]
+2025-03-12T14:55:37.661Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 90 seconds with 2m0s timeout [init]
+2025-03-12T14:55:42.838Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 95 seconds with 2m0s timeout [init]
+2025-03-12T14:55:47.847Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 100 seconds with 2m0s timeout [init]
+2025-03-12T14:55:52.929Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 105 seconds with 2m0s timeout [init]
+2025-03-12T14:55:56.986Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 110 seconds with 2m0s timeout [init]
+2025-03-12T14:56:02.038Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 115 seconds with 2m0s timeout [init]
+2025-03-12T14:56:06.947Z [jfmd ] [PANIC] [                ] [keys.go:23                    ] [main                ] [] - Cluster join: Failed resolving join key: failed resolving 'shared.security.joinKey' key; file does not exist: /opt/jfrog/artifactory/var/etc/security/join.key
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/src/runtime/debug/stack.go:24 +0x65
+jfrog.com/jfrog-go-commons/v7/pkg/log.(*standardLogger).Panicfc(0xc000774600, {0x1c19c50, 0xc0006df170}, {0xc00071c0a0, 0x9e}, {0x0, 0x0, 0x0})
+	goroot/pkg/mod/jfrog.com/jfrog-go-commons/v7@v7.83.0/pkg/log/standard_logger.go:95 +0xd2
+jfrog.com/metadata/v7/services/common.MustResolveSecurityKeys({0x1c19c50, 0xc0006df170}, {0x1c1e3b0, 0xc000180460}, {0x1c24a48, 0xc000774600?})
+	jfrog.com/metadata/v7@v7.63.0/services/common/keys.go:23 +0x1ca
+main.main()
+	jfrog.com/metadata/v7@v7.63.0/metadata.go:31 +0x345
+ [init]
+2025-03-12T15:05:11.654Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 5 seconds with 2m0s timeout [init]
+2025-03-12T15:05:16.728Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 10 seconds with 2m0s timeout [init]
+2025-03-12T15:05:22.109Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 15 seconds with 2m0s timeout [init]
+2025-03-12T15:05:27.128Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 20 seconds with 2m0s timeout [init]
+2025-03-12T15:05:32.160Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 25 seconds with 2m0s timeout [init]
+2025-03-12T15:05:37.308Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 30 seconds with 2m0s timeout [init]
+2025-03-12T15:05:42.319Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 35 seconds with 2m0s timeout [init]
+2025-03-12T15:05:46.746Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 40 seconds with 2m0s timeout [init]
+2025-03-12T15:05:51.757Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 45 seconds with 2m0s timeout [init]
+2025-03-12T15:05:56.922Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 50 seconds with 2m0s timeout [init]
+2025-03-12T15:06:01.974Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 55 seconds with 2m0s timeout [init]
+2025-03-12T15:06:07.075Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 60 seconds with 2m0s timeout [init]
+2025-03-12T15:06:12.083Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 65 seconds with 2m0s timeout [init]
+2025-03-12T15:06:17.182Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 70 seconds with 2m0s timeout [init]
+2025-03-12T15:06:22.310Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 75 seconds with 2m0s timeout [init]
+2025-03-12T15:06:27.324Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 80 seconds with 2m0s timeout [init]
+2025-03-12T15:06:32.524Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 85 seconds with 2m0s timeout [init]
+2025-03-12T15:06:37.537Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 90 seconds with 2m0s timeout [init]
+2025-03-12T15:06:46.676Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 100 seconds with 2m0s timeout [init]
+2025-03-12T15:06:51.768Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 105 seconds with 2m0s timeout [init]
+2025-03-12T15:06:56.878Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 110 seconds with 2m0s timeout [init]
+2025-03-12T15:07:01.892Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 115 seconds with 2m0s timeout [init]
+2025-03-12T15:07:06.612Z [jfmd ] [PANIC] [                ] [keys.go:23                    ] [main                ] [] - Cluster join: Failed resolving join key: failed resolving 'shared.security.joinKey' key; file does not exist: /opt/jfrog/artifactory/var/etc/security/join.key
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/src/runtime/debug/stack.go:24 +0x65
+jfrog.com/jfrog-go-commons/v7/pkg/log.(*standardLogger).Panicfc(0xc00075c360, {0x1c19c50, 0xc0005b5170}, {0xc00077c0a0, 0x9e}, {0x0, 0x0, 0x0})
+	goroot/pkg/mod/jfrog.com/jfrog-go-commons/v7@v7.83.0/pkg/log/standard_logger.go:95 +0xd2
+jfrog.com/metadata/v7/services/common.MustResolveSecurityKeys({0x1c19c50, 0xc0005b5170}, {0x1c1e3b0, 0xc0000d7e50}, {0x1c24a48, 0xc00075c360?})
+	jfrog.com/metadata/v7@v7.63.0/services/common/keys.go:23 +0x1ca
+main.main()
+	jfrog.com/metadata/v7@v7.63.0/metadata.go:31 +0x345
+ [init]
+2025-03-12T15:14:41.495Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 5 seconds with 2m0s timeout [init]
+2025-03-12T15:14:46.518Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 10 seconds with 2m0s timeout [init]
+2025-03-12T15:14:51.536Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 15 seconds with 2m0s timeout [init]
+2025-03-12T15:14:56.560Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 20 seconds with 2m0s timeout [init]
+2025-03-12T15:15:01.576Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 25 seconds with 2m0s timeout [init]
+2025-03-12T15:15:06.592Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 30 seconds with 2m0s timeout [init]
+2025-03-12T15:15:11.611Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 35 seconds with 2m0s timeout [init]
+2025-03-12T15:15:16.636Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 40 seconds with 2m0s timeout [init]
+2025-03-12T15:15:21.649Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 45 seconds with 2m0s timeout [init]
+2025-03-12T15:15:26.667Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 50 seconds with 2m0s timeout [init]
+2025-03-12T15:15:31.688Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 55 seconds with 2m0s timeout [init]
+2025-03-12T15:15:36.710Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 60 seconds with 2m0s timeout [init]
+2025-03-12T15:15:41.733Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 65 seconds with 2m0s timeout [init]
+2025-03-12T15:15:46.756Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 70 seconds with 2m0s timeout [init]
+2025-03-12T15:15:51.777Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 75 seconds with 2m0s timeout [init]
+2025-03-12T15:15:56.800Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 80 seconds with 2m0s timeout [init]
+2025-03-12T15:16:01.822Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 85 seconds with 2m0s timeout [init]
+2025-03-12T15:16:06.849Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 90 seconds with 2m0s timeout [init]
+2025-03-12T15:16:11.865Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 95 seconds with 2m0s timeout [init]
+2025-03-12T15:16:16.892Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 100 seconds with 2m0s timeout [init]
+2025-03-12T15:16:21.907Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 105 seconds with 2m0s timeout [init]
+2025-03-12T15:16:26.924Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 110 seconds with 2m0s timeout [init]
+2025-03-12T15:16:31.942Z [jfmd ] [INFO ] [                ] [security_keys.go:185          ] [main                ] [] - Cluster join: Join key is missing. Pending for 115 seconds with 2m0s timeout [init]
+2025-03-12T15:16:36.471Z [jfmd ] [PANIC] [                ] [keys.go:23                    ] [main                ] [] - Cluster join: Failed resolving join key: failed resolving 'shared.security.joinKey' key; file does not exist: /opt/jfrog/artifactory/var/etc/security/join.key
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/src/runtime/debug/stack.go:24 +0x65
+jfrog.com/jfrog-go-commons/v7/pkg/log.(*standardLogger).Panicfc(0xc00074a300, {0x1c19c50, 0xc000778ab0}, {0xc0007600a0, 0x9e}, {0x0, 0x0, 0x0})
+	goroot/pkg/mod/jfrog.com/jfrog-go-commons/v7@v7.83.0/pkg/log/standard_logger.go:95 +0xd2
+jfrog.com/metadata/v7/services/common.MustResolveSecurityKeys({0x1c19c50, 0xc000778ab0}, {0x1c1e3b0, 0xc000454370}, {0x1c24a48, 0xc00074a300?})
+	jfrog.com/metadata/v7@v7.63.0/services/common/keys.go:23 +0x1ca
+main.main()
+	jfrog.com/metadata/v7@v7.63.0/metadata.go:31 +0x345
+ [init]
+2025-03-12T15:23:39.091Z [jfmd ] [PANIC] [                ] [keys.go:23                    ] [main                ] [] - Cluster join: Failed resolving join key: Corrupted join key: encoding/hex: invalid byte: U+0069 'i'
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/src/runtime/debug/stack.go:24 +0x65
+jfrog.com/jfrog-go-commons/v7/pkg/log.(*standardLogger).Panicfc(0xc0005be180, {0x1c19c50, 0xc00052abd0}, {0xc0004e6b60, 0x63}, {0x0, 0x0, 0x0})
+	goroot/pkg/mod/jfrog.com/jfrog-go-commons/v7@v7.83.0/pkg/log/standard_logger.go:95 +0xd2
+jfrog.com/metadata/v7/services/common.MustResolveSecurityKeys({0x1c19c50, 0xc00052abd0}, {0x1c1e3b0, 0xc0000d23c0}, {0x1c24a48, 0xc0005be180?})
+	jfrog.com/metadata/v7@v7.63.0/services/common/keys.go:23 +0x1ca
+main.main()
+	jfrog.com/metadata/v7@v7.63.0/metadata.go:31 +0x345
+ [init]
+2025-03-12T15:38:16.951Z [jfmd ] [PANIC] [                ] [keys.go:23                    ] [main                ] [] - Cluster join: Failed resolving join key: Corrupted join key: encoding/hex: invalid byte: U+0069 'i'
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/src/runtime/debug/stack.go:24 +0x65
+jfrog.com/jfrog-go-commons/v7/pkg/log.(*standardLogger).Panicfc(0xc0004b5a70, {0x1c19c50, 0xc0004b4b10}, {0xc00060e540, 0x63}, {0x0, 0x0, 0x0})
+	goroot/pkg/mod/jfrog.com/jfrog-go-commons/v7@v7.83.0/pkg/log/standard_logger.go:95 +0xd2
+jfrog.com/metadata/v7/services/common.MustResolveSecurityKeys({0x1c19c50, 0xc0004b4b10}, {0x1c1e3b0, 0xc0004e01e0}, {0x1c24a48, 0xc0004b5a70?})
+	jfrog.com/metadata/v7@v7.63.0/services/common/keys.go:23 +0x1ca
+main.main()
+	jfrog.com/metadata/v7@v7.63.0/metadata.go:31 +0x345
+ [init]
